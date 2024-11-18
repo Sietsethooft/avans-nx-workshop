@@ -6,7 +6,7 @@ import { Id } from './id.type';
 export enum UserRole {
     Guest = 'Guest',
     Admin = 'Admin',
-    Unknown = 'Unknown'
+    Unknown = 'Unknown',
 }
 
 export enum UserGender {
