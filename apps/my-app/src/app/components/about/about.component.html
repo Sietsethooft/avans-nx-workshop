@@ -1,1 +1,177 @@
-<p>about works!</p>
+<div class="container">
+    <h2 class="pb-2">Jam with the Band!</h2>
+    <p class="lead border-bottom pb-2">Gemaakt door: Sietse 't Hooft (2213722)</p>
+
+    <h4>Achtergrond:</h4>
+    <p>"Jam with the Band" is een online platform dat muzikanten samenbrengt. Het biedt een plek waar gebruikers hun passie voor muziek kunnen delen, nieuwe connecties kunnen maken en samen in bands kunnen spelen. Het doel van de applicatie is om muzikanten te helpen in contact te komen met andere muzikanten, band op te richten (of te joinen) en hun muzikale activiteiten te organiseren.  </p>
+
+    <h4>Doelgroep:</h4>
+    <p>Het doelgroep bestaat uit muzikanten van alle leeftijden, ervaringsniveaus en muziekgenres. Zowel beginners die een plek zoeken om te starten als ervaren muzikanten die hun vaardigheden willen delen, kunnen gebruik maken van het platform.  </p>
+
+    <h4>Functionaliteit:</h4>
+    <p>Het platform biedt de volgende kernfunctionaliteiten:</p>
+    <ol>
+        <li><span class="fw-bold">Muziekprofiel aanmaken:</span> Gebruikers kunnen een persoonlijk profiel aanmaken waarin zij informatie delen zoals hun naam, leeftijd, muziekinstrumenten, ervaring, en de bands waar zij deel van uitmaken.</li>
+        <li><span class="fw-bold">Bands oprichten en beheren:</span> Gebruikers kunnen zelf bands oprichten, waarbij zij de samenstelling, muzikale voorkeuren, en repetitieplanning van de band kunnen beheren.</li>
+        <li><span class="fw-bold">Bands zoeken en joinen:</span> Gebruikers kunnen bestaande bands opzoeken en filteren op basis van genres, instrumenten, regio, en repetitiefrequentie. Ze kunnen lidmaatschapsverzoeken indienen om deel te nemen aan een band.</li>
+        <li><span class="fw-bold">Repetities organiseren:</span> Bandleiders kunnen repetities plannen, bewerken of annuleren, en bandleden ontvangen notificaties zodat ze altijd op de hoogte zijn.</li>
+        <li><span class="fw-bold">Muzikale connecties versterken:</span> Het platform biedt mogelijkheden om muzikanten en bands te vinden die goed bij elkaar passen op basis van interesses, ervaring en muzikale doelen.</li>
+    </ol>
+
+    <h4>Gebruiksscenario:</h4>
+    <p>Een gebruiker die bijvoorbeeld een gitarist is, kan zich registreren en zijn profiel aanvullen met zijn muziekinstrument en ervaring. Vervolgens kan hij een band zoeken die een gitarist nodig heeft en voldoet aan zijn muzikale smaak en regio. Als hij geen geschikte band vindt, kan hij zelf een band oprichten. Zodra de band gevormd is, kan de bandleider repetities plannen en de samenwerking coördineren via het platform.  </p>
+
+    <h4>Technische aspecten:</h4>
+    <p>De applicatie bevat vier hoofdentiteiten in het datamodel:</p>
+    <ul>
+        <li><span class="fw-bold">User (sterk):</span> Voor opslag van profielinformatie en interacties.</li>
+        <li><span class="fw-bold">Band (zwak):</span> Voor het aanmaken, zoeken en beheren van bands.</li>
+        <li><span class="fw-bold">Repetitie (zwak):</span> Voor het plannen, bewerken en annuleren van bandactiviteiten.</li>
+        <li><span class="fw-bold">Instrument (sterk):</span> Voor opslag van instrumenten.</li>
+    </ul>
+    <p class="pb-4 border-bottom">Met deze structuur biedt het platform een flexibele, maar gestructureerde ervaring waarmee muzikanten gemakkelijker samen kunnen komen en hun passie voor muziek kunnen delen.</p>
+
+    <h4>ERD:</h4>
+    <img src="assets/images/ERD-JamWithTheBand.jpg" alt="ERD-Image" class="img-fluid border-bottom pb-2">
+
+    <h4 class="pt-2 pb-2">De Functionele Requirements:</h4>
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th class="col-1">ID</th>
+                <th class="col-3">Functionele Requirement</th>
+                <th class="col-5">Acceptatiecriteria</th>
+                <th class="col-1">Prioriteit</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>F-01</td>
+                <td>Als gebruiker wil ik een persoonlijk muziekprofiel aanmaken, zodanig dat anderen gemakkelijk informatie over mij kunnen vinden.</td>
+                <td>Het profiel bevat:
+                    <ul>
+                        <li>Een naam</li>
+                        <li>Email-adres</li>
+                        <li>Profielfoto</li>
+                        <li>Gender</li>
+                        <li>Leeftijd, dat berekend is door geboortedatum</li>
+                        <li>Muziekervaring, dat in jaren kan worden ingevuld.</li>
+                        <li>Lijst van muziekinstrumenten die de gebruiker kan spelen.</li>
+                        <li>Bands waar de gebruiker in zit</li>
+                    </ul></td>
+                <td>Must</td>
+            </tr>
+            <tr>
+                <td>F-02</td>
+                <td>Als gebruiker wil ik mijn muziekprofiel kunnen aanpassen, zodanig dat mijn profiel altijd up-to-date is.</td>
+                <td><ul>
+                    <li>Gebruikers kunnen hun naam, email, gender, leeftijd, profielfoto en muziekinformatie bewerken.</li>
+                    <li>Instrumenten kunnen toegevoegd, gewijzigd en verwijderd worden.</li>
+                    <li>Bands worden automatisch toegevoegd/verwijderd.</li>
+                </ul></td>
+                <td>Must</td>
+            </tr>
+            <tr>
+                <td>F-03</td>
+                <td>Als gebruiker wil ik een band kunnen aanmaken, zodanig dat ik een groep kan samenstellen met andere muzikanten op het platform.</td>
+                <td>
+                    De gebruiker moet kunnen aangeven:
+                    <ul>
+                        <li>Naam van de band.</li>
+                        <li>Beschrijving van de band.</li>
+                        <li>Minimale leeftijd van de leden.</li>
+                        <li>Minimale muziekervaring van de leden.</li>
+                        <li>Frequentie van de repetities (Per kwartaal/maandelijks/wekelijks).</li>
+                        <li>De regio van de band.</li>
+                        <li>Gezochte instrumenten.</li>
+                        <li>Gespeelde genres.</li>
+                    </ul>
+                </td>
+                <td>Must</td>
+            </tr>
+            <tr>
+                <td>F-04</td>
+                <td>Als gebruiker wil ik bands kunnen opzoeken, zodanig dat ik gemakkelijk bands kan vinden.</td>
+                <td>
+                    <ul>
+                        <li>Gebruikers kunnen zoeken op bandnaam.</li>
+                        <li>Zoekresultaten tonen een overzicht van de bands met hun naam en beschrijving.</li>
+                        <li>Gebruikers kunnen op een band klikken om meer details te bekijken.</li>
+                    </ul>
+                </td>
+                <td>Must</td>
+            </tr>
+            <tr>
+                <td>F-05</td>
+                <td>Als gebruiker wil ik zoekresultaten kunnen filteren, zodanig dat ik gemakkelijk een band kan vinden die past bij mijn muzieksmaak, ervaring en instrument(en).</td>
+                <td>
+                    <ul>
+                        <li>Gebruikers kunnen filteren op genres.</li>
+                        <li>Gebruikers kunnen filteren op muziekinstrumenten waar de band naar zoekt.</li>
+                        <li>Gebruikers kunnen filteren op regio.</li>
+                        <li>Gebruikers kunnen filteren op ervaring.</li>
+                        <li>Gebruikers kunnen filteren op frequentie van repetities.</li>
+                    </ul>
+                </td>
+                <td>Should</td>
+            </tr>
+            <tr>
+                <td>F-06</td>
+                <td>Als gebruiker wil ik een bestaande band kunnen joinen, zodanig dat ik kan deelnemen aan een groep muzikanten en hun activiteiten.</td>
+                <td>
+                    <ul>
+                        <li>Op de detailpagina van de band kunnen gebruikers verzoeken indienen om lid te worden van een band.</li>
+                        <li>Je kunt je verzoek intrekken, door nog een keer op dezelfde knop te klikken.</li>
+                    </ul>
+                </td>
+                <td>Must</td>
+            </tr>
+            <tr>
+                <td>F-07</td>
+                <td>Als bandleider wil ik zelf kunnen kiezen wie mijn band mag joinen, zodanig dat ik de controle behoud over wie lid wordt en de kwaliteit/sfeer bewaak.</td>
+                <td>
+                    <ul>
+                        <li>De bandleider ontvangt een melding van nieuwe lidmaatschap verzoeken.</li>
+                        <li>De bandleider kan een verzoek accepteren of weigeren.</li>
+                        <li>Geaccepteerde leden worden toegevoegd aan de band en krijgen een bevestiging.</li>
+                        <li>Geweigerde gebruikers krijgen een melding dat hun verzoek is afgewezen.</li>
+                    </ul>
+                </td>
+                <td>Should</td>
+            </tr>
+            <tr>
+                <td>F-08</td>
+                <td>Als bandleider wil ik een repetitie kunnen plannen, zodanig dat de bandleden weten wanneer en waar we samenkomen.</td>
+                <td>                
+                    <ul>
+                    <li>De bandleider kan een datum, tijd en locatie opgeven.</li>
+                    <li>Bandleden ontvangen een melding van de geplande repetities.</li>
+                    <li>Bandleden kunnen aangeven of ze wel of niet aanwezig zijn.</li>
+                    </ul>
+                </td>
+                <td>Must</td>
+            </tr>
+            <tr>
+                <td>F-09</td>
+                <td>Als bandleider wil ik repetities kunnen bewerken, zodanig dat ik wijzigingen in de planning kan doorvoeren en de bandleden altijd op de hoogte zijn van de meest actuele informatie.</td>
+                <td>
+                    <ul>
+                        <li>De bandleider kan een geplande repetitie openen en details wijzigen.</li>
+                        <li>Bandleden ontvangen een melding wanneer een repetitie is bijgewerkt.</li>
+                    </ul>
+                </td>
+                <td>Should</td>
+            </tr>
+            <tr>
+                <td>F-10</td>
+                <td>Als bandleider wil ik repetities kunnen annuleren, zodanig dat ik wijzigingen in de planning kan doorvoeren en de bandleden altijd op de hoogte zijn van de meest actuele informatie.</td>
+                <td><ul>
+                    <li>De bandleider kan een geplande repetitie annuleren in het detailscherm.</li>
+                    <li>Bandleden ontvangen een melding dat de repetitie is geannuleerd.</li>
+                    </ul>
+                </td>
+                <td>Should</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
