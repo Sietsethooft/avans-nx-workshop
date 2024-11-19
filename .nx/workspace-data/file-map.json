@@ -56,20 +56,16 @@
         "hash": "13404745306227114823"
       },
       {
-        "file": ".prettierignore",
-        "hash": "135344717789917661"
+        "file": "migrations.json",
+        "hash": "4597419159832879830"
+      },
+      {
+        "file": "nx.json",
+        "hash": "6436606829117263318"
       },
       {
         "file": ".gitignore",
         "hash": "11966908335120871298"
-      },
-      {
-        "file": ".editorconfig",
-        "hash": "11532813898455409296"
-      },
-      {
-        "file": "tsconfig.base.json",
-        "hash": "5853766662806313320"
       },
       {
         "file": "libs/share-a-meal/readme.txt",
@@ -80,6 +76,14 @@
         "hash": "1955868086715526908"
       },
       {
+        "file": "package.json",
+        "hash": "2989054113532756238"
+      },
+      {
+        "file": ".github/workflows/azure-static-web-apps-icy-tree-01fe4d303.yml",
+        "hash": "4292851524355691075"
+      },
+      {
         "file": "jest.config.ts",
         "hash": "3407785570333453138"
       },
@@ -88,32 +92,28 @@
         "hash": "7473220183190921152"
       },
       {
-        "file": "migrations.json",
-        "hash": "4597419159832879830"
-      },
-      {
-        "file": "Nx-workshop.postman_collection.json",
-        "hash": "13796819436055774183"
-      },
-      {
-        "file": ".github/workflows/azure-static-web-apps-icy-tree-01fe4d303.yml",
-        "hash": "4292851524355691075"
-      },
-      {
         "file": "package-lock.json",
         "hash": "1194419262312006041"
-      },
-      {
-        "file": "package.json",
-        "hash": "2989054113532756238"
       },
       {
         "file": ".prettierrc",
         "hash": "6192629144332209564"
       },
       {
-        "file": "nx.json",
-        "hash": "6436606829117263318"
+        "file": ".prettierignore",
+        "hash": "135344717789917661"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "5853766662806313320"
+      },
+      {
+        "file": ".editorconfig",
+        "hash": "11532813898455409296"
+      },
+      {
+        "file": "Nx-workshop.postman_collection.json",
+        "hash": "13796819436055774183"
       },
       {
         "file": ".eslintrc.json",
@@ -396,7 +396,7 @@
         },
         {
           "file": "apps/my-app/src/app/components/ui/header/header.component.html",
-          "hash": "6296984258919751912"
+          "hash": "10541398504098617854"
         },
         {
           "file": "apps/my-app/src/app/components/ui/header/header.component.spec.ts",
