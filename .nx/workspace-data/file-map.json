@@ -56,36 +56,40 @@
         "hash": "13404745306227114823"
       },
       {
-        "file": "libs/share-a-meal/readme.txt",
-        "hash": "8731589497805983804"
-      },
-      {
-        "file": ".eslintrc.json",
-        "hash": "4566917484430375526"
+        "file": ".prettierignore",
+        "hash": "135344717789917661"
       },
       {
         "file": ".gitignore",
         "hash": "11966908335120871298"
       },
       {
-        "file": "migrations.json",
-        "hash": "4597419159832879830"
-      },
-      {
         "file": ".editorconfig",
         "hash": "11532813898455409296"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "5853766662806313320"
+      },
+      {
+        "file": "libs/share-a-meal/readme.txt",
+        "hash": "8731589497805983804"
+      },
+      {
+        "file": "README.md",
+        "hash": "1955868086715526908"
       },
       {
         "file": "jest.config.ts",
         "hash": "3407785570333453138"
       },
       {
-        "file": "nx.json",
-        "hash": "6436606829117263318"
-      },
-      {
         "file": "jest.preset.js",
         "hash": "7473220183190921152"
+      },
+      {
+        "file": "migrations.json",
+        "hash": "4597419159832879830"
       },
       {
         "file": "Nx-workshop.postman_collection.json",
@@ -108,16 +112,12 @@
         "hash": "6192629144332209564"
       },
       {
-        "file": "tsconfig.base.json",
-        "hash": "5853766662806313320"
+        "file": "nx.json",
+        "hash": "6436606829117263318"
       },
       {
-        "file": "README.md",
-        "hash": "1955868086715526908"
-      },
-      {
-        "file": ".prettierignore",
-        "hash": "135344717789917661"
+        "file": ".eslintrc.json",
+        "hash": "4566917484430375526"
       }
     ],
     "projectFileMap": {
