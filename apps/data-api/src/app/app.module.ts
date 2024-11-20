@@ -10,12 +10,13 @@ import { Logger } from '@nestjs/common';
     imports: [
         BackendFeaturesMealModule,
         AuthModule,
-        MongooseModule.forRoot(environment.MONGO_DB_CONNECTION_STRING, {
+        MongooseModule.forRoot(process.env.MONGO_DB_CONNECTION_STRING, {
             connectionFactory: (connection) => {
                 connection.on('connected', () => {
                     // console.log('is connected');
                     Logger.verbose(
-                        `Mongoose db connected to ${environment.MONGO_DB_CONNECTION_STRING}`
+                        `Mongoose db connected to ${process.env.MONGO_DB_CONNECTION_STRING}`,
+                        'Appmodule'
                     );
                 });
                 connection._events.connected();
