@@ -35,28 +35,5 @@ export class UserListComponent implements OnInit, OnDestroy {
     }
     console.log('UserListComponent.ngOnDestroy');
   }
-
-    // users: IUserInfo[] = [
-    //     {
-    //         _id: '1',
-    //         name: 'John Doe',
-    //         emailAddress: 'j.doe@outlook.com',
-    //         role: UserRole.Unknown,
-    //         gender: UserGender.Unknown,
-    //         password: 'secret',
-    //         isActive: true,
-    //         profileImgUrl: "url"
-    //     },
-    //     {
-    //         _id: '2',
-    //         name: 'Jane Doe',
-    //         emailAddress: 'j.doe2@outlook.com',
-    //         role: UserRole.Unknown,
-    //         gender: UserGender.Unknown,
-    //         password: 'secret',
-    //         isActive: true,
-    //         profileImgUrl: "url"
-    //     }
-    // ]
 }
 
