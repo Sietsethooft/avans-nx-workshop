@@ -1024,3 +1024,35 @@ An organization admin can start a free two week PRO plan trial with no billing r
 [NX Daemon Server] - 2024-11-21T11:01:28.293Z - [WATCHER]: Processing file changes in outputs
 [NX Daemon Server] - 2024-11-21T11:01:28.966Z - [WATCHER]: Processing file changes in outputs
 [NX Daemon Server] - 2024-11-21T11:01:29.111Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-21T11:05:38.395Z - Started listening on: \\.\pipe\nx\C:\Users\siets\AppData\Local\Temp\f439848001\d.sock
+[NX Daemon Server] - 2024-11-21T11:05:38.399Z - [WATCHER]: Subscribed to changes within: C:\Documenten\Jaar 2\Periode 2\Client-side\github_avans-nx-workshop\avans-nx-workshop (native)
+[NX Daemon Server] - 2024-11-21T11:05:38.408Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-11-21T11:05:38.410Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-11-21T11:05:38.410Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-11-21T11:05:38.412Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-11-21T11:05:38.759Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-21T11:05:38.759Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-21T11:05:38.759Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-21T11:05:38.768Z - Time taken for 'loadNxPlugins' 345.77049999999997ms
+[NX Daemon Server] - 2024-11-21T11:05:38.809Z - Time taken for 'build-project-configs' 28.04340000000002ms
+[NX Daemon Server] - 2024-11-21T11:05:38.846Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-21T11:05:38.848Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-11-21T11:05:38.849Z - Time taken for 'total for creating and serializing project graph' 435.74769999999995ms
+[NX Daemon Server] - 2024-11-21T11:05:38.849Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-11-21T11:05:38.849Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 436. Response time: 1.
+[NX Daemon Server] - 2024-11-21T11:05:38.897Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2024-11-21T11:05:38.897Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2024-11-21T11:05:38.897Z - Handled HASH_TASKS. Handling time: 17. Response time: 0.
+[NX Daemon Server] - 2024-11-21T11:05:38.962Z - [REQUEST]: Responding to the client. handleGetEstimatedTaskTimings
+[NX Daemon Server] - 2024-11-21T11:05:38.963Z - Done responding to the client handleGetEstimatedTaskTimings
+[NX Daemon Server] - 2024-11-21T11:05:38.963Z - Handled GET_ESTIMATED_TASK_TIMINGS. Handling time: 5. Response time: 1.
+[NX Daemon Server] - 2024-11-21T11:05:39.571Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-11-21T11:05:39.572Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-11-21T11:05:39.573Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-11-21T11:05:39.575Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-11-21T11:05:39.576Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-11-21T11:05:39.577Z - Time taken for 'total for creating and serializing project graph' 0.46509999999989304ms
+[NX Daemon Server] - 2024-11-21T11:05:39.578Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-11-21T11:05:39.578Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 2.
+[NX Daemon Server] - 2024-11-21T11:05:45.513Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-21T11:05:45.592Z - [WATCHER]: Processing file changes in outputs
