@@ -27,10 +27,8 @@ export class UserDetailsComponent implements OnInit{
           this.userService
           .getUserByIdAsync(this.userId).subscribe((user: IUserInfo) => {
               this.user = user;
-              console.log('result: ', this.user); // Hier gaat het ergens fout?
+              console.log('result: ', this.user); 
           });
-
-          // this.user = this.userService.getUserById(String(this.userId));
         });
     }
 }

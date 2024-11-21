@@ -15,12 +15,7 @@ export class UserListComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     console.log('UserListComponent.ngOnInit');
-
-    // Synchrone manier: geen zichtbare vertraging
-    // this.users = this.userService.getUsers();
-
-    // Asynchroon: met reactive programming
-    
+        
     this.userService
     .getUsersAsync()
     .subscribe(
