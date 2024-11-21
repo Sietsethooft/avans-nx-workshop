@@ -16243,6 +16243,11 @@
       },
       {
         "source": "features",
+        "target": "util-env",
+        "type": "static"
+      },
+      {
+        "source": "features",
         "target": "npm:jest-preset-angular",
         "type": "static"
       }

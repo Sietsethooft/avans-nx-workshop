@@ -4,14 +4,13 @@ import { UserDetailsComponent } from './users/user-details/user-details.componen
 import { UserListComponent } from './users/user-list/user-list.component';
 import { UserEditComponent } from './users/user-edit/user-edit.component';
 import { RouterModule } from '@angular/router';
+import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
     imports: [CommonModule, RouterModule],
     declarations: [UserDetailsComponent, UserListComponent, UserEditComponent],
-    // exports: [ (Dit mag weg, aangezien hij nu al exports doet in de index.ts)
-    //     // UserDetailsComponent,
-    //     // UserListComponent,
-    //     // UserEditComponent
-    // ]
+    providers: [provideHttpClient()],
 })
 export class FeaturesModule {}
+
+
