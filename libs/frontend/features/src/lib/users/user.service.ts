@@ -76,21 +76,18 @@ export class UserService {
       tap(console.log),
       map(response => response.results));
   }
-
-  getUsersAsObservable(): Observable<IUserInfo[]> {
-    console.log('getUsersAsObservable aangeroepen');
-    // 'of' is een rxjs operator die een Observable
-    // maakt van de gegeven data.
-    return of(this.users);
-  }
   
   getUserById(id: string | null): IUserInfo {
     console.log('getUserById aangeroepen');
     return this.users!.filter((user) => user._id === id)[0];
   }
 
-  getuserByIdAsync(id: string | null): Observable<IUserInfo> {
+  getUserByIdAsync(id: string | null): Observable<IUserInfo> {
     console.log('getUserByIdAsync aangeroepen');
-    return of();
+    return this.http
+    .get<ApiResponse<any>>(environment.dataApiUrl + '/user/' + id)
+    .pipe(
+      tap(console.log),
+      map(response => response.results));
   }
 }

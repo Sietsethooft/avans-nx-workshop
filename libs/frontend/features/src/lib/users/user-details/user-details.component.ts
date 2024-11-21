@@ -17,10 +17,20 @@ export class UserDetailsComponent implements OnInit{
         private userService: UserService
       ) {}
 
-      ngOnInit(): void {
-        this.route.paramMap.subscribe((params) => {
-            this.userId = params.get('id');
-            this.user = this.userService.getUserById(String(this.userId)); // Waarom 'Number'?
+    ngOnInit(): void {
+      console.log('UserDetailsComponent.ngOnInit');
+
+      this.route.paramMap.subscribe((params) => {
+          this.userId = params.get('id');
+          console.log('userId: ', this.userId);
+
+          this.userService
+          .getUserByIdAsync(this.userId).subscribe((user: IUserInfo) => {
+              this.user = user;
+              console.log('result: ', this.user); // Hier gaat het ergens fout?
           });
+
+          // this.user = this.userService.getUserById(String(this.userId));
+        });
     }
 }
