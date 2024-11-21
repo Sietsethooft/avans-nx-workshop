@@ -43,3 +43,7 @@ Thumbs.db
 /.nx
 .nx
 .nx/workspace-data
+.nx/*
+.nx\*
+/.nx/*
+\.nx\*
