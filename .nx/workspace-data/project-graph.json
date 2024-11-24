@@ -16280,6 +16280,16 @@
       },
       {
         "source": "backend-features-meal",
+        "target": "npm:mongoose",
+        "type": "static"
+      },
+      {
+        "source": "backend-features-meal",
+        "target": "npm:class-validator",
+        "type": "static"
+      },
+      {
+        "source": "backend-features-meal",
         "target": "npm:@nestjs/testing",
         "type": "static"
       },
@@ -16291,16 +16301,6 @@
       {
         "source": "backend-features-meal",
         "target": "dto",
-        "type": "static"
-      },
-      {
-        "source": "backend-features-meal",
-        "target": "npm:mongoose",
-        "type": "static"
-      },
-      {
-        "source": "backend-features-meal",
-        "target": "npm:class-validator",
         "type": "static"
       }
     ],

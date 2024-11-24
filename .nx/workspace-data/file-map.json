@@ -52,6 +52,54 @@
   "fileMap": {
     "nonProjectFiles": [
       {
+        "file": ".gitignore",
+        "hash": "637008721651112966"
+      },
+      {
+        "file": "libs/share-a-meal/readme.txt",
+        "hash": "8731589497805983804"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "6192629144332209564"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "1194419262312006041"
+      },
+      {
+        "file": "Nx-workshop.postman_collection.json",
+        "hash": "13796819436055774183"
+      },
+      {
+        "file": "migrations.json",
+        "hash": "4597419159832879830"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "135344717789917661"
+      },
+      {
+        "file": "package.json",
+        "hash": "2989054113532756238"
+      },
+      {
+        "file": "nx.json",
+        "hash": "3545277295341199665"
+      },
+      {
+        "file": "README.md",
+        "hash": "1955868086715526908"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "5853766662806313320"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "7473220183190921152"
+      },
+      {
         "file": ".eslintrc.json",
         "hash": "4566917484430375526"
       },
@@ -60,64 +108,16 @@
         "hash": "11532813898455409296"
       },
       {
-        "file": ".prettierignore",
-        "hash": "135344717789917661"
-      },
-      {
-        "file": "Nx-workshop.postman_collection.json",
-        "hash": "13796819436055774183"
-      },
-      {
-        "file": "package.json",
-        "hash": "2989054113532756238"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "637008721651112966"
-      },
-      {
-        "file": "nx.json",
-        "hash": "3545277295341199665"
-      },
-      {
-        "file": "tsconfig.base.json",
-        "hash": "5853766662806313320"
+        "file": ".eslintignore",
+        "hash": "13404745306227114823"
       },
       {
         "file": ".github/workflows/azure-static-web-apps-icy-tree-01fe4d303.yml",
         "hash": "4292851524355691075"
       },
       {
-        "file": "package-lock.json",
-        "hash": "1194419262312006041"
-      },
-      {
-        "file": "README.md",
-        "hash": "1955868086715526908"
-      },
-      {
-        "file": ".eslintignore",
-        "hash": "13404745306227114823"
-      },
-      {
-        "file": ".prettierrc",
-        "hash": "6192629144332209564"
-      },
-      {
         "file": "jest.config.ts",
         "hash": "3407785570333453138"
-      },
-      {
-        "file": "jest.preset.js",
-        "hash": "7473220183190921152"
-      },
-      {
-        "file": "libs/share-a-meal/readme.txt",
-        "hash": "8731589497805983804"
-      },
-      {
-        "file": "migrations.json",
-        "hash": "4597419159832879830"
       }
     ],
     "projectFileMap": {
@@ -875,7 +875,7 @@
         },
         {
           "file": "libs/shared/util-env/src/lib/environment.development.ts",
-          "hash": "2658168945417351789"
+          "hash": "11737728096530437137"
         },
         {
           "file": "libs/shared/util-env/src/lib/environment.interface.ts",
@@ -1087,8 +1087,26 @@
           ]
         },
         {
+          "file": "libs/backend/features/src/lib/band/band.schema.ts",
+          "hash": "585076461836610246",
+          "deps": [
+            "npm:@nestjs/mongoose",
+            "npm:mongoose",
+            "npm:class-validator"
+          ]
+        },
+        {
           "file": "libs/backend/features/src/lib/ingredients/.gitkeep",
           "hash": "3244421341483603138"
+        },
+        {
+          "file": "libs/backend/features/src/lib/instrument/instrument.schema.ts",
+          "hash": "17633283602354598829",
+          "deps": [
+            "npm:@nestjs/mongoose",
+            "npm:class-validator",
+            "npm:mongoose"
+          ]
         },
         {
           "file": "libs/backend/features/src/lib/meal/meal.controller.spec.ts",
@@ -1127,6 +1145,15 @@
             "api",
             "dto",
             "users"
+          ]
+        },
+        {
+          "file": "libs/backend/features/src/lib/requests/request.schema.ts",
+          "hash": "7046310059927760229",
+          "deps": [
+            "npm:@nestjs/mongoose",
+            "npm:class-validator",
+            "npm:mongoose"
           ]
         },
         {
