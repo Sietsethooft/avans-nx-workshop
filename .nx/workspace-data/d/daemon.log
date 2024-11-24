@@ -1095,3 +1095,107 @@ An organization admin can start a free two week PRO plan trial with no billing r
 [NX Daemon Server] - 2024-11-21T11:46:41.117Z - [WATCHER]: Stopping the watcher for C:\Documenten\Jaar 2\Periode 2\Client-side\github_avans-nx-workshop\avans-nx-workshop (sources)
 [NX Daemon Server] - 2024-11-21T11:46:41.118Z - [WATCHER]: Stopping the watcher for C:\Documenten\Jaar 2\Periode 2\Client-side\github_avans-nx-workshop\avans-nx-workshop (outputs)
 [NX Daemon Server] - 2024-11-21T11:46:41.131Z - Server stopped because: "Stopping the daemon the set of ignored files changed (native)"
+[NX Daemon Server] - 2024-11-22T10:30:41.488Z - Started listening on: \\.\pipe\nx\C:\Users\siets\AppData\Local\Temp\f439848001\d.sock
+node:events:496
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use \\.\pipe\nx\C:\Users\siets\AppData\Local\Temp\f439848001\d.sock
+    at Server.setupListenHandle [as _listen2] (node:net:1880:21)
+    at listenInCluster (node:net:1945:12)
+    at Server.listen (node:net:2054:5)
+    at C:\Documenten\Jaar 2\Periode 2\Client-side\github_avans-nx-workshop\avans-nx-workshop\node_modules\nx\src\daemon\server\server.js:353:20
+    at new Promise (<anonymous>)
+    at startServer (C:\Documenten\Jaar 2\Periode 2\Client-side\github_avans-nx-workshop\avans-nx-workshop\node_modules\nx\src\daemon\server\server.js:351:12)
+    at async C:\Documenten\Jaar 2\Periode 2\Client-side\github_avans-nx-workshop\avans-nx-workshop\node_modules\nx\src\daemon\server\start.js:8:9
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1924:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '\\\\.\\pipe\\nx\\C:\\Users\\siets\\AppData\\Local\\Temp\\f439848001\\d.sock',
+  port: -1
+}
+
+Node.js v20.12.2
+[NX Daemon Server] - 2024-11-22T10:30:41.500Z - [WATCHER]: Subscribed to changes within: C:\Documenten\Jaar 2\Periode 2\Client-side\github_avans-nx-workshop\avans-nx-workshop (native)
+[NX Daemon Server] - 2024-11-22T10:30:41.505Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-11-22T10:30:41.506Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-11-22T10:30:41.507Z - Established a connection. Number of open connections: 3
+[NX Daemon Server] - 2024-11-22T10:30:41.508Z - Established a connection. Number of open connections: 4
+[NX Daemon Server] - 2024-11-22T10:30:41.512Z - Closed a connection. Number of open connections: 3
+[NX Daemon Server] - 2024-11-22T10:30:41.512Z - Closed a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-11-22T10:30:41.516Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2024-11-22T10:30:41.519Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2024-11-22T10:30:41.520Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2024-11-22T10:30:41.520Z - Handled RECORD_OUTPUTS_HASH. Handling time: 1. Response time: 4.
+[NX Daemon Server] - 2024-11-22T10:30:41.520Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2024-11-22T10:30:41.520Z - Handled RECORD_OUTPUTS_HASH. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2024-11-22T10:30:41.554Z - [REQUEST]: Responding to the client. handleRecordTaskRuns
+[NX Daemon Server] - 2024-11-22T10:30:41.559Z - [REQUEST]: Responding to the client. handleRecordTaskRuns
+[NX Daemon Server] - 2024-11-22T10:30:41.559Z - Done responding to the client handleRecordTaskRuns
+[NX Daemon Server] - 2024-11-22T10:30:41.560Z - Handled RECORD_TASK_RUNS. Handling time: 12. Response time: 6.
+[NX Daemon Server] - 2024-11-22T10:30:41.562Z - [REQUEST]: Responding to the client. handleGetFlakyTasks
+[NX Daemon Server] - 2024-11-22T10:30:41.563Z - Done responding to the client handleRecordTaskRuns
+[NX Daemon Server] - 2024-11-22T10:30:41.563Z - Handled RECORD_TASK_RUNS. Handling time: 3. Response time: 4.
+[NX Daemon Server] - 2024-11-22T10:30:41.566Z - [REQUEST]: Responding to the client. handleGetFlakyTasks
+[NX Daemon Server] - 2024-11-22T10:30:41.566Z - Done responding to the client handleGetFlakyTasks
+[NX Daemon Server] - 2024-11-22T10:30:41.566Z - Handled GET_FLAKY_TASKS. Handling time: 1. Response time: 4.
+[NX Daemon Server] - 2024-11-22T10:30:41.566Z - Done responding to the client handleGetFlakyTasks
+[NX Daemon Server] - 2024-11-22T10:30:41.566Z - Handled GET_FLAKY_TASKS. Handling time: 1. Response time: 0.
+[NX Daemon Server] - 2024-11-22T10:30:41.566Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-11-22T10:30:41.571Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-11-22T10:30:42.074Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-22T10:30:42.075Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-22T10:30:42.075Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-22T10:30:42.089Z - Time taken for 'loadNxPlugins' 459.1369000000001ms
+[NX Daemon Server] - 2024-11-22T10:30:42.150Z - Time taken for 'build-project-configs' 41.721700000000055ms
+[NX Daemon Server] - 2024-11-22T10:30:42.642Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-22T10:30:42.644Z - Time taken for 'total execution time for createProjectGraph()' 489.9949999999999ms
+[NX Daemon Server] - 2024-11-24T17:52:24.873Z - Started listening on: \\.\pipe\nx\C:\Users\siets\AppData\Local\Temp\f439848001\d.sock
+[NX Daemon Server] - 2024-11-24T17:52:24.892Z - [WATCHER]: Subscribed to changes within: C:\Documenten\Jaar 2\Periode 2\Client-side\github_avans-nx-workshop\avans-nx-workshop (native)
+[NX Daemon Server] - 2024-11-24T17:52:24.895Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-11-24T17:52:24.896Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-11-24T17:52:24.898Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-11-24T17:52:24.900Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-11-24T17:52:25.229Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-24T17:52:25.229Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-24T17:52:25.229Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-24T17:52:25.240Z - Time taken for 'loadNxPlugins' 325.2725ms
+[NX Daemon Server] - 2024-11-24T17:52:25.297Z - Time taken for 'build-project-configs' 33.31389999999999ms
+[NX Daemon Server] - 2024-11-24T17:52:25.341Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-24T17:52:25.343Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-11-24T17:52:25.344Z - Time taken for 'total for creating and serializing project graph' 442.2809ms
+[NX Daemon Server] - 2024-11-24T17:52:25.344Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-11-24T17:52:25.345Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 443. Response time: 2.
+[NX Daemon Server] - 2024-11-24T17:52:25.498Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2024-11-24T17:52:25.498Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2024-11-24T17:52:25.498Z - Handled HASH_TASKS. Handling time: 36. Response time: 0.
+[NX Daemon Server] - 2024-11-24T17:52:25.524Z - [REQUEST]: Responding to the client. handleGetEstimatedTaskTimings
+[NX Daemon Server] - 2024-11-24T17:52:25.524Z - Done responding to the client handleGetEstimatedTaskTimings
+[NX Daemon Server] - 2024-11-24T17:52:25.524Z - Handled GET_ESTIMATED_TASK_TIMINGS. Handling time: 3. Response time: 0.
+[NX Daemon Server] - 2024-11-24T17:52:26.649Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-11-24T17:52:26.650Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-11-24T17:52:26.651Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-11-24T17:52:26.653Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-11-24T17:52:26.654Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-11-24T17:52:26.655Z - Time taken for 'total for creating and serializing project graph' 0.5331999999998516ms
+[NX Daemon Server] - 2024-11-24T17:52:26.655Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-11-24T17:52:26.655Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 1.
+[NX Daemon Server] - 2024-11-24T17:52:37.287Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-24T17:56:24.809Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-24T17:56:24.819Z - [WATCHER]: apps/my-app/src/assets/images/ERD-JamWithTheBand.jpg was modified
+[NX Daemon Server] - 2024-11-24T17:56:25.037Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-24T17:56:25.037Z - [REQUEST]: apps/my-app/src/assets/images/ERD-JamWithTheBand.jpg
+[NX Daemon Server] - 2024-11-24T17:56:25.037Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-24T17:56:25.104Z - Time taken for 'hash changed files from watcher' 1.4100000000034925ms
+[NX Daemon Server] - 2024-11-24T17:56:25.139Z - Time taken for 'build-project-configs' 78.17600000000675ms
+[NX Daemon Server] - 2024-11-24T17:56:26.327Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-24T17:56:26.328Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-11-24T17:56:26.328Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-11-24T17:56:26.328Z - Time taken for 'total execution time for createProjectGraph()' 1172.2887000000046ms
+[NX Daemon Server] - 2024-11-24T17:56:26.983Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-24T17:56:27.347Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-24T17:56:27.414Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-24T17:56:27.477Z - [WATCHER]: Processing file changes in outputs
