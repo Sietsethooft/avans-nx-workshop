@@ -47,7 +47,7 @@ jobs:
 
     deploy-my-app:
         runs-on: ubuntu-latest
-        name: Deploy Angular Frontend
+        name: avans-clientside-static
         needs: build
         environment:
             name: 'Production'
