@@ -1,5 +1,7 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Document, Schema as MongooseSchema } from 'mongoose';
+import { Document, Schema as MongooseSchema, Types } from 'mongoose';
+import { Instrument, InstrumentSchema } from '../../../../instrument/src';
+
 // import { v4 as uuid } from 'uuid';
 import isEmail from 'validator/lib/isEmail';
 import {
@@ -71,11 +73,12 @@ export class User implements IUser {
     isActive = true;
 
     @Prop({
-        default: [],
-        type: [MongooseSchema.Types.ObjectId],
-        ref: 'Meal'
+        required: true,
     })
-    meals: IMeal[] = [];
+    birthDate!: Date;
+
+    @Prop({ type: [InstrumentSchema], default: [] }) 
+    instruments: Instrument[] = [];
 }
 
 export const UserSchema = SchemaFactory.createForClass(User);

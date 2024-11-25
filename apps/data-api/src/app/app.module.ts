@@ -1,14 +1,17 @@
 import { Module } from '@nestjs/common';
-import { BackendFeaturesMealModule } from '@avans-nx-workshop/backend/features';
+// import { BackendFeaturesMealModule } from '@avans-nx-workshop/backend/features';
 import { UsersModule } from '@avans-nx-workshop/backend/user';
 import { AuthModule } from '@avans-nx-workshop/backend/auth';
 import { MongooseModule } from '@nestjs/mongoose';
 import { environment } from '@avans-nx-workshop/shared/util-env';
 import { Logger } from '@nestjs/common';
+import { BandModule } from '@avans-nx-workshop/band';
+import { InstrumentModule } from '@avans-nx-workshop/instrument';
 
 @Module({
     imports: [
-        BackendFeaturesMealModule,
+        BandModule,
+        InstrumentModule,
         AuthModule,
         MongooseModule.forRoot(environment.MONGO_DB_CONNECTION_STRING, {
             connectionFactory: (connection) => {
