@@ -6,5 +6,5 @@ export const environment: IEnvironment = {
     ROOT_DOMAIN_URL: 'https://jamwiththeband.azurewebsites.net',
     dataApiUrl: 'https://jamwiththeband.azurewebsites.net/api',
 
-    MONGO_DB_CONNECTION_STRING: 'mongodb://remote-host/mongodb'
+    MONGO_DB_CONNECTION_STRING: 'mongodb+srv://DBadmin:DBwwAdmin@avans-nx-workshop.e9l1h.mongodb.net/?retryWrites=true&w=majority&appName=Avans-nx-workshop'
 };
