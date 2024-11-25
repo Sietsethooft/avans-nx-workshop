@@ -65,52 +65,52 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "migrations.json",
-        "hash": "4597419159832879830"
-      },
-      {
-        "file": "Nx-workshop.postman_collection.json",
-        "hash": "13796819436055774183"
-      },
-      {
-        "file": "package.json",
-        "hash": "3868875776957438874"
-      },
-      {
-        "file": ".editorconfig",
-        "hash": "11532813898455409296"
-      },
-      {
-        "file": ".eslintignore",
-        "hash": "13404745306227114823"
-      },
-      {
-        "file": "jest.config.ts",
-        "hash": "3407785570333453138"
+        "file": ".prettierrc",
+        "hash": "6192629144332209564"
       },
       {
         "file": ".gitignore",
         "hash": "637008721651112966"
       },
       {
-        "file": "package-lock.json",
-        "hash": "1194419262312006041"
-      },
-      {
-        "file": ".github/workflows/azure-static-web-apps-icy-tree-01fe4d303.yml",
-        "hash": "4292851524355691075"
-      },
-      {
-        "file": "nx.json",
-        "hash": "13543554231657983656"
+        "file": "README.md",
+        "hash": "1955868086715526908"
       },
       {
         "file": "jest.preset.js",
         "hash": "7473220183190921152"
       },
       {
-        "file": ".prettierrc",
-        "hash": "6192629144332209564"
+        "file": "package.json",
+        "hash": "3868875776957438874"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "3407785570333453138"
+      },
+      {
+        "file": ".editorconfig",
+        "hash": "11532813898455409296"
+      },
+      {
+        "file": "migrations.json",
+        "hash": "4597419159832879830"
+      },
+      {
+        "file": ".eslintignore",
+        "hash": "13404745306227114823"
+      },
+      {
+        "file": ".github/workflows/azure-static-web-apps-icy-tree-01fe4d303.yml",
+        "hash": "4292851524355691075"
+      },
+      {
+        "file": "Nx-workshop.postman_collection.json",
+        "hash": "13796819436055774183"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "135344717789917661"
       },
       {
         "file": "libs/share-a-meal/readme.txt",
@@ -121,16 +121,16 @@
         "hash": "102872237454768305"
       },
       {
-        "file": "README.md",
-        "hash": "1955868086715526908"
-      },
-      {
         "file": ".eslintrc.json",
         "hash": "4566917484430375526"
       },
       {
-        "file": ".prettierignore",
-        "hash": "135344717789917661"
+        "file": "package-lock.json",
+        "hash": "1194419262312006041"
+      },
+      {
+        "file": "nx.json",
+        "hash": "13543554231657983656"
       }
     ],
     "projectFileMap": {
@@ -540,7 +540,7 @@
         },
         {
           "file": "libs/backend/band/src/lib/band.schema.ts",
-          "hash": "7187630934186848012",
+          "hash": "4072616792661204678",
           "deps": [
             "npm:@nestjs/mongoose",
             "npm:mongoose",
@@ -1467,7 +1467,7 @@
         },
         {
           "file": "libs/backend/dto/src/lib/band.dto.ts",
-          "hash": "9622992357959104618",
+          "hash": "10888947237304678878",
           "deps": [
             "npm:class-validator",
             "npm:mongoose",
@@ -1567,7 +1567,7 @@
         },
         {
           "file": "libs/shared/api/src/lib/models/band.interface.ts",
-          "hash": "4885568847631451108"
+          "hash": "3383137146962046362"
         },
         {
           "file": "libs/shared/api/src/lib/models/id.type.ts",

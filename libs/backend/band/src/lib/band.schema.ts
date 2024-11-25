@@ -1,11 +1,14 @@
 import { Schema, Prop, SchemaFactory } from '@nestjs/mongoose';
 import { Document, Types } from 'mongoose';
-// import { Instrument, InstrumentSchema } from '@avans-nx-workshop/backend/instrument';
 import { Instrument, InstrumentSchema } from '../../../instrument/src';
 import { IsString, IsMongoId, IsEnum, IsNumber } from 'class-validator';
 
 @Schema()
 export class Band {
+  @Prop({ type: Types.ObjectId, auto: true })
+  @IsMongoId()
+  _id!: Types.ObjectId;
+
   @Prop({ required: true })
   @IsString()
   name!: string;
@@ -14,7 +17,7 @@ export class Band {
   @IsString()
   description?: string;
 
-  @Prop()
+  @Prop({ type: Types.ObjectId, ref: 'User', required: true })
   @IsMongoId()
   leader!: Types.ObjectId;
 

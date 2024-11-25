@@ -48,6 +48,8 @@ export class CreateBandDto {
 }
 
 export class UpsertBandDto {
+  @IsMongoId()
+  @IsNotEmpty()
   _id!: Id;
 
   @IsString()
@@ -94,7 +96,9 @@ export class UpsertBandDto {
 }
 
 export class UpdateBandDto {
-  _id?: string | undefined;
+  @IsMongoId()
+  @IsOptional()
+  _id?: Id;
 
   @IsString()
   @IsOptional()
