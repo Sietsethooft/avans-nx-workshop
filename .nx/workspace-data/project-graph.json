@@ -17427,16 +17427,6 @@
       },
       {
         "source": "users",
-        "target": "npm:validator",
-        "type": "static"
-      },
-      {
-        "source": "users",
-        "target": "npm:class-validator",
-        "type": "static"
-      },
-      {
-        "source": "users",
         "target": "npm:mongodb",
         "type": "static"
       }
