@@ -2,7 +2,7 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { Band, BandDocument } from './band.schema';
-import { CreateBandDto, UpdateBandDto } from './dto';
+import { CreateBandDto, UpdateBandDto } from '@avans-nx-workshop/backend/dto';
 
 @Injectable()
 export class BandService {

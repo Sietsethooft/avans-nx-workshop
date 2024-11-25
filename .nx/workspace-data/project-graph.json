@@ -197,77 +197,6 @@
         "implicitDependencies": []
       }
     },
-    "instrument": {
-      "name": "instrument",
-      "type": "lib",
-      "data": {
-        "root": "libs/backend/instrument",
-        "targets": {
-          "eslint:lint": {
-            "cache": true,
-            "options": {
-              "cwd": "libs/backend/instrument",
-              "command": "eslint ."
-            },
-            "inputs": [
-              "default",
-              "^default",
-              "{workspaceRoot}/.eslintrc.json",
-              "{projectRoot}/.eslintrc.json",
-              "{workspaceRoot}/tools/eslint-rules/**/*",
-              {
-                "externalDependencies": [
-                  "eslint"
-                ]
-              }
-            ],
-            "outputs": [
-              "{options.outputFile}"
-            ],
-            "metadata": {
-              "technologies": [
-                "eslint"
-              ],
-              "description": "Runs ESLint on project",
-              "help": {
-                "command": "npx eslint --help",
-                "example": {
-                  "options": {
-                    "max-warnings": 0
-                  }
-                }
-              }
-            },
-            "executor": "nx:run-commands",
-            "configurations": {},
-            "parallelism": true
-          },
-          "test": {
-            "executor": "@nx/jest:jest",
-            "outputs": [
-              "{workspaceRoot}/coverage/{projectRoot}"
-            ],
-            "options": {
-              "jestConfig": "libs/backend/instrument/jest.config.ts"
-            },
-            "configurations": {},
-            "parallelism": true,
-            "cache": true,
-            "inputs": [
-              "default",
-              "^production",
-              "{workspaceRoot}/jest.preset.js"
-            ]
-          }
-        },
-        "name": "instrument",
-        "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-        "sourceRoot": "libs/backend/instrument/src",
-        "projectType": "library",
-        "tags": [],
-        "implicitDependencies": []
-      }
-    },
     "features": {
       "name": "features",
       "type": "lib",
@@ -17098,28 +17027,6 @@
         "type": "static"
       }
     ],
-    "instrument": [
-      {
-        "source": "instrument",
-        "target": "npm:@nestjs/common",
-        "type": "static"
-      },
-      {
-        "source": "instrument",
-        "target": "npm:@nestjs/mongoose",
-        "type": "static"
-      },
-      {
-        "source": "instrument",
-        "target": "npm:class-validator",
-        "type": "static"
-      },
-      {
-        "source": "instrument",
-        "target": "npm:mongoose",
-        "type": "static"
-      }
-    ],
     "features": [
       {
         "source": "features",
@@ -17185,16 +17092,6 @@
       },
       {
         "source": "backend-features-meal",
-        "target": "npm:mongoose",
-        "type": "static"
-      },
-      {
-        "source": "backend-features-meal",
-        "target": "npm:class-validator",
-        "type": "static"
-      },
-      {
-        "source": "backend-features-meal",
         "target": "npm:@nestjs/testing",
         "type": "static"
       },
@@ -17206,6 +17103,16 @@
       {
         "source": "backend-features-meal",
         "target": "dto",
+        "type": "static"
+      },
+      {
+        "source": "backend-features-meal",
+        "target": "npm:mongoose",
+        "type": "static"
+      },
+      {
+        "source": "backend-features-meal",
+        "target": "npm:class-validator",
         "type": "static"
       }
     ],
@@ -17343,17 +17250,17 @@
       },
       {
         "source": "band",
+        "target": "dto",
+        "type": "static"
+      },
+      {
+        "source": "band",
         "target": "npm:@nestjs/mongoose",
         "type": "static"
       },
       {
         "source": "band",
         "target": "npm:mongoose",
-        "type": "static"
-      },
-      {
-        "source": "band",
-        "target": "npm:class-validator",
         "type": "static"
       }
     ],

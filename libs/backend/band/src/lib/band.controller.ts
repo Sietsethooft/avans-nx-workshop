@@ -1,7 +1,7 @@
 import { Controller, Get, Post, Put, Delete, Param, Body } from '@nestjs/common';
 import { BandService } from './band.service';
 import { Band } from './band.schema';
-import { CreateBandDto, UpdateBandDto } from './dto';
+import { CreateBandDto, UpdateBandDto } from '@avans-nx-workshop/backend/dto';
 
 @Controller('band')
 export class BandController {
