@@ -1,6 +1,7 @@
 import { Schema, Prop, SchemaFactory } from '@nestjs/mongoose';
 import { Document, Types } from 'mongoose';
-import { Instrument, InstrumentSchema } from '../instrument/instrument.schema';
+// import { Instrument, InstrumentSchema } from '@avans-nx-workshop/backend/instrument';
+import { Instrument, InstrumentSchema } from '../../../instrument/src';
 import { IsString, IsMongoId, IsEnum, IsNumber } from 'class-validator';
 
 @Schema()

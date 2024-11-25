@@ -35,6 +35,9 @@
             "@avans-nx-workshop/frontend-common": [
                 "libs/frontend/common/src/index.ts"
             ],
+            "@avans-nx-workshop/instrument": [
+                "libs/backend/instrument/src/index.ts"
+            ],
             "@avans-nx-workshop/share-a-meal/auth": [
                 "libs/share-a-meal/auth/src/index.ts"
             ],
