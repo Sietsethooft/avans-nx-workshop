@@ -65,20 +65,20 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": ".eslintignore",
-        "hash": "13404745306227114823"
+        "file": "Nx-workshop.postman_collection.json",
+        "hash": "13796819436055774183"
       },
       {
-        "file": "nx.json",
-        "hash": "13543554231657983656"
+        "file": ".prettierrc",
+        "hash": "6192629144332209564"
       },
       {
-        "file": "libs/share-a-meal/readme.txt",
-        "hash": "8731589497805983804"
+        "file": "package-lock.json",
+        "hash": "1194419262312006041"
       },
       {
-        "file": "package.json",
-        "hash": "3868875776957438874"
+        "file": "jest.preset.js",
+        "hash": "7473220183190921152"
       },
       {
         "file": "README.md",
@@ -89,48 +89,48 @@
         "hash": "135344717789917661"
       },
       {
+        "file": "jest.config.ts",
+        "hash": "3407785570333453138"
+      },
+      {
+        "file": "package.json",
+        "hash": "3868875776957438874"
+      },
+      {
         "file": ".github/workflows/azure-static-web-apps-icy-tree-01fe4d303.yml",
         "hash": "4292851524355691075"
       },
       {
-        "file": ".editorconfig",
-        "hash": "11532813898455409296"
-      },
-      {
-        "file": "package-lock.json",
-        "hash": "1194419262312006041"
+        "file": "nx.json",
+        "hash": "13543554231657983656"
       },
       {
         "file": ".gitignore",
         "hash": "637008721651112966"
       },
       {
-        "file": ".eslintrc.json",
-        "hash": "4566917484430375526"
-      },
-      {
-        "file": ".prettierrc",
-        "hash": "6192629144332209564"
-      },
-      {
-        "file": "jest.config.ts",
-        "hash": "3407785570333453138"
-      },
-      {
-        "file": "jest.preset.js",
-        "hash": "7473220183190921152"
-      },
-      {
-        "file": "Nx-workshop.postman_collection.json",
-        "hash": "13796819436055774183"
-      },
-      {
         "file": "tsconfig.base.json",
         "hash": "102872237454768305"
       },
       {
+        "file": "libs/share-a-meal/readme.txt",
+        "hash": "8731589497805983804"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "4566917484430375526"
+      },
+      {
+        "file": ".eslintignore",
+        "hash": "13404745306227114823"
+      },
+      {
         "file": "migrations.json",
         "hash": "4597419159832879830"
+      },
+      {
+        "file": ".editorconfig",
+        "hash": "11532813898455409296"
       }
     ],
     "projectFileMap": {
@@ -815,6 +815,18 @@
             "npm:mongoose",
             "npm:@nestjs/mongoose",
             "npm:uuid"
+          ]
+        },
+        {
+          "file": "libs/backend/user/src/lib/user/user.schema.ts",
+          "hash": "947072942186766255",
+          "deps": [
+            "npm:@nestjs/mongoose",
+            "npm:mongoose",
+            "instrument",
+            "npm:validator",
+            "api",
+            "npm:class-validator"
           ]
         },
         {
@@ -1505,11 +1517,11 @@
         },
         {
           "file": "libs/backend/dto/src/lib/user.dto.ts",
-          "hash": "17176159729947919542",
+          "hash": "13280143097946192615",
           "deps": [
             "npm:class-validator",
             "api",
-            "backend-features-meal"
+            "instrument"
           ]
         },
         {
@@ -1572,7 +1584,7 @@
         },
         {
           "file": "libs/shared/api/src/lib/models/user.interface.ts",
-          "hash": "18397435122512970079",
+          "hash": "6822745741728513388",
           "deps": [
             "common"
           ]

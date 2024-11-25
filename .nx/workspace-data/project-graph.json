@@ -17427,6 +17427,21 @@
       },
       {
         "source": "users",
+        "target": "instrument",
+        "type": "static"
+      },
+      {
+        "source": "users",
+        "target": "npm:validator",
+        "type": "static"
+      },
+      {
+        "source": "users",
+        "target": "npm:class-validator",
+        "type": "static"
+      },
+      {
+        "source": "users",
         "target": "npm:mongodb",
         "type": "static"
       }
@@ -17470,11 +17485,6 @@
       {
         "source": "dto",
         "target": "npm:express",
-        "type": "static"
-      },
-      {
-        "source": "dto",
-        "target": "backend-features-meal",
         "type": "static"
       }
     ],
