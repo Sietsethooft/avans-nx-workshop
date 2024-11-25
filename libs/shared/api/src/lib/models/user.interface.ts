@@ -26,7 +26,6 @@ export interface IUserIdentity extends IEntity {
     profileImgUrl: string;
     role: UserRole;
     token?: string;
-    nosense?:string;
 }
 
 /**
