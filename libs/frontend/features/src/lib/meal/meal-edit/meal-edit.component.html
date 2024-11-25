@@ -1,0 +1,45 @@
+<h1>Meal edit</h1>
+<p>Meal edit works.</p>
+
+<!-- Form -->
+ <form #mealEditForm="ngForm">
+    <div class="row">
+        <div class="col-4">
+            <div class="form-group">
+                <label for="MealTitle">Meal title</label>
+                <input 
+                    type="text" 
+                    class="form-control" 
+                    id="mealTitle" 
+                    #mealTitle="ngModel"
+                    placeholder="Enter meal title"
+                    name="mealTitle"
+                    [(ngModel)]="meal!.title"
+                    required
+                    minlength="5"
+                >
+
+                @if(!mealTitle.valid){
+                    <div id="titleErrorMsg" class="form-text">
+                        meal title bevat fouten.
+                    </div>
+                }
+
+              </div>
+        </div>
+        <div class="col-4">
+            <pre
+                >{{meal | json}}
+            </pre>
+        </div>
+
+        <div class="col-4">
+            <!-- Status van title veld -->
+            <pre>
+mealTitle.valid: {{mealTitle.valid}} <br>
+mealEditForm.valid: {{mealEditForm.valid}}
+            </pre>
+        </div>
+    </div>  
+
+ </form>

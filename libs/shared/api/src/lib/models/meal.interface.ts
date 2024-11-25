@@ -15,7 +15,7 @@ export interface IMeal {
     isVega: boolean;
     dateServed: Date;
     sort: MealSort;
-    cook: IUserIdentity;
+    cook?: IUserIdentity;
 }
 
 export type ICreateMeal = Pick<IMeal, 'title' | 'description' | 'sort'>;

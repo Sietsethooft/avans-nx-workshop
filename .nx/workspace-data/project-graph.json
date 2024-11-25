@@ -16233,6 +16233,11 @@
       },
       {
         "source": "features",
+        "target": "npm:@angular/forms",
+        "type": "static"
+      },
+      {
+        "source": "features",
         "target": "api",
         "type": "static"
       },
