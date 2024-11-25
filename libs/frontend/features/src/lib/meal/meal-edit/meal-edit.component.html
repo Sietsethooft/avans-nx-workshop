@@ -2,7 +2,12 @@
 <p>Meal edit works.</p>
 
 <!-- Form -->
- <form #mealEditForm="ngForm">
+ <form 
+    #mealEditForm="ngForm"
+    name="form"
+    (ngSubmit)="mealEditForm.form.valid && onSubmit(meal!)" 
+    novalidate
+    >
     <div class="row">
         <div class="col-4">
             <div class="form-group">
@@ -41,5 +46,16 @@ mealEditForm.valid: {{mealEditForm.valid}}
             </pre>
         </div>
     </div>  
+
+    <!-- Buttons -->
+     <div>
+        <button 
+            type="submit" 
+            class="btn btn-primary"
+            [disabled]="!mealEditForm.valid"
+        >
+            Save
+        </button>
+     </div>
 
  </form>

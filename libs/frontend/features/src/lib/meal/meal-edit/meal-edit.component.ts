@@ -29,4 +29,11 @@ export class MealEditComponent {
             sort: MealSort.Breakfast
         };
     }
+
+    onSubmit(meal: IMeal): void {
+        // verzend meal-object naar de data-api backend.
+        // Handel eventuele fouten af.
+
+        console.log('onSubmit', meal);
+    }
 }
