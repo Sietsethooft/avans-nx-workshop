@@ -52,60 +52,48 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "nx.json",
-        "hash": "3545277295341199665"
-      },
-      {
-        "file": ".eslintignore",
-        "hash": "13404745306227114823"
-      },
-      {
-        "file": ".prettierrc",
-        "hash": "6192629144332209564"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "11966908335120871298"
-      },
-      {
         "file": "Nx-workshop.postman_collection.json",
         "hash": "13796819436055774183"
-      },
-      {
-        "file": "migrations.json",
-        "hash": "4597419159832879830"
-      },
-      {
-        "file": ".editorconfig",
-        "hash": "11532813898455409296"
-      },
-      {
-        "file": "jest.preset.js",
-        "hash": "7473220183190921152"
-      },
-      {
-        "file": "tsconfig.base.json",
-        "hash": "5853766662806313320"
-      },
-      {
-        "file": ".eslintrc.json",
-        "hash": "4566917484430375526"
       },
       {
         "file": "package-lock.json",
         "hash": "1194419262312006041"
       },
       {
-        "file": "README.md",
-        "hash": "1955868086715526908"
-      },
-      {
         "file": "libs/share-a-meal/readme.txt",
         "hash": "8731589497805983804"
       },
       {
+        "file": "jest.preset.js",
+        "hash": "7473220183190921152"
+      },
+      {
+        "file": ".eslintignore",
+        "hash": "13404745306227114823"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "4566917484430375526"
+      },
+      {
+        "file": "package.json",
+        "hash": "2989054113532756238"
+      },
+      {
         "file": ".prettierignore",
         "hash": "135344717789917661"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "6192629144332209564"
+      },
+      {
+        "file": "README.md",
+        "hash": "1955868086715526908"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "11966908335120871298"
       },
       {
         "file": "jest.config.ts",
@@ -113,11 +101,23 @@
       },
       {
         "file": ".github/workflows/deploy.yml",
-        "hash": "5774042031464923260"
+        "hash": "7439822610637499592"
       },
       {
-        "file": "package.json",
-        "hash": "2989054113532756238"
+        "file": "nx.json",
+        "hash": "3545277295341199665"
+      },
+      {
+        "file": ".editorconfig",
+        "hash": "11532813898455409296"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "5853766662806313320"
+      },
+      {
+        "file": "migrations.json",
+        "hash": "4597419159832879830"
       }
     ],
     "projectFileMap": {
