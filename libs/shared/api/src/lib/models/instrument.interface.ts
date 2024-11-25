@@ -1,11 +1,12 @@
 import { Id } from './id.type';
 
 export interface IInstrument {
-    id: Id;
-    name: string;
-    type: string;
+  _id: Id;
+  name: string;
+  type: string;
+  imageURL?: string;
 }
 
-export type ICreateInstrument = Pick<IInstrument, 'name' | 'type'>;
-export type IUpdateInstrument = Partial<Omit<IInstrument, 'id'>>;
+export type ICreateInstrument = Pick<IInstrument, 'name' | 'type' | 'imageURL' | '_id'>;
+export type IUpdateInstrument = Partial<Omit<IInstrument, '_id'>>;
 export type IUpsertInstrument = IInstrument;

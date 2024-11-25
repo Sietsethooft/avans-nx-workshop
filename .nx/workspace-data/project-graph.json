@@ -17106,6 +17106,11 @@
       },
       {
         "source": "instrument",
+        "target": "dto",
+        "type": "static"
+      },
+      {
+        "source": "instrument",
         "target": "npm:@nestjs/mongoose",
         "type": "static"
       },
@@ -17569,11 +17574,6 @@
       },
       {
         "source": "data-api",
-        "target": "backend-features-meal",
-        "type": "static"
-      },
-      {
-        "source": "data-api",
         "target": "users",
         "type": "static"
       },
@@ -17590,6 +17590,16 @@
       {
         "source": "data-api",
         "target": "util-env",
+        "type": "static"
+      },
+      {
+        "source": "data-api",
+        "target": "band",
+        "type": "static"
+      },
+      {
+        "source": "data-api",
+        "target": "instrument",
         "type": "static"
       },
       {

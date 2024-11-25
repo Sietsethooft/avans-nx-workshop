@@ -1,9 +1,13 @@
 import { Schema, Prop, SchemaFactory } from '@nestjs/mongoose';
-import { IsString } from 'class-validator';
+import { IsMongoId, IsString } from 'class-validator';
 import { Document } from 'mongoose';
 
 @Schema()
 export class Instrument {
+  @Prop({ required: true })
+  @IsMongoId()
+  _id!: string;
+  
   @Prop({ required: true })
   @IsString()
   name!: string;
