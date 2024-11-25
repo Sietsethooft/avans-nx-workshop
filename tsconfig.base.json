@@ -28,6 +28,7 @@
             "@avans-nx-workshop/backend/user": [
                 "libs/backend/user/src/index.ts"
             ],
+            "@avans-nx-workshop/band": ["libs/backend/band/src/index.ts"],
             "@avans-nx-workshop/features": [
                 "libs/frontend/features/src/index.ts"
             ],
