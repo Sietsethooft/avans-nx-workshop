@@ -212,3 +212,23 @@ An organization admin can start a free two week PRO plan trial with no billing r
 [NX Daemon Server] - 2024-11-19T20:01:03.825Z - [WATCHER]: Stopping the watcher for C:\Documenten\Jaar 2\Periode 2\Client-side\github_avans-nx-workshop\avans-nx-workshop (sources)
 [NX Daemon Server] - 2024-11-19T20:01:03.826Z - [WATCHER]: Stopping the watcher for C:\Documenten\Jaar 2\Periode 2\Client-side\github_avans-nx-workshop\avans-nx-workshop (outputs)
 [NX Daemon Server] - 2024-11-19T20:01:03.841Z - Server stopped because: "this process is no longer the current daemon (native)"
+[NX Daemon Server] - 2024-11-25T12:21:54.586Z - Started listening on: \\.\pipe\nx\C:\Users\siets\AppData\Local\Temp\f439848001\d.sock
+[NX Daemon Server] - 2024-11-25T12:21:54.592Z - [WATCHER]: Subscribed to changes within: c:\Documenten\Jaar 2\Periode 2\Client-side\github_avans-nx-workshop\avans-nx-workshop (native)
+[NX Daemon Server] - 2024-11-25T12:21:54.596Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-11-25T12:21:54.598Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-11-25T12:21:54.598Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-11-25T12:21:54.600Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-11-25T12:21:55.066Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-25T12:21:55.066Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-25T12:21:55.066Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-25T12:21:55.075Z - Time taken for 'loadNxPlugins' 463.6809999999998ms
+[NX Daemon Server] - 2024-11-25T12:21:55.119Z - Time taken for 'build-project-configs' 28.822400000000016ms
+[NX Daemon Server] - 2024-11-25T12:21:55.159Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-11-25T12:21:55.161Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-11-25T12:21:55.163Z - Time taken for 'total for creating and serializing project graph' 560.9331999999999ms
+[NX Daemon Server] - 2024-11-25T12:21:55.164Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-11-25T12:21:55.164Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 561. Response time: 3.
+[NX Daemon Server] - 2024-11-25T12:21:55.182Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX Daemon Server] - 2024-11-25T12:21:55.183Z - Done responding to the client handleContextFileData
+[NX Daemon Server] - 2024-11-25T12:21:55.183Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2024-11-25T12:21:55.185Z - Closed a connection. Number of open connections: 0
