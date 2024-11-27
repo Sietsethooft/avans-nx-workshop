@@ -1,6 +1,7 @@
 import { Id } from './id.type';
 import { IUserIdentity } from './user.interface';
 import { IInstrument } from './instrument.interface';
+import { IEntity } from '@avans-nx-workshop/share-a-meal/common';
 
 export enum FrequencyRepetition {
   Weekly = 'Weekly',
@@ -8,13 +9,12 @@ export enum FrequencyRepetition {
   Quarterly = 'Quarterly'
 }
 
-export interface IBand {
-  _id: Id;
+export interface IBand extends IEntity{
   name: string;
   description?: string;
   leader: IUserIdentity;
   members: IUserIdentity[];
-  searchFor: IInstrument[];
+  searchFor?: IInstrument[];
   frequencyRepetition?: FrequencyRepetition;
   region?: string;
   genres: string[];
@@ -23,5 +23,5 @@ export interface IBand {
 }
 
 export type ICreateBand = Pick<IBand, 'name' | 'description' | 'leader' | 'members' | 'searchFor' | 'frequencyRepetition' | 'region' | 'genres' | 'minAge' | 'minExperience'>;
-export type IUpdateBand = Partial<Omit<IBand, '_id'>>;
+export type IUpdateBand = Partial<Omit<IBand, 'id'>>;
 export type IUpsertBand = IBand;

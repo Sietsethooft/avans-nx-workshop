@@ -65,28 +65,36 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": ".prettierignore",
-        "hash": "135344717789917661"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "637008721651112966"
-      },
-      {
         "file": ".editorconfig",
         "hash": "11532813898455409296"
       },
       {
-        "file": "nx.json",
-        "hash": "13543554231657983656"
+        "file": "package-lock.json",
+        "hash": "1194419262312006041"
+      },
+      {
+        "file": "Nx-workshop.postman_collection.json",
+        "hash": "13796819436055774183"
+      },
+      {
+        "file": "migrations.json",
+        "hash": "4597419159832879830"
       },
       {
         "file": "libs/share-a-meal/readme.txt",
         "hash": "8731589497805983804"
       },
       {
-        "file": "package-lock.json",
-        "hash": "1194419262312006041"
+        "file": "README.md",
+        "hash": "1955868086715526908"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "102872237454768305"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "135344717789917661"
       },
       {
         "file": "jest.config.ts",
@@ -97,40 +105,32 @@
         "hash": "4292851524355691075"
       },
       {
-        "file": ".prettierrc",
-        "hash": "6192629144332209564"
-      },
-      {
-        "file": "migrations.json",
-        "hash": "4597419159832879830"
+        "file": ".eslintignore",
+        "hash": "13404745306227114823"
       },
       {
         "file": ".eslintrc.json",
         "hash": "4566917484430375526"
       },
       {
-        "file": "README.md",
-        "hash": "1955868086715526908"
+        "file": "nx.json",
+        "hash": "13543554231657983656"
       },
       {
-        "file": "Nx-workshop.postman_collection.json",
-        "hash": "13796819436055774183"
-      },
-      {
-        "file": ".eslintignore",
-        "hash": "13404745306227114823"
+        "file": ".prettierrc",
+        "hash": "6192629144332209564"
       },
       {
         "file": "package.json",
         "hash": "3868875776957438874"
       },
       {
-        "file": "jest.preset.js",
-        "hash": "7473220183190921152"
+        "file": ".gitignore",
+        "hash": "637008721651112966"
       },
       {
-        "file": "tsconfig.base.json",
-        "hash": "102872237454768305"
+        "file": "jest.preset.js",
+        "hash": "7473220183190921152"
       }
     ],
     "projectFileMap": {
@@ -293,7 +293,7 @@
         },
         {
           "file": "libs/backend/band/src/lib/band.schema.ts",
-          "hash": "4072616792661204678",
+          "hash": "380568824690560468",
           "deps": [
             "npm:@nestjs/mongoose",
             "npm:mongoose",
@@ -969,7 +969,7 @@
         },
         {
           "file": "libs/backend/dto/src/lib/band.dto.ts",
-          "hash": "10888947237304678878",
+          "hash": "14660684633710202471",
           "deps": [
             "npm:class-validator",
             "npm:mongoose",
@@ -1637,7 +1637,10 @@
         },
         {
           "file": "libs/shared/api/src/lib/models/band.interface.ts",
-          "hash": "3383137146962046362"
+          "hash": "2604961636214504226",
+          "deps": [
+            "common"
+          ]
         },
         {
           "file": "libs/shared/api/src/lib/models/id.type.ts",
