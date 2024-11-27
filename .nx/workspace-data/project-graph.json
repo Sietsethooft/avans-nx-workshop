@@ -17133,12 +17133,7 @@
       },
       {
         "source": "features",
-        "target": "npm:@angular/common",
-        "type": "static"
-      },
-      {
-        "source": "features",
-        "target": "npm:@angular/router",
+        "target": "npm:rxjs",
         "type": "static"
       },
       {
@@ -17148,12 +17143,17 @@
       },
       {
         "source": "features",
-        "target": "npm:rxjs",
+        "target": "npm:@angular/common",
         "type": "static"
       },
       {
         "source": "features",
         "target": "util-env",
+        "type": "static"
+      },
+      {
+        "source": "features",
+        "target": "npm:@angular/router",
         "type": "static"
       },
       {
@@ -17427,11 +17427,6 @@
       },
       {
         "source": "users",
-        "target": "instrument",
-        "type": "static"
-      },
-      {
-        "source": "users",
         "target": "npm:validator",
         "type": "static"
       },
@@ -17470,11 +17465,6 @@
       {
         "source": "dto",
         "target": "npm:mongoose",
-        "type": "static"
-      },
-      {
-        "source": "dto",
-        "target": "instrument",
         "type": "static"
       },
       {
@@ -17590,16 +17580,6 @@
       {
         "source": "data-api",
         "target": "util-env",
-        "type": "static"
-      },
-      {
-        "source": "data-api",
-        "target": "band",
-        "type": "static"
-      },
-      {
-        "source": "data-api",
-        "target": "instrument",
         "type": "static"
       },
       {
