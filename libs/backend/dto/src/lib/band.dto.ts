@@ -12,6 +12,10 @@ export class CreateBandDto {
   @IsOptional()
   description?: string;
 
+  @IsString()
+  @IsOptional()
+  profileImgUrl? = '';
+
   @IsMongoId()
   @IsNotEmpty()
   leader!: Types.ObjectId;
@@ -58,6 +62,10 @@ export class UpsertBandDto {
   @IsOptional()
   description?: string;
 
+  @IsString()
+  @IsOptional()
+  profileImgUrl? = '';
+
   @IsMongoId()
   @IsNotEmpty()
   leader!: Types.ObjectId;
@@ -103,6 +111,10 @@ export class UpdateBandDto {
   @IsString()
   @IsOptional()
   description?: string;
+  
+  @IsString()
+  @IsOptional()
+  profileImgUrl? = '';
 
   @IsMongoId()
   @IsOptional()

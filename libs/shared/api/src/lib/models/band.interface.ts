@@ -12,6 +12,7 @@ export enum FrequencyRepetition {
 export interface IBand extends IEntity{
   name: string;
   description?: string;
+  profileImgUrl?: string;
   leader: IUserIdentity;
   members: IUserIdentity[];
   searchFor?: IInstrument[];

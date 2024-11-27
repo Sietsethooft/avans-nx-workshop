@@ -16,6 +16,13 @@ export class Band {
   @IsString()
   description?: string;
 
+  @Prop({
+    required: false,
+    select: true,
+    default: 'https://utaten.com/karaoke/wp-content/uploads/2018/09/image2-21.jpg'
+  })
+  profileImgUrl?: string;
+
   @Prop({ type: Types.ObjectId, ref: 'User', required: true })
   @IsMongoId()
   leader!: Types.ObjectId;
