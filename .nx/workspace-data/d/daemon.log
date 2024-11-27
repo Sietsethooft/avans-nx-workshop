@@ -4752,3 +4752,22 @@ Failed to process project graph. Run "nx reset" to fix this. Please report the i
 [NX Daemon Server] - 2024-11-27T08:35:39.815Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 2. Response time: 1.
 [NX Daemon Server] - 2024-11-27T08:35:39.816Z - Closed a connection. Number of open connections: 2
 [NX Daemon Server] - 2024-11-27T08:35:41.498Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-27T10:03:04.880Z - Started listening on: \\.\pipe\nx\C:\Users\siets\AppData\Local\Temp\f439848001\d.sock
+[NX Daemon Server] - 2024-11-27T10:03:04.887Z - [WATCHER]: Subscribed to changes within: c:\Documenten\Jaar 2\Periode 2\Client-side\github_avans-nx-workshop\avans-nx-workshop (native)
+[NX Daemon Server] - 2024-11-27T10:03:04.897Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-11-27T10:03:04.900Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-11-27T10:03:04.900Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-11-27T10:03:04.902Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-11-27T10:03:06.193Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-27T10:03:07.515Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-27T10:03:07.515Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-27T10:03:07.515Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-27T10:03:07.534Z - Time taken for 'loadNxPlugins' 2610.7401ms
+[NX Daemon Server] - 2024-11-27T10:03:07.534Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-11-27T10:03:07.535Z - Established a connection. Number of open connections: 3
+[NX Daemon Server] - 2024-11-27T10:03:07.535Z - Closed a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-11-27T10:03:07.538Z - [REQUEST]: Responding to the client. handleGlob
+[NX Daemon Server] - 2024-11-27T10:03:07.539Z - Done responding to the client handleGlob
+[NX Daemon Server] - 2024-11-27T10:03:07.539Z - Handled GLOB. Handling time: 1. Response time: 1.
+[NX Daemon Server] - 2024-11-27T10:03:07.916Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-27T10:03:07.978Z - [WATCHER]: Processing file changes in outputs
