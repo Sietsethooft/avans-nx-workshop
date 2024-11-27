@@ -35,8 +35,8 @@ export class Band {
   searchFor?: Instrument[];
 
   @Prop()
-  @IsEnum(['Weekly', 'Monthly', 'Quarterly'])
-  frequencyRepetition?: 'Weekly' | 'Monthly' | 'Quarterly';
+  @IsEnum(['Wekelijks', 'Maandelijks', 'Per kwartaal'])
+  frequencyRepetition?: 'Wekelijks' | 'Maandelijks' | 'Per kwartaal';
 
   @Prop()
   @IsString()

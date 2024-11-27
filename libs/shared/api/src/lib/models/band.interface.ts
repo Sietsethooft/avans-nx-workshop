@@ -4,9 +4,9 @@ import { IInstrument } from './instrument.interface';
 import { IEntity } from '@avans-nx-workshop/share-a-meal/common';
 
 export enum FrequencyRepetition {
-  Weekly = 'Weekly',
-  Monthly = 'Monthly',
-  Quarterly = 'Quarterly'
+  Weekly = 'Wekelijks',
+  Monthly = 'Maandelijks',
+  Quarterly = 'Per kwartaal'
 }
 
 export interface IBand extends IEntity{
