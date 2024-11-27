@@ -19,6 +19,7 @@ export class UserEditComponent implements OnInit, OnDestroy {
   sub: Subscription = new Subscription();
   genders = Object.values(UserGender);
   userForm: FormGroup;
+  photoForm: FormGroup;
   formattedBirthDate: string = '';
 
   constructor(
@@ -34,7 +35,12 @@ export class UserEditComponent implements OnInit, OnDestroy {
       gender: ['', Validators.required],
       formattedBirthDate: ['', [Validators.required, this.dateValidator]]
     });
+  
+    this.photoForm = this.fb.group({
+      profileImgUrl: ['', [Validators.required, Validators.pattern(/https?:\/\/.+/)]]
+    });
   }
+  
 
   ngOnInit() {
     this.route.paramMap.subscribe((params: any) => {
@@ -90,4 +96,20 @@ export class UserEditComponent implements OnInit, OnDestroy {
     }
     return null;
   }
+
+  updatePhoto() {
+    if (this.photoForm.valid) {
+      const newUrl = this.photoForm.value.profileImgUrl;
+      this.user.profileImgUrl = newUrl;
+  
+      // Opslaan via de user-service
+      if (this.userId) {
+        this.userService.updateUser(this.userId, this.user).subscribe(() => {
+          // Sluit de modal handmatig
+          const modalElement = document.getElementById('uploadPhotoModal');
+        });
+      }
+    }
+  }
+  
 }
