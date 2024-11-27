@@ -65,48 +65,12 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "nx.json",
-        "hash": "13543554231657983656"
-      },
-      {
-        "file": ".github/workflows/azure-static-web-apps-icy-tree-01fe4d303.yml",
-        "hash": "4292851524355691075"
-      },
-      {
-        "file": "package-lock.json",
-        "hash": "1194419262312006041"
-      },
-      {
-        "file": "package.json",
-        "hash": "3868875776957438874"
-      },
-      {
-        "file": "jest.config.ts",
-        "hash": "3407785570333453138"
-      },
-      {
-        "file": ".prettierrc",
-        "hash": "6192629144332209564"
-      },
-      {
-        "file": "Nx-workshop.postman_collection.json",
-        "hash": "13796819436055774183"
-      },
-      {
-        "file": ".editorconfig",
-        "hash": "11532813898455409296"
-      },
-      {
         "file": ".prettierignore",
         "hash": "135344717789917661"
       },
       {
-        "file": "libs/share-a-meal/readme.txt",
-        "hash": "8731589497805983804"
-      },
-      {
-        "file": "tsconfig.base.json",
-        "hash": "102872237454768305"
+        "file": "nx.json",
+        "hash": "13543554231657983656"
       },
       {
         "file": ".gitignore",
@@ -117,20 +81,60 @@
         "hash": "1955868086715526908"
       },
       {
-        "file": ".eslintignore",
-        "hash": "13404745306227114823"
-      },
-      {
         "file": "migrations.json",
         "hash": "4597419159832879830"
+      },
+      {
+        "file": ".vscode/settings.json",
+        "hash": "16632116639765706074"
       },
       {
         "file": "jest.preset.js",
         "hash": "7473220183190921152"
       },
       {
+        "file": "package.json",
+        "hash": "3868875776957438874"
+      },
+      {
+        "file": "libs/share-a-meal/readme.txt",
+        "hash": "8731589497805983804"
+      },
+      {
+        "file": ".editorconfig",
+        "hash": "11532813898455409296"
+      },
+      {
+        "file": ".github/workflows/azure-static-web-apps-icy-tree-01fe4d303.yml",
+        "hash": "4292851524355691075"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "1194419262312006041"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "3407785570333453138"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "102872237454768305"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "6192629144332209564"
+      },
+      {
+        "file": "Nx-workshop.postman_collection.json",
+        "hash": "13796819436055774183"
+      },
+      {
         "file": ".eslintrc.json",
         "hash": "4566917484430375526"
+      },
+      {
+        "file": ".eslintignore",
+        "hash": "13404745306227114823"
       }
     ],
     "projectFileMap": {
@@ -1412,7 +1416,7 @@
         },
         {
           "file": "libs/frontend/features/src/lib/bands/band-list/band-list.component.html",
-          "hash": "16842078715578941359"
+          "hash": "12763467336319669367"
         },
         {
           "file": "libs/frontend/features/src/lib/bands/band-list/band-list.component.ts",
