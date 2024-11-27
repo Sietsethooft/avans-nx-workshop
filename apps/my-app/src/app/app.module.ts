@@ -7,7 +7,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AboutComponent } from './components/about/about.component';
 import { HeaderComponent } from './components/ui/header/header.component';
 import { FooterComponent } from './components/ui/footer/footer.component';
-import { FeaturesModule } from '../../../../libs/frontend/features/src';
+import { FeaturesModule } from '@avans-nx-workshop/features';
 
 @NgModule({
     declarations: [

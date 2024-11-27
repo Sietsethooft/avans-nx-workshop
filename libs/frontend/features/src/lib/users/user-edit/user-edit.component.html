@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-xl-4">
     <div class="card mb-4 mb-xl-0">
-      <div class="card-header">Profielfoto</div>
+      <div class="card-header" style="background-color: #435d7d; color: white;">Profielfoto</div>
       <div class="card-body text-center">
         <img class="img-account-profile rounded-circle mb-2" [src]="user?.profileImgUrl" alt="Profielfoto" style="width: 150px; height: 150px;">
       </div>
@@ -9,7 +9,7 @@
   </div>
   <div class="col-xl-8">
     <div class="card mb-4">
-      <div class="card-header">Accountgegevens</div>
+      <div class="card-header" style="background-color: #435d7d; color: white;">Accountgegevens</div>
       <div class="card-body">
         <form [formGroup]="userForm" (ngSubmit)="onSave()">
           <div class="row mb-3">
