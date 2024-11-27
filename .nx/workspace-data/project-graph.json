@@ -17158,6 +17158,16 @@
       },
       {
         "source": "features",
+        "target": "npm:@angular/forms",
+        "type": "static"
+      },
+      {
+        "source": "features",
+        "target": "users",
+        "type": "static"
+      },
+      {
+        "source": "features",
         "target": "npm:jest-preset-angular",
         "type": "static"
       }

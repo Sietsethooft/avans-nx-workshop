@@ -1,1 +1,56 @@
-<p>user-edit works!</p>
+<div class="row">
+    <div class="col-xl-4">
+      <div class="card mb-4 mb-xl-0">
+        <div class="card-header">Profielfoto</div>
+        <div class="card-body text-center">
+          <img class="img-account-profile rounded-circle mb-2" [src]="user?.profileImgUrl" alt="Profielfoto" style="width: 150px; height: 150px;">
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-8">
+      <div class="card mb-4">
+        <div class="card-header">Accountgegevens</div>
+        <div class="card-body">
+          <form (ngSubmit)="onSave()">
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label class="small mb-1" for="inputName">Naam</label>
+                <input class="form-control" id="inputName" type="text" [(ngModel)]="user.name" name="name">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label class="small mb-1" for="inputEmail">E-mail</label>
+                <input class="form-control" id="inputEmail" type="email" [(ngModel)]="user.emailAddress" name="emailAddress">
+              </div>
+              <div class="col-md-6">
+                <label class="small mb-1" for="inputRole">Rol</label>
+                <input class="form-control" id="inputRole" type="text" [(ngModel)]="user.role" name="role">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label class="small mb-1" for="inputGender">Geslacht</label>
+                <input class="form-control" id="inputGender" type="text" [(ngModel)]="user.gender" name="gender">
+              </div>
+              <div class="col-md-6">
+                <label class="small mb-1" for="inputBirthDate">Geboortedatum</label>
+                <input class="form-control" id="inputBirthDate" type="text" [(ngModel)]="user.birthDate" name="birthDate">
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="small mb-1" for="inputInstruments">Instrumenten</label>
+              <ul class="list-group">
+                <li class="list-group-item" *ngFor="let instrument of user?.instruments">{{ instrument.name }}</li>
+              </ul>
+            </div>
+            <div class="mb-3 col-md-6">
+              <label class="small mb-1" for="inputIsActive">Actief</label>
+              <input class="form-control" id="inputIsActive" type="text" [(ngModel)]="user.isActive" name="isActive">
+            </div>
+            <button class="btn btn-primary btn-sm" type="submit">Opslaan</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
