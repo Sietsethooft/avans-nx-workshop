@@ -1,6 +1,7 @@
 import {
     Body,
     Controller,
+    Delete,
     Get,
     Param,
     Post,
@@ -45,5 +46,10 @@ export class UserController {
         @Body() user: UpdateUserDto
     ): Promise<IUserInfo | null> {
         return this.userService.update(id, user);
+    }
+
+    @Delete(':id')
+    delete(@Param('id') id: string): Promise<IUserInfo | null> {
+        return this.userService.delete(id);
     }
 }
