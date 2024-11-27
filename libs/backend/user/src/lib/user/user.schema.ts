@@ -47,7 +47,7 @@ export class User implements IUser {
     @Prop({
         required: false,
         select: true,
-        default: 'https://cdn-icons-png.flaticon.com/512/219/219969.png'
+        default: 'https://lpcna.nhs.uk/application/files/1516/0322/1131/person-placeholder.jpg'
     })
     profileImgUrl?: string;
 
