@@ -14,41 +14,41 @@
         <form (ngSubmit)="onSave()">
           <div class="row mb-3">
             <div class="col-md-6">
-              <label class="small mb-1" for="inputName">Naam</label>
+              <label class="fs-4 mb-1" for="inputName">Naam</label>
               <input class="form-control" id="inputName" type="text" [(ngModel)]="user.name" name="name">
             </div>
           </div>
           <div class="row mb-3">
             <div class="col-md-6">
-              <label class="small mb-1" for="inputEmail">E-mail</label>
+              <label class="fs-4 mb-1" for="inputEmail">E-mail</label>
               <input class="form-control" id="inputEmail" type="email" [(ngModel)]="user.emailAddress" name="emailAddress">
             </div>
             <div class="col-md-6">
-              <label class="small mb-1" for="inputRole">Rol</label>
+              <label class="fs-4 mb-1" for="inputRole">Rol</label>
               <p class="form-control-plaintext">{{ user.role }}</p>
             </div>
           </div>
           <div class="row mb-3">
             <div class="col-md-6">
-              <label class="small mb-1" for="inputGender">Geslacht</label>
+              <label class="fs-4 mb-1" for="inputGender">Geslacht</label>
               <select class="form-control" id="inputGender" [(ngModel)]="user.gender" name="gender">
                 <option *ngFor="let gender of genders" [value]="gender">{{ gender }}</option>
               </select>
             </div>
             <div class="col-md-6">
-              <label class="small mb-1" for="inputBirthDate">Geboortedatum</label>
-              <input class="form-control" id="inputBirthDate" type="text" [(ngModel)]="user.birthDate" name="birthDate">
+              <label class="fs-4 mb-1" for="inputBirthDate">Geboortedatum</label>
+              <input class="form-control datepicker" id="inputBirthDate" type="text" [(ngModel)]="user.birthDate" name="birthDate">
             </div>
           </div>
           <div class="mb-3">
-            <label class="small mb-1" for="inputInstruments">Instrumenten</label>
+            <label class="fs-4 mb-1" for="inputInstruments">Instrumenten</label>
             <ul class="list-group">
               <li class="list-group-item" *ngFor="let instrument of user?.instruments">{{ instrument.name }}</li>
             </ul>
           </div>
           <div class="mb-3 col-md-6">
-            <label class="small mb-1" for="inputIsActive">Is Actief</label>
-            <p class="form-control-plaintext">{{ user.isActive ? 'Ja' : 'Nee' }}</p>
+            <label class="fs-4 mb-1" for="inputIsActive">Is Actief</label>
+            <p class="form-control-plaintext p-0">{{ user.isActive ? 'Ja' : 'Nee' }}</p>
           </div>
           <div class="mb-3">
             <button class="btn btn-primary" type="submit">Opslaan</button>

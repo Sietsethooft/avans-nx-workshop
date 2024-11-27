@@ -4,6 +4,7 @@ import { UserService } from '../user.service';
 import { User } from '@avans-nx-workshop/backend/user';
 import { Subscription } from 'rxjs';
 import { UserGender} from '@avans-nx-workshop/shared/api';
+declare var $: any;
 
 @Component({
     selector: 'avans-nx-workshop-user-edit',
@@ -34,6 +35,15 @@ export class UserEditComponent implements OnInit, OnDestroy {
         });
     }
 
+    ngAfterViewInit() {
+        $('.datepicker').datepicker({
+            format: 'dd-mm-yyyy',
+            autoclose: true
+        }).on('changeDate', (e: any) => {
+            this.user.birthDate = this.formatDate(e.date);
+        });
+    }
+
     ngOnDestroy() {
         this.sub.unsubscribe();
     }
@@ -44,5 +54,12 @@ export class UserEditComponent implements OnInit, OnDestroy {
                 this.router.navigate(['/users']);
             });
         }
+    }
+
+    private formatDate(date: Date): string {
+        const day = ('0' + date.getDate()).slice(-2);
+        const month = ('0' + (date.getMonth() + 1)).slice(-2);
+        const year = date.getFullYear();
+        return `${day}-${month}-${year}`;
     }
 }
