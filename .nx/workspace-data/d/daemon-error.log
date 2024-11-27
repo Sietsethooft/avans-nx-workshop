@@ -1,0 +1,26 @@
+Daemon process terminated and closed the connection
+
+Messages from the log:
+[NX Daemon Server] - 2024-11-27T13:53:23.364Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-27T13:53:23.365Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-27T13:53:23.365Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-27T13:53:23.389Z - Time taken for 'loadNxPlugins' 602.9042999999999ms
+[NX Daemon Server] - 2024-11-27T13:53:23.395Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-11-27T13:53:23.395Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-11-27T13:53:23.396Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-11-27T13:53:23.399Z - [REQUEST]: Responding to the client. handleGlob
+[NX Daemon Server] - 2024-11-27T13:53:23.404Z - Done responding to the client handleGlob
+[NX Daemon Server] - 2024-11-27T13:53:23.404Z - Handled GLOB. Handling time: 1. Response time: 5.
+[NX Daemon Server] - 2024-11-27T13:53:23.628Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX Daemon Server] - 2024-11-27T13:53:23.628Z - Done responding to the client handleHashGlob
+[NX Daemon Server] - 2024-11-27T13:53:23.628Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX Daemon Server] - 2024-11-27T13:53:24.822Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-11-27T13:53:24.826Z - [WATCHER]: .gitignore was modified
+[NX Daemon Server] - 2024-11-27T13:53:24.827Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-11-27T13:53:24.827Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-11-27T13:53:24.827Z - [WATCHER]: Stopping the watcher for c:\Documenten\Jaar 2\Periode 2\Client-side\github_avans-nx-workshop\avans-nx-workshop (sources)
+[NX Daemon Server] - 2024-11-27T13:53:24.828Z - [WATCHER]: Stopping the watcher for c:\Documenten\Jaar 2\Periode 2\Client-side\github_avans-nx-workshop\avans-nx-workshop (outputs)
+
+
+
+More information: c:\Documenten\Jaar 2\Periode 2\Client-side\github_avans-nx-workshop\avans-nx-workshop\.nx\workspace-data\d\daemon.log
