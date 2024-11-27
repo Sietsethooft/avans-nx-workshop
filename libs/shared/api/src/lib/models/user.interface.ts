@@ -1,7 +1,7 @@
 import { IEntity } from 'libs/share-a-meal/common/src/lib/entity/entity.model';
-import { IMeal } from './meal.interface';
 import { IToken, IUserRegistration } from './auth.interface';
 import { Id } from './id.type';
+import { IInstrument } from './instrument.interface';
 
 export enum UserRole {
     Guest = 'Guest',
@@ -23,7 +23,7 @@ export enum UserGender {
 export interface IUserIdentity extends IEntity {
     name: string;
     emailAddress: string;
-    profileImgUrl: string;
+    profileImgUrl?: string;
     role: UserRole;
     token?: string;
 }
@@ -33,17 +33,19 @@ export interface IUserIdentity extends IEntity {
  */
 export interface IUserInfo extends IUserRegistration {
     _id: Id;
-    profileImgUrl: string;
+    profileImgUrl?: string;
     role: UserRole;
     gender: UserGender;
     isActive: boolean;
+    birthDate: Date;
+    instruments: IInstrument[];
 }
 
 /**
  * All user information, incl. domain entities
  */
 export interface IUser extends IUserInfo {
-    meals: IMeal[];
+    
 }
 
 export type ICreateUser = Pick<IUser, 'name' | 'password' | 'emailAddress'>;

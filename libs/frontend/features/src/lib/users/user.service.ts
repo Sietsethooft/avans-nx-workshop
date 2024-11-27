@@ -1,94 +1,56 @@
 import { Injectable } from '@angular/core';
-import { delay, Observable, of } from 'rxjs';
-import { IUserInfo, UserGender, UserRole } from "@avans-nx-workshop/shared/api";
+import { IUser,IUserInfo, UserRole, UserGender } from '@avans-nx-workshop/shared/api';
+import { delay, map, Observable, of } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { environment } from '@avans-nx-workshop/shared/util-env';
+import { ApiResponse } from '@avans-nx-workshop/shared/api';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
+
 export class UserService {
-  readonly users: IUserInfo[] = [
-    {
-        _id: '1',
-      name: 'Sietse Hooft',
-      emailAddress: 's.Hooft@outlook.com',
-      role: UserRole.Unknown,
-      gender: UserGender.Unknown,
-      password: 'SietsHooft',
-      isActive: true,
-      profileImgUrl: "https://picsum.photos/id/1/200/300"
-    },
-    {
-      _id: '2',
-      name: 'Merel van Dijk',
-      emailAddress: 'm.Dijk2@outlook.com',
-      role: UserRole.Guest,
-      gender: UserGender.Unknown,
-      password: 'MerelDijk',
-      isActive: true,
-      profileImgUrl: "https://picsum.photos/id/22/200/300"
-    },
-    {
-      _id: '3',
-      name: 'Jan de Vries',
-      emailAddress: 'j.devries@outlook.com',
-      role: UserRole.Admin,
-      gender: UserGender.Male,
-      password: 'JanVriesland',
-      isActive: true,
-      profileImgUrl: "https://picsum.photos/id/27/200/300"
-    },
-    {
-      _id: '4',
-      name: 'Anna Jansen',
-      emailAddress: 'a.jansen@outlook.com',
-      role: UserRole.Admin,
-      gender: UserGender.Female,
-      password: 'AdamAnna',
-      isActive: false,
-      profileImgUrl: "https://picsum.photos/id/40/200/300"
-    },
-    {
-      _id: '5',
-      name: 'Peter Bakker',
-      emailAddress: 'p.bakker@outlook.com',
-      role: UserRole.Unknown,
-      gender: UserGender.Male,
-      password: 'PeterBakkers',
-      isActive: true,
-      profileImgUrl: "https://picsum.photos/id/64/200/300"
+    readonly users?: IUserInfo[]
+
+    constructor(private http: HttpClient) {
+        console.log('Service constructor aanroepen');
     }
-  ];
 
-  constructor() {
-    console.log('Service constructor aangeroepen');
-  }
+    getUsersAsync(): Observable<IUserInfo[]> {
+        console.log('getUsersAsync() aanroepen');
+        return this.http
+            .get<ApiResponse<any>>(environment.dataApiUrl + '/user')
+            .pipe(map((response) => response.results));
+    }
 
-  getUsers(): IUserInfo[] {
-    console.log('getUsers aangeroepen');
-    return this.users;
-  }
+    getUserByIdAsync(id: string | null, async: boolean = false): Observable<IUser> {
+        console.log('getUserById aanroepen');
+        return this.http
+            .get<ApiResponse<any>>(environment.dataApiUrl + `/user/${id}`)
+            .pipe(map((response) => response.results));
+    }
 
-  getUsersAsObservable(): Observable<IUserInfo[]> {
-    console.log('getUsersAsObservable aangeroepen');
-    // 'of' is een rxjs operator die een Observable
-    // maakt van de gegeven data.
-    return of(this.users);
-  }
-  
-  getUsersAsync(): Observable<IUserInfo[]> {
-    console.log('getUsersAsObservable aangeroepen');
-    // 'of' is een rxjs operator die een Observable
-    // maakt van de gegeven data.
-    return of(this.users).pipe(delay(1000));
-  }
+    updateUser(id: string | null, user: IUser): Observable<IUser> {
+        console.log('updateUser aanroepen');
+        return this.http
+            .put<ApiResponse<any>>(environment.dataApiUrl + `/user/${id}`, user)
+            .pipe(map((response) => response.results));
+    }
 
-  getUserById(id: string | null): IUserInfo {
-    console.log('getUserById aangeroepen');
-    return this.users.filter((user) => user._id === id)[0];
-  }
+    deleteUser(id: string | null): Observable<IUser> {
+        if (!id) {
+            throw new Error('ID is required to delete a user');
+        }
+        console.log('deleteUser aanroepen');
+        return this.http
+            .delete<ApiResponse<any>>(environment.dataApiUrl + `/user/${id}`)
+            .pipe(map((response) => response.results));
+    }
 
-  getuserByIdAsync(id: string | null): Observable<IUserInfo> {
-    console.log('getUserByIdAsync aangeroepen');
-    return of(this.users.filter((user) => user._id === id)[0]).pipe(delay(1000));
-  }
+    createUser(user: IUser): Observable<IUser> {
+        console.log('createUser aanroepen');
+        return this.http
+          .post<ApiResponse<any>>(environment.dataApiUrl + '/user', user)
+          .pipe(map((response) => response.results));
+      }     
 }

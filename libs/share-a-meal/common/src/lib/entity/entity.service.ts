@@ -2,10 +2,7 @@ import { IEntity } from './entity.model';
 import { Observable, of } from 'rxjs';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
-import { AlertService } from '@avans-nx-workshop/share-a-meal/ui';
-import { AlertType } from '@avans-nx-workshop/share-a-meal/ui';
 import { Id } from '@avans-nx-workshop/shared/api';
-
 /**
  * See https://angular.io/guide/http#requesting-data-from-a-server
  */
@@ -13,6 +10,19 @@ const httpOptions = {
     observe: 'body',
     responseType: 'json' as const
 };
+
+export class AlertService {
+    showAlert(options: any): void {
+        console.log
+    }
+}
+
+export enum AlertType{
+    Success = 'Success',
+    Info = 'Info',
+    Warning = 'Warning',
+    Error = 'Error'
+}
 
 /**
  * Generic service class for communicating objects to/from services.

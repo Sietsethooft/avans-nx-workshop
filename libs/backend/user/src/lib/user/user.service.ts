@@ -48,4 +48,13 @@ export class UserService {
         this.logger.log(`Update user ${user.name}`);
         return this.userModel.findByIdAndUpdate({ _id }, user);
     }
+
+    async delete(_id: string): Promise<IUserInfo | null> {
+        this.logger.log(`Deleting user with id ${_id}`);
+        const deletedItem = await this.userModel.findByIdAndDelete(_id).exec();
+        if (!deletedItem) {
+            this.logger.debug('Item not found');
+        }
+        return deletedItem;
+    }
 }

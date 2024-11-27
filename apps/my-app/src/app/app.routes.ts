@@ -1,6 +1,7 @@
 import { Route } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { UserListComponent, UserEditComponent, UserDetailsComponent } from '@avans-nx-workshop/features';
+import { BandListComponent } from '@avans-nx-workshop/features';
 import { AboutComponent } from './components/about/about.component';
 
 export const appRoutes: Route[] = [
@@ -9,9 +10,15 @@ export const appRoutes: Route[] = [
     { path: 'dashboard', component: DashboardComponent },
     { path: 'about', pathMatch: 'full', component: AboutComponent },
     { path: 'users', pathMatch: 'full', component: UserListComponent },
-    { path: 'users/:id', component: UserDetailsComponent },
-    { path: 'users/new', component: UserEditComponent },
-    { path: 'users/:id/edit', component: UserEditComponent },
+    { path: 'bands', pathMatch: 'full', component: BandListComponent},
 
-    { path: '**', redirectTo: 'dashboard' }
+    { path: 'users/new', component: UserEditComponent },
+    { path: 'users/:id', component: UserDetailsComponent },
+    { path: 'users/:id/edit', component: UserEditComponent }
+
+    // { path: 'bands/:id', component: BandDetailsComponent },
+    // { path: 'bands/new', component: BandEditComponent },
+    // { path: 'bands/:id/edit', component: BandEditComponent },
+
+    // { path: '**', redirectTo: 'dashboard' }
 ];

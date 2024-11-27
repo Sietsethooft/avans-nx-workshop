@@ -5,15 +5,46 @@
       "type": "e2e",
       "data": {
         "root": "apps/share-a-meal-web-e2e",
-        "name": "share-a-meal-web-e2e",
-        "$schema": "../../node_modules/nx/schemas/project-schema.json",
-        "projectType": "application",
-        "sourceRoot": "apps/share-a-meal-web-e2e/src",
-        "tags": [],
-        "implicitDependencies": [
-          "share-a-meal-web"
-        ],
         "targets": {
+          "eslint:lint": {
+            "cache": true,
+            "options": {
+              "cwd": "apps/share-a-meal-web-e2e",
+              "command": "eslint ."
+            },
+            "inputs": [
+              "default",
+              "^default",
+              "{workspaceRoot}/.eslintrc.json",
+              "{projectRoot}/.eslintrc.json",
+              "{workspaceRoot}/tools/eslint-rules/**/*",
+              {
+                "externalDependencies": [
+                  "eslint"
+                ]
+              }
+            ],
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "metadata": {
+              "technologies": [
+                "eslint"
+              ],
+              "description": "Runs ESLint on project",
+              "help": {
+                "command": "npx eslint --help",
+                "example": {
+                  "options": {
+                    "max-warnings": 0
+                  }
+                }
+              }
+            },
+            "executor": "nx:run-commands",
+            "configurations": {},
+            "parallelism": true
+          },
           "e2e": {
             "executor": "@nx/cypress:cypress",
             "options": {
@@ -56,7 +87,15 @@
               "{workspaceRoot}/eslint.config.js"
             ]
           }
-        }
+        },
+        "name": "share-a-meal-web-e2e",
+        "$schema": "../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "application",
+        "sourceRoot": "apps/share-a-meal-web-e2e/src",
+        "tags": [],
+        "implicitDependencies": [
+          "share-a-meal-web"
+        ]
       }
     },
     "common": {
@@ -64,13 +103,46 @@
       "type": "lib",
       "data": {
         "root": "libs/share-a-meal/common",
-        "name": "common",
-        "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-        "sourceRoot": "libs/share-a-meal/common/src",
-        "prefix": "avans-nx-workshop",
-        "projectType": "library",
-        "tags": [],
         "targets": {
+          "eslint:lint": {
+            "cache": true,
+            "options": {
+              "cwd": "libs/share-a-meal/common",
+              "command": "eslint ."
+            },
+            "inputs": [
+              "default",
+              "^default",
+              "{workspaceRoot}/.eslintrc.json",
+              "{projectRoot}/.eslintrc.json",
+              "{workspaceRoot}/tools/eslint-rules/**/*",
+              {
+                "externalDependencies": [
+                  "eslint"
+                ]
+              }
+            ],
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "metadata": {
+              "technologies": [
+                "eslint"
+              ],
+              "description": "Runs ESLint on project",
+              "help": {
+                "command": "npx eslint --help",
+                "example": {
+                  "options": {
+                    "max-warnings": 0
+                  }
+                }
+              }
+            },
+            "executor": "nx:run-commands",
+            "configurations": {},
+            "parallelism": true
+          },
           "test": {
             "executor": "@nx/jest:jest",
             "outputs": [
@@ -116,6 +188,83 @@
             ]
           }
         },
+        "name": "common",
+        "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/share-a-meal/common/src",
+        "prefix": "avans-nx-workshop",
+        "projectType": "library",
+        "tags": [],
+        "implicitDependencies": []
+      }
+    },
+    "instrument": {
+      "name": "instrument",
+      "type": "lib",
+      "data": {
+        "root": "libs/backend/instrument",
+        "targets": {
+          "eslint:lint": {
+            "cache": true,
+            "options": {
+              "cwd": "libs/backend/instrument",
+              "command": "eslint ."
+            },
+            "inputs": [
+              "default",
+              "^default",
+              "{workspaceRoot}/.eslintrc.json",
+              "{projectRoot}/.eslintrc.json",
+              "{workspaceRoot}/tools/eslint-rules/**/*",
+              {
+                "externalDependencies": [
+                  "eslint"
+                ]
+              }
+            ],
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "metadata": {
+              "technologies": [
+                "eslint"
+              ],
+              "description": "Runs ESLint on project",
+              "help": {
+                "command": "npx eslint --help",
+                "example": {
+                  "options": {
+                    "max-warnings": 0
+                  }
+                }
+              }
+            },
+            "executor": "nx:run-commands",
+            "configurations": {},
+            "parallelism": true
+          },
+          "test": {
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/{projectRoot}"
+            ],
+            "options": {
+              "jestConfig": "libs/backend/instrument/jest.config.ts"
+            },
+            "configurations": {},
+            "parallelism": true,
+            "cache": true,
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ]
+          }
+        },
+        "name": "instrument",
+        "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/backend/instrument/src",
+        "projectType": "library",
+        "tags": [],
         "implicitDependencies": []
       }
     },
@@ -124,13 +273,46 @@
       "type": "lib",
       "data": {
         "root": "libs/frontend/features",
-        "name": "features",
-        "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-        "sourceRoot": "libs/frontend/features/src",
-        "prefix": "avans-nx-workshop",
-        "projectType": "library",
-        "tags": [],
         "targets": {
+          "eslint:lint": {
+            "cache": true,
+            "options": {
+              "cwd": "libs/frontend/features",
+              "command": "eslint ."
+            },
+            "inputs": [
+              "default",
+              "^default",
+              "{workspaceRoot}/.eslintrc.json",
+              "{projectRoot}/.eslintrc.json",
+              "{workspaceRoot}/tools/eslint-rules/**/*",
+              {
+                "externalDependencies": [
+                  "eslint"
+                ]
+              }
+            ],
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "metadata": {
+              "technologies": [
+                "eslint"
+              ],
+              "description": "Runs ESLint on project",
+              "help": {
+                "command": "npx eslint --help",
+                "example": {
+                  "options": {
+                    "max-warnings": 0
+                  }
+                }
+              }
+            },
+            "executor": "nx:run-commands",
+            "configurations": {},
+            "parallelism": true
+          },
           "test": {
             "executor": "@nx/jest:jest",
             "outputs": [
@@ -176,6 +358,12 @@
             ]
           }
         },
+        "name": "features",
+        "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/frontend/features/src",
+        "prefix": "avans-nx-workshop",
+        "projectType": "library",
+        "tags": [],
         "implicitDependencies": []
       }
     },
@@ -184,12 +372,46 @@
       "type": "lib",
       "data": {
         "root": "libs/backend/features",
-        "name": "backend-features-meal",
-        "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
-        "sourceRoot": "libs/backend/features/meal/src",
-        "projectType": "library",
-        "tags": [],
         "targets": {
+          "eslint:lint": {
+            "cache": true,
+            "options": {
+              "cwd": "libs/backend/features",
+              "command": "eslint ."
+            },
+            "inputs": [
+              "default",
+              "^default",
+              "{workspaceRoot}/.eslintrc.json",
+              "{projectRoot}/.eslintrc.json",
+              "{workspaceRoot}/tools/eslint-rules/**/*",
+              {
+                "externalDependencies": [
+                  "eslint"
+                ]
+              }
+            ],
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "metadata": {
+              "technologies": [
+                "eslint"
+              ],
+              "description": "Runs ESLint on project",
+              "help": {
+                "command": "npx eslint --help",
+                "example": {
+                  "options": {
+                    "max-warnings": 0
+                  }
+                }
+              }
+            },
+            "executor": "nx:run-commands",
+            "configurations": {},
+            "parallelism": true
+          },
           "lint": {
             "executor": "@nx/eslint:lint",
             "outputs": [
@@ -234,6 +456,11 @@
             ]
           }
         },
+        "name": "backend-features-meal",
+        "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/backend/features/meal/src",
+        "projectType": "library",
+        "tags": [],
         "implicitDependencies": []
       }
     },
@@ -242,13 +469,46 @@
       "type": "app",
       "data": {
         "root": "apps/share-a-meal-web",
-        "name": "share-a-meal-web",
-        "$schema": "../../node_modules/nx/schemas/project-schema.json",
-        "projectType": "application",
-        "prefix": "avans-nx-workshop",
-        "sourceRoot": "apps/share-a-meal-web/src",
-        "tags": [],
         "targets": {
+          "eslint:lint": {
+            "cache": true,
+            "options": {
+              "cwd": "apps/share-a-meal-web",
+              "command": "eslint ."
+            },
+            "inputs": [
+              "default",
+              "^default",
+              "{workspaceRoot}/.eslintrc.json",
+              "{projectRoot}/.eslintrc.json",
+              "{workspaceRoot}/tools/eslint-rules/**/*",
+              {
+                "externalDependencies": [
+                  "eslint"
+                ]
+              }
+            ],
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "metadata": {
+              "technologies": [
+                "eslint"
+              ],
+              "description": "Runs ESLint on project",
+              "help": {
+                "command": "npx eslint --help",
+                "example": {
+                  "options": {
+                    "max-warnings": 0
+                  }
+                }
+              }
+            },
+            "executor": "nx:run-commands",
+            "configurations": {},
+            "parallelism": true
+          },
           "build": {
             "executor": "@angular-devkit/build-angular:browser",
             "outputs": [
@@ -402,6 +662,12 @@
             "parallelism": true
           }
         },
+        "name": "share-a-meal-web",
+        "$schema": "../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "application",
+        "prefix": "avans-nx-workshop",
+        "sourceRoot": "apps/share-a-meal-web/src",
+        "tags": [],
         "implicitDependencies": []
       }
     },
@@ -410,13 +676,46 @@
       "type": "lib",
       "data": {
         "root": "libs/frontend/common",
-        "name": "frontend-common",
-        "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-        "sourceRoot": "libs/frontend/common/src",
-        "prefix": "avans-nx-workshop",
-        "projectType": "library",
-        "tags": [],
         "targets": {
+          "eslint:lint": {
+            "cache": true,
+            "options": {
+              "cwd": "libs/frontend/common",
+              "command": "eslint ."
+            },
+            "inputs": [
+              "default",
+              "^default",
+              "{workspaceRoot}/.eslintrc.json",
+              "{projectRoot}/.eslintrc.json",
+              "{workspaceRoot}/tools/eslint-rules/**/*",
+              {
+                "externalDependencies": [
+                  "eslint"
+                ]
+              }
+            ],
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "metadata": {
+              "technologies": [
+                "eslint"
+              ],
+              "description": "Runs ESLint on project",
+              "help": {
+                "command": "npx eslint --help",
+                "example": {
+                  "options": {
+                    "max-warnings": 0
+                  }
+                }
+              }
+            },
+            "executor": "nx:run-commands",
+            "configurations": {},
+            "parallelism": true
+          },
           "test": {
             "executor": "@nx/jest:jest",
             "outputs": [
@@ -462,6 +761,12 @@
             ]
           }
         },
+        "name": "frontend-common",
+        "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/frontend/common/src",
+        "prefix": "avans-nx-workshop",
+        "projectType": "library",
+        "tags": [],
         "implicitDependencies": []
       }
     },
@@ -470,12 +775,46 @@
       "type": "lib",
       "data": {
         "root": "libs/shared/util-env",
-        "name": "util-env",
-        "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-        "sourceRoot": "libs/shared/util-env/src",
-        "projectType": "library",
-        "tags": [],
         "targets": {
+          "eslint:lint": {
+            "cache": true,
+            "options": {
+              "cwd": "libs/shared/util-env",
+              "command": "eslint ."
+            },
+            "inputs": [
+              "default",
+              "^default",
+              "{workspaceRoot}/.eslintrc.json",
+              "{projectRoot}/.eslintrc.json",
+              "{workspaceRoot}/tools/eslint-rules/**/*",
+              {
+                "externalDependencies": [
+                  "eslint"
+                ]
+              }
+            ],
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "metadata": {
+              "technologies": [
+                "eslint"
+              ],
+              "description": "Runs ESLint on project",
+              "help": {
+                "command": "npx eslint --help",
+                "example": {
+                  "options": {
+                    "max-warnings": 0
+                  }
+                }
+              }
+            },
+            "executor": "nx:run-commands",
+            "configurations": {},
+            "parallelism": true
+          },
           "lint": {
             "executor": "@nx/eslint:lint",
             "outputs": [
@@ -520,6 +859,11 @@
             ]
           }
         },
+        "name": "util-env",
+        "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/shared/util-env/src",
+        "projectType": "library",
+        "tags": [],
         "implicitDependencies": []
       }
     },
@@ -528,12 +872,46 @@
       "type": "lib",
       "data": {
         "root": "libs/backend/neo4j",
-        "name": "neo4j",
-        "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-        "sourceRoot": "libs/backend/neo4j/src",
-        "projectType": "library",
-        "tags": [],
         "targets": {
+          "eslint:lint": {
+            "cache": true,
+            "options": {
+              "cwd": "libs/backend/neo4j",
+              "command": "eslint ."
+            },
+            "inputs": [
+              "default",
+              "^default",
+              "{workspaceRoot}/.eslintrc.json",
+              "{projectRoot}/.eslintrc.json",
+              "{workspaceRoot}/tools/eslint-rules/**/*",
+              {
+                "externalDependencies": [
+                  "eslint"
+                ]
+              }
+            ],
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "metadata": {
+              "technologies": [
+                "eslint"
+              ],
+              "description": "Runs ESLint on project",
+              "help": {
+                "command": "npx eslint --help",
+                "example": {
+                  "options": {
+                    "max-warnings": 0
+                  }
+                }
+              }
+            },
+            "executor": "nx:run-commands",
+            "configurations": {},
+            "parallelism": true
+          },
           "lint": {
             "executor": "@nx/eslint:lint",
             "outputs": [
@@ -578,6 +956,11 @@
             ]
           }
         },
+        "name": "neo4j",
+        "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/backend/neo4j/src",
+        "projectType": "library",
+        "tags": [],
         "implicitDependencies": []
       }
     },
@@ -586,13 +969,46 @@
       "type": "e2e",
       "data": {
         "root": "apps/rcmnd-api-e2e",
-        "name": "rcmnd-api-e2e",
-        "$schema": "../../node_modules/nx/schemas/project-schema.json",
-        "projectType": "application",
-        "implicitDependencies": [
-          "rcmnd-api"
-        ],
         "targets": {
+          "eslint:lint": {
+            "cache": true,
+            "options": {
+              "cwd": "apps/rcmnd-api-e2e",
+              "command": "eslint ."
+            },
+            "inputs": [
+              "default",
+              "^default",
+              "{workspaceRoot}/.eslintrc.json",
+              "{projectRoot}/.eslintrc.json",
+              "{workspaceRoot}/tools/eslint-rules/**/*",
+              {
+                "externalDependencies": [
+                  "eslint"
+                ]
+              }
+            ],
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "metadata": {
+              "technologies": [
+                "eslint"
+              ],
+              "description": "Runs ESLint on project",
+              "help": {
+                "command": "npx eslint --help",
+                "example": {
+                  "options": {
+                    "max-warnings": 0
+                  }
+                }
+              }
+            },
+            "executor": "nx:run-commands",
+            "configurations": {},
+            "parallelism": true
+          },
           "e2e": {
             "executor": "@nx/jest:jest",
             "outputs": [
@@ -631,6 +1047,12 @@
             ]
           }
         },
+        "name": "rcmnd-api-e2e",
+        "$schema": "../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "application",
+        "implicitDependencies": [
+          "rcmnd-api"
+        ],
         "tags": []
       }
     },
@@ -639,12 +1061,46 @@
       "type": "lib",
       "data": {
         "root": "libs/backend/auth",
-        "name": "auth",
-        "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-        "sourceRoot": "libs/backend/auth/src",
-        "projectType": "library",
-        "tags": [],
         "targets": {
+          "eslint:lint": {
+            "cache": true,
+            "options": {
+              "cwd": "libs/backend/auth",
+              "command": "eslint ."
+            },
+            "inputs": [
+              "default",
+              "^default",
+              "{workspaceRoot}/.eslintrc.json",
+              "{projectRoot}/.eslintrc.json",
+              "{workspaceRoot}/tools/eslint-rules/**/*",
+              {
+                "externalDependencies": [
+                  "eslint"
+                ]
+              }
+            ],
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "metadata": {
+              "technologies": [
+                "eslint"
+              ],
+              "description": "Runs ESLint on project",
+              "help": {
+                "command": "npx eslint --help",
+                "example": {
+                  "options": {
+                    "max-warnings": 0
+                  }
+                }
+              }
+            },
+            "executor": "nx:run-commands",
+            "configurations": {},
+            "parallelism": true
+          },
           "lint": {
             "executor": "@nx/eslint:lint",
             "outputs": [
@@ -689,6 +1145,82 @@
             ]
           }
         },
+        "name": "auth",
+        "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/backend/auth/src",
+        "projectType": "library",
+        "tags": [],
+        "implicitDependencies": []
+      }
+    },
+    "band": {
+      "name": "band",
+      "type": "lib",
+      "data": {
+        "root": "libs/backend/band",
+        "targets": {
+          "eslint:lint": {
+            "cache": true,
+            "options": {
+              "cwd": "libs/backend/band",
+              "command": "eslint ."
+            },
+            "inputs": [
+              "default",
+              "^default",
+              "{workspaceRoot}/.eslintrc.json",
+              "{projectRoot}/.eslintrc.json",
+              "{workspaceRoot}/tools/eslint-rules/**/*",
+              {
+                "externalDependencies": [
+                  "eslint"
+                ]
+              }
+            ],
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "metadata": {
+              "technologies": [
+                "eslint"
+              ],
+              "description": "Runs ESLint on project",
+              "help": {
+                "command": "npx eslint --help",
+                "example": {
+                  "options": {
+                    "max-warnings": 0
+                  }
+                }
+              }
+            },
+            "executor": "nx:run-commands",
+            "configurations": {},
+            "parallelism": true
+          },
+          "test": {
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/{projectRoot}"
+            ],
+            "options": {
+              "jestConfig": "libs/backend/band/jest.config.ts"
+            },
+            "configurations": {},
+            "parallelism": true,
+            "cache": true,
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ]
+          }
+        },
+        "name": "band",
+        "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/backend/band/src",
+        "projectType": "library",
+        "tags": [],
         "implicitDependencies": []
       }
     },
@@ -697,13 +1229,46 @@
       "type": "e2e",
       "data": {
         "root": "apps/data-api-e2e",
-        "name": "data-api-e2e",
-        "$schema": "../../node_modules/nx/schemas/project-schema.json",
-        "projectType": "application",
-        "implicitDependencies": [
-          "data-api"
-        ],
         "targets": {
+          "eslint:lint": {
+            "cache": true,
+            "options": {
+              "cwd": "apps/data-api-e2e",
+              "command": "eslint ."
+            },
+            "inputs": [
+              "default",
+              "^default",
+              "{workspaceRoot}/.eslintrc.json",
+              "{projectRoot}/.eslintrc.json",
+              "{workspaceRoot}/tools/eslint-rules/**/*",
+              {
+                "externalDependencies": [
+                  "eslint"
+                ]
+              }
+            ],
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "metadata": {
+              "technologies": [
+                "eslint"
+              ],
+              "description": "Runs ESLint on project",
+              "help": {
+                "command": "npx eslint --help",
+                "example": {
+                  "options": {
+                    "max-warnings": 0
+                  }
+                }
+              }
+            },
+            "executor": "nx:run-commands",
+            "configurations": {},
+            "parallelism": true
+          },
           "e2e": {
             "executor": "@nx/jest:jest",
             "outputs": [
@@ -742,6 +1307,12 @@
             ]
           }
         },
+        "name": "data-api-e2e",
+        "$schema": "../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "application",
+        "implicitDependencies": [
+          "data-api"
+        ],
         "tags": []
       }
     },
@@ -750,12 +1321,46 @@
       "type": "lib",
       "data": {
         "root": "libs/backend/user",
-        "name": "users",
-        "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-        "sourceRoot": "libs/backend/user/src",
-        "projectType": "library",
-        "tags": [],
         "targets": {
+          "eslint:lint": {
+            "cache": true,
+            "options": {
+              "cwd": "libs/backend/user",
+              "command": "eslint ."
+            },
+            "inputs": [
+              "default",
+              "^default",
+              "{workspaceRoot}/.eslintrc.json",
+              "{projectRoot}/.eslintrc.json",
+              "{workspaceRoot}/tools/eslint-rules/**/*",
+              {
+                "externalDependencies": [
+                  "eslint"
+                ]
+              }
+            ],
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "metadata": {
+              "technologies": [
+                "eslint"
+              ],
+              "description": "Runs ESLint on project",
+              "help": {
+                "command": "npx eslint --help",
+                "example": {
+                  "options": {
+                    "max-warnings": 0
+                  }
+                }
+              }
+            },
+            "executor": "nx:run-commands",
+            "configurations": {},
+            "parallelism": true
+          },
           "lint": {
             "executor": "@nx/eslint:lint",
             "outputs": [
@@ -800,6 +1405,11 @@
             ]
           }
         },
+        "name": "users",
+        "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/backend/user/src",
+        "projectType": "library",
+        "tags": [],
         "implicitDependencies": []
       }
     },
@@ -808,12 +1418,46 @@
       "type": "lib",
       "data": {
         "root": "libs/backend/dto",
-        "name": "dto",
-        "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-        "sourceRoot": "libs/backend/dto/src",
-        "projectType": "library",
-        "tags": [],
         "targets": {
+          "eslint:lint": {
+            "cache": true,
+            "options": {
+              "cwd": "libs/backend/dto",
+              "command": "eslint ."
+            },
+            "inputs": [
+              "default",
+              "^default",
+              "{workspaceRoot}/.eslintrc.json",
+              "{projectRoot}/.eslintrc.json",
+              "{workspaceRoot}/tools/eslint-rules/**/*",
+              {
+                "externalDependencies": [
+                  "eslint"
+                ]
+              }
+            ],
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "metadata": {
+              "technologies": [
+                "eslint"
+              ],
+              "description": "Runs ESLint on project",
+              "help": {
+                "command": "npx eslint --help",
+                "example": {
+                  "options": {
+                    "max-warnings": 0
+                  }
+                }
+              }
+            },
+            "executor": "nx:run-commands",
+            "configurations": {},
+            "parallelism": true
+          },
           "lint": {
             "executor": "@nx/eslint:lint",
             "outputs": [
@@ -858,6 +1502,11 @@
             ]
           }
         },
+        "name": "dto",
+        "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/backend/dto/src",
+        "projectType": "library",
+        "tags": [],
         "implicitDependencies": []
       }
     },
@@ -866,13 +1515,46 @@
       "type": "lib",
       "data": {
         "root": "libs/frontend/ui",
-        "name": "ui",
-        "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-        "sourceRoot": "libs/frontend/ui/src",
-        "prefix": "avans-nx-workshop",
-        "projectType": "library",
-        "tags": [],
         "targets": {
+          "eslint:lint": {
+            "cache": true,
+            "options": {
+              "cwd": "libs/frontend/ui",
+              "command": "eslint ."
+            },
+            "inputs": [
+              "default",
+              "^default",
+              "{workspaceRoot}/.eslintrc.json",
+              "{projectRoot}/.eslintrc.json",
+              "{workspaceRoot}/tools/eslint-rules/**/*",
+              {
+                "externalDependencies": [
+                  "eslint"
+                ]
+              }
+            ],
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "metadata": {
+              "technologies": [
+                "eslint"
+              ],
+              "description": "Runs ESLint on project",
+              "help": {
+                "command": "npx eslint --help",
+                "example": {
+                  "options": {
+                    "max-warnings": 0
+                  }
+                }
+              }
+            },
+            "executor": "nx:run-commands",
+            "configurations": {},
+            "parallelism": true
+          },
           "test": {
             "executor": "@nx/jest:jest",
             "outputs": [
@@ -918,6 +1600,12 @@
             ]
           }
         },
+        "name": "ui",
+        "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/frontend/ui/src",
+        "prefix": "avans-nx-workshop",
+        "projectType": "library",
+        "tags": [],
         "implicitDependencies": []
       }
     },
@@ -926,12 +1614,46 @@
       "type": "lib",
       "data": {
         "root": "libs/shared/api",
-        "name": "api",
-        "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-        "sourceRoot": "libs/shared/api/src",
-        "projectType": "library",
-        "tags": [],
         "targets": {
+          "eslint:lint": {
+            "cache": true,
+            "options": {
+              "cwd": "libs/shared/api",
+              "command": "eslint ."
+            },
+            "inputs": [
+              "default",
+              "^default",
+              "{workspaceRoot}/.eslintrc.json",
+              "{projectRoot}/.eslintrc.json",
+              "{workspaceRoot}/tools/eslint-rules/**/*",
+              {
+                "externalDependencies": [
+                  "eslint"
+                ]
+              }
+            ],
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "metadata": {
+              "technologies": [
+                "eslint"
+              ],
+              "description": "Runs ESLint on project",
+              "help": {
+                "command": "npx eslint --help",
+                "example": {
+                  "options": {
+                    "max-warnings": 0
+                  }
+                }
+              }
+            },
+            "executor": "nx:run-commands",
+            "configurations": {},
+            "parallelism": true
+          },
           "lint": {
             "executor": "@nx/eslint:lint",
             "outputs": [
@@ -976,6 +1698,11 @@
             ]
           }
         },
+        "name": "api",
+        "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/shared/api/src",
+        "projectType": "library",
+        "tags": [],
         "implicitDependencies": []
       }
     },
@@ -984,15 +1711,46 @@
       "type": "e2e",
       "data": {
         "root": "apps/my-app-e2e",
-        "name": "my-app-e2e",
-        "$schema": "../../node_modules/nx/schemas/project-schema.json",
-        "projectType": "application",
-        "sourceRoot": "apps/my-app-e2e/src",
-        "tags": [],
-        "implicitDependencies": [
-          "my-app"
-        ],
         "targets": {
+          "eslint:lint": {
+            "cache": true,
+            "options": {
+              "cwd": "apps/my-app-e2e",
+              "command": "eslint ."
+            },
+            "inputs": [
+              "default",
+              "^default",
+              "{workspaceRoot}/.eslintrc.json",
+              "{projectRoot}/.eslintrc.json",
+              "{workspaceRoot}/tools/eslint-rules/**/*",
+              {
+                "externalDependencies": [
+                  "eslint"
+                ]
+              }
+            ],
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "metadata": {
+              "technologies": [
+                "eslint"
+              ],
+              "description": "Runs ESLint on project",
+              "help": {
+                "command": "npx eslint --help",
+                "example": {
+                  "options": {
+                    "max-warnings": 0
+                  }
+                }
+              }
+            },
+            "executor": "nx:run-commands",
+            "configurations": {},
+            "parallelism": true
+          },
           "e2e": {
             "executor": "@nx/cypress:cypress",
             "options": {
@@ -1035,7 +1793,15 @@
               "{workspaceRoot}/eslint.config.js"
             ]
           }
-        }
+        },
+        "name": "my-app-e2e",
+        "$schema": "../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "application",
+        "sourceRoot": "apps/my-app-e2e/src",
+        "tags": [],
+        "implicitDependencies": [
+          "my-app"
+        ]
       }
     },
     "rcmnd-api": {
@@ -1043,12 +1809,46 @@
       "type": "app",
       "data": {
         "root": "apps/rcmnd-api",
-        "name": "rcmnd-api",
-        "$schema": "../../node_modules/nx/schemas/project-schema.json",
-        "sourceRoot": "apps/rcmnd-api/src",
-        "projectType": "application",
-        "tags": [],
         "targets": {
+          "eslint:lint": {
+            "cache": true,
+            "options": {
+              "cwd": "apps/rcmnd-api",
+              "command": "eslint ."
+            },
+            "inputs": [
+              "default",
+              "^default",
+              "{workspaceRoot}/.eslintrc.json",
+              "{projectRoot}/.eslintrc.json",
+              "{workspaceRoot}/tools/eslint-rules/**/*",
+              {
+                "externalDependencies": [
+                  "eslint"
+                ]
+              }
+            ],
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "metadata": {
+              "technologies": [
+                "eslint"
+              ],
+              "description": "Runs ESLint on project",
+              "help": {
+                "command": "npx eslint --help",
+                "example": {
+                  "options": {
+                    "max-warnings": 0
+                  }
+                }
+              }
+            },
+            "executor": "nx:run-commands",
+            "configurations": {},
+            "parallelism": true
+          },
           "build": {
             "executor": "@nx/webpack:webpack",
             "outputs": [
@@ -1141,6 +1941,11 @@
             ]
           }
         },
+        "name": "rcmnd-api",
+        "$schema": "../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "apps/rcmnd-api/src",
+        "projectType": "application",
+        "tags": [],
         "implicitDependencies": []
       }
     },
@@ -1149,12 +1954,46 @@
       "type": "app",
       "data": {
         "root": "apps/data-api",
-        "name": "data-api",
-        "$schema": "../../node_modules/nx/schemas/project-schema.json",
-        "sourceRoot": "apps/data-api/src",
-        "projectType": "application",
-        "tags": [],
         "targets": {
+          "eslint:lint": {
+            "cache": true,
+            "options": {
+              "cwd": "apps/data-api",
+              "command": "eslint ."
+            },
+            "inputs": [
+              "default",
+              "^default",
+              "{workspaceRoot}/.eslintrc.json",
+              "{projectRoot}/.eslintrc.json",
+              "{workspaceRoot}/tools/eslint-rules/**/*",
+              {
+                "externalDependencies": [
+                  "eslint"
+                ]
+              }
+            ],
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "metadata": {
+              "technologies": [
+                "eslint"
+              ],
+              "description": "Runs ESLint on project",
+              "help": {
+                "command": "npx eslint --help",
+                "example": {
+                  "options": {
+                    "max-warnings": 0
+                  }
+                }
+              }
+            },
+            "executor": "nx:run-commands",
+            "configurations": {},
+            "parallelism": true
+          },
           "build": {
             "executor": "@nx/webpack:webpack",
             "outputs": [
@@ -1262,6 +2101,11 @@
             ]
           }
         },
+        "name": "data-api",
+        "$schema": "../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "apps/data-api/src",
+        "projectType": "application",
+        "tags": [],
         "implicitDependencies": []
       }
     },
@@ -1270,13 +2114,46 @@
       "type": "app",
       "data": {
         "root": "apps/my-app",
-        "name": "my-app",
-        "$schema": "../../node_modules/nx/schemas/project-schema.json",
-        "projectType": "application",
-        "prefix": "avans-nx-workshop",
-        "sourceRoot": "apps/my-app/src",
-        "tags": [],
         "targets": {
+          "eslint:lint": {
+            "cache": true,
+            "options": {
+              "cwd": "apps/my-app",
+              "command": "eslint ."
+            },
+            "inputs": [
+              "default",
+              "^default",
+              "{workspaceRoot}/.eslintrc.json",
+              "{projectRoot}/.eslintrc.json",
+              "{workspaceRoot}/tools/eslint-rules/**/*",
+              {
+                "externalDependencies": [
+                  "eslint"
+                ]
+              }
+            ],
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "metadata": {
+              "technologies": [
+                "eslint"
+              ],
+              "description": "Runs ESLint on project",
+              "help": {
+                "command": "npx eslint --help",
+                "example": {
+                  "options": {
+                    "max-warnings": 0
+                  }
+                }
+              }
+            },
+            "executor": "nx:run-commands",
+            "configurations": {},
+            "parallelism": true
+          },
           "build": {
             "executor": "@angular-devkit/build-angular:browser",
             "outputs": [
@@ -1413,6 +2290,12 @@
             "parallelism": true
           }
         },
+        "name": "my-app",
+        "$schema": "../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "application",
+        "prefix": "avans-nx-workshop",
+        "sourceRoot": "apps/my-app/src",
+        "tags": [],
         "implicitDependencies": []
       }
     }
@@ -16215,10 +17098,47 @@
         "type": "static"
       }
     ],
+    "instrument": [
+      {
+        "source": "instrument",
+        "target": "npm:@nestjs/common",
+        "type": "static"
+      },
+      {
+        "source": "instrument",
+        "target": "dto",
+        "type": "static"
+      },
+      {
+        "source": "instrument",
+        "target": "npm:@nestjs/mongoose",
+        "type": "static"
+      },
+      {
+        "source": "instrument",
+        "target": "npm:class-validator",
+        "type": "static"
+      },
+      {
+        "source": "instrument",
+        "target": "npm:mongoose",
+        "type": "static"
+      }
+    ],
     "features": [
       {
         "source": "features",
         "target": "npm:@angular/core",
+        "type": "static"
+      },
+      {
+        "source": "features",
+        "target": "api",
+        "type": "static"
+      },
+      {
+        "source": "features",
+        "target": "npm:rxjs",
         "type": "static"
       },
       {
@@ -16233,12 +17153,17 @@
       },
       {
         "source": "features",
-        "target": "api",
+        "target": "util-env",
         "type": "static"
       },
       {
         "source": "features",
-        "target": "npm:rxjs",
+        "target": "npm:@angular/forms",
+        "type": "static"
+      },
+      {
+        "source": "features",
+        "target": "users",
         "type": "static"
       },
       {
@@ -16425,6 +17350,38 @@
         "type": "static"
       }
     ],
+    "band": [
+      {
+        "source": "band",
+        "target": "npm:@nestjs/common",
+        "type": "static"
+      },
+      {
+        "source": "band",
+        "target": "dto",
+        "type": "static"
+      },
+      {
+        "source": "band",
+        "target": "npm:@nestjs/mongoose",
+        "type": "static"
+      },
+      {
+        "source": "band",
+        "target": "instrument",
+        "type": "static"
+      },
+      {
+        "source": "band",
+        "target": "npm:mongoose",
+        "type": "static"
+      },
+      {
+        "source": "band",
+        "target": "npm:class-validator",
+        "type": "static"
+      }
+    ],
     "data-api-e2e": [
       {
         "source": "data-api-e2e",
@@ -16480,6 +17437,11 @@
       },
       {
         "source": "users",
+        "target": "instrument",
+        "type": "static"
+      },
+      {
+        "source": "users",
         "target": "npm:validator",
         "type": "static"
       },
@@ -16512,22 +17474,27 @@
       },
       {
         "source": "dto",
+        "target": "npm:class-validator",
+        "type": "static"
+      },
+      {
+        "source": "dto",
+        "target": "npm:mongoose",
+        "type": "static"
+      },
+      {
+        "source": "dto",
+        "target": "instrument",
+        "type": "static"
+      },
+      {
+        "source": "dto",
         "target": "npm:@nestjs/core",
         "type": "static"
       },
       {
         "source": "dto",
         "target": "npm:express",
-        "type": "static"
-      },
-      {
-        "source": "dto",
-        "target": "npm:class-validator",
-        "type": "static"
-      },
-      {
-        "source": "dto",
-        "target": "backend-features-meal",
         "type": "static"
       }
     ],
@@ -16613,11 +17580,6 @@
       {
         "source": "data-api",
         "target": "npm:@nestjs/common",
-        "type": "static"
-      },
-      {
-        "source": "data-api",
-        "target": "backend-features-meal",
         "type": "static"
       },
       {

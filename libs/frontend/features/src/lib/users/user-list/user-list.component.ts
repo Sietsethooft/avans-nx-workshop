@@ -15,12 +15,7 @@ export class UserListComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     console.log('UserListComponent.ngOnInit');
-
-    // Synchrone manier: geen zichtbare vertraging
-    // this.users = this.userService.getUsers();
-
-    // Asynchroon: met reactive programming
-    
+        
     this.userService
     .getUsersAsync()
     .subscribe(
@@ -35,28 +30,5 @@ export class UserListComponent implements OnInit, OnDestroy {
     }
     console.log('UserListComponent.ngOnDestroy');
   }
-
-    // users: IUserInfo[] = [
-    //     {
-    //         _id: '1',
-    //         name: 'John Doe',
-    //         emailAddress: 'j.doe@outlook.com',
-    //         role: UserRole.Unknown,
-    //         gender: UserGender.Unknown,
-    //         password: 'secret',
-    //         isActive: true,
-    //         profileImgUrl: "url"
-    //     },
-    //     {
-    //         _id: '2',
-    //         name: 'Jane Doe',
-    //         emailAddress: 'j.doe2@outlook.com',
-    //         role: UserRole.Unknown,
-    //         gender: UserGender.Unknown,
-    //         password: 'secret',
-    //         isActive: true,
-    //         profileImgUrl: "url"
-    //     }
-    // ]
 }
 
