@@ -42,7 +42,7 @@ export class UserDetailsComponent implements OnInit{
       }
 
       confirmDelete() {
-        this.deleteUser(); // Roep de bestaande delete-logica aan
+        this.deleteUser();
       }
       
 }

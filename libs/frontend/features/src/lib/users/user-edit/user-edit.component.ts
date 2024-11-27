@@ -100,16 +100,7 @@ export class UserEditComponent implements OnInit, OnDestroy {
   updatePhoto() {
     if (this.photoForm.valid) {
       const newUrl = this.photoForm.value.profileImgUrl;
-      this.user.profileImgUrl = newUrl;
-  
-      // Opslaan via de user-service
-      if (this.userId) {
-        this.userService.updateUser(this.userId, this.user).subscribe(() => {
-          // Sluit de modal handmatig
-          const modalElement = document.getElementById('uploadPhotoModal');
-        });
-      }
+      this.user.profileImgUrl = newUrl;      
     }
-  }
-  
+  } 
 }
