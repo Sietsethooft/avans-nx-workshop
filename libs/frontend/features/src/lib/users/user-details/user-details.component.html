@@ -1,18 +1,57 @@
-<div class="container component detail mt-4">
-  <div class="row">
-      <div class="col-md-4 text-center">
-          <img [src]="user?.profileImgUrl" alt="Profile Picture" class="img-fluid rounded mb-3" style="max-width: 200px;">
-      </div>
-      <div class="col-md-8">
-          <h1>{{ user?.name }}</h1>
-          <p><strong>ID:</strong> {{ user?._id }}</p>
-          <p><strong>Email:</strong> {{ user?.emailAddress }}</p>
-          <p><strong>Role:</strong> {{ user?.role }}</p>
-          <p><strong>Gender:</strong> {{ user?.gender }}</p>
-          <p><strong>Active:</strong> {{ user?.isActive ? 'Yes' : 'No' }}</p>
-          <div class="col-12 text-right mb-3">
-              <a class="btn btn-primary btn-sm" href="#" role="button" routerLink="edit">Edit</a>
-          </div>
-      </div>
-  </div>
+<div class="row">
+    <div class="col-xl-4">
+        <div class="card mb-4 mb-xl-0">
+            <div class="card-header">Profielfoto</div>
+            <div class="card-body text-center">
+                <img class="img-account-profile rounded-circle mb-2" [src]="user?.profileImgUrl" alt="Profielfoto" style="width: 200px; height: 200px;">
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-8">
+        <div class="card mb-4">
+            <div class="card-header">Accountgegevens
+                    <a class="btn btn-primary btn-sm float-end" href="#" role="button" routerLink="edit">Edit</a>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label class="fs-4 mb-1">Naam:</label>
+                            <p class="form-control-plaintext p-0">{{ user?.name }}</p>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="fs-4 mb-1">Geboortedatum:</label>
+                            <p class="form-control-plaintext p-0">{{ user?.birthDate | date:'dd/MM/yyyy' }}</p>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label class="fs-4 mb-1">E-mail:</label>
+                            <p class="form-control-plaintext p-0">{{ user?.emailAddress }}</p>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="fs-4 mb-1">Rol:</label>
+                            <p class="form-control-plaintext p-0">{{ user?.role }}</p>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label class="fs-4 mb-1">Geslacht:</label>
+                            <p class="form-control-plaintext p-0">{{ user?.gender }}</p>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="fs-4 mb-1">Actief:</label>
+                            <p class="form-control-plaintext p-0">{{ user?.isActive ? 'Ja' : 'Nee' }}</p>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="fs-4 mb-1">Instrumenten:</label>
+                        <ul class="list-group">
+                            <li class="list-group-item" *ngFor="let instrument of user?.instruments">{{ instrument.name }}</li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
