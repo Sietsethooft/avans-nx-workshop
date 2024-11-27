@@ -49,7 +49,7 @@ export class User implements IUser {
         select: true,
         default: 'https://cdn-icons-png.flaticon.com/512/219/219969.png'
     })
-    profileImgUrl!: string;
+    profileImgUrl?: string;
 
     @Prop({
         required: false,
