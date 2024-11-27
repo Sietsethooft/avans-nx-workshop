@@ -5,9 +5,8 @@ import { IsString, IsMongoId, IsEnum, IsNumber } from 'class-validator';
 
 @Schema()
 export class Band {
-  @Prop({ type: Types.ObjectId, auto: true })
   @IsMongoId()
-  _id!: Types.ObjectId;
+  _id!: String;
 
   @Prop({ required: true })
   @IsString()
@@ -26,7 +25,7 @@ export class Band {
   members!: Types.ObjectId[];
 
   @Prop({ type: [InstrumentSchema], default: [] }) // Embedded schema
-  searchFor!: Instrument[];
+  searchFor?: Instrument[];
 
   @Prop()
   @IsEnum(['Weekly', 'Monthly', 'Quarterly'])

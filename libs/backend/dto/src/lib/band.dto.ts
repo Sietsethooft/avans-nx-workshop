@@ -22,8 +22,8 @@ export class CreateBandDto {
   members!: Types.ObjectId[];
 
   @IsArray()
-  @IsNotEmpty()
-  searchFor!: Instrument[];
+  @IsOptional()
+  searchFor?: Instrument[];
 
   @IsEnum(['Weekly', 'Monthly', 'Quarterly'])
   @IsOptional()
@@ -48,8 +48,6 @@ export class CreateBandDto {
 }
 
 export class UpsertBandDto {
-  @IsMongoId()
-  @IsNotEmpty()
   _id!: Id;
 
   @IsString()
@@ -70,8 +68,8 @@ export class UpsertBandDto {
   members!: Types.ObjectId[];
 
   @IsArray()
-  @IsNotEmpty()
-  searchFor!: Instrument[];
+  @IsOptional()
+  searchFor?: Instrument[];
 
   @IsEnum(['Weekly', 'Monthly', 'Quarterly'])
   @IsOptional()
@@ -96,9 +94,7 @@ export class UpsertBandDto {
 }
 
 export class UpdateBandDto {
-  @IsMongoId()
-  @IsOptional()
-  _id?: Id;
+  _id?: string | undefined;
 
   @IsString()
   @IsOptional()
