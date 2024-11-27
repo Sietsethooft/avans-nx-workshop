@@ -11,17 +11,23 @@
     <div class="card mb-4">
       <div class="card-header">Accountgegevens</div>
       <div class="card-body">
-        <form (ngSubmit)="onSave()">
+        <form [formGroup]="userForm" (ngSubmit)="onSave()">
           <div class="row mb-3">
             <div class="col-md-6">
               <label class="fs-4 mb-1" for="inputName">Naam</label>
-              <input class="form-control" id="inputName" type="text" [(ngModel)]="user.name" name="name">
+              <input class="form-control" id="inputName" type="text" formControlName="name">
+              <div *ngIf="userForm.get('name')?.invalid && userForm.get('name')?.touched" class="text-danger">
+                Naam moet minimaal 5 letters zijn.
+              </div>
             </div>
           </div>
           <div class="row mb-3">
             <div class="col-md-6">
               <label class="fs-4 mb-1" for="inputEmail">E-mail</label>
-              <input class="form-control" id="inputEmail" type="email" [(ngModel)]="user.emailAddress" name="emailAddress">
+              <input class="form-control" id="inputEmail" type="email" formControlName="emailAddress">
+              <div *ngIf="userForm.get('emailAddress')?.invalid && userForm.get('emailAddress')?.touched" class="text-danger">
+                Voer een geldig e-mailadres in.
+              </div>
             </div>
             <div class="col-md-6">
               <label class="fs-4 mb-1" for="inputRole">Rol</label>
@@ -31,21 +37,23 @@
           <div class="row mb-3">
             <div class="col-md-6">
               <label class="fs-4 mb-1" for="inputGender">Geslacht</label>
-              <select class="form-control" id="inputGender" [(ngModel)]="user.gender" name="gender">
+              <select class="form-control" id="inputGender" formControlName="gender">
                 <option *ngFor="let gender of genders" [value]="gender">{{ gender }}</option>
               </select>
             </div>
             <div class="col-md-6">
               <label class="fs-4 mb-1" for="inputBirthDate">Geboortedatum</label>
               <input
-                  class="form-control"
-                  id="inputBirthDate"
-                  type="text"
-                  [(ngModel)]="formattedBirthDate"
-                  name="formattedBirthDate"
-                  placeholder="dd-mm-yyyy"
+                class="form-control"
+                id="inputBirthDate"
+                type="text"
+                formControlName="formattedBirthDate"
+                placeholder="dd-mm-yyyy"
               >
-          </div>                    
+              <div *ngIf="userForm.get('formattedBirthDate')?.invalid && userForm.get('formattedBirthDate')?.touched" class="text-danger">
+                Voer een geldige geboortedatum in (dd-mm-yyyy).
+              </div>
+            </div>
           </div>
           <div class="mb-3">
             <label class="fs-4 mb-1" for="inputInstruments">Instrumenten</label>
@@ -58,7 +66,7 @@
             <p class="form-control-plaintext p-0">{{ user.isActive ? 'Ja' : 'Nee' }}</p>
           </div>
           <div class="mb-3">
-            <button class="btn btn-primary" type="submit">Opslaan</button>
+            <button class="btn btn-primary" type="submit" [disabled]="userForm.invalid">Opslaan</button>
           </div>
         </form>
       </div>
