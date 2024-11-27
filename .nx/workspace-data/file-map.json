@@ -65,76 +65,76 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "jest.preset.js",
-        "hash": "7473220183190921152"
+        "file": "migrations.json",
+        "hash": "4597419159832879830"
       },
       {
         "file": ".prettierrc",
         "hash": "6192629144332209564"
       },
       {
-        "file": ".prettierignore",
-        "hash": "135344717789917661"
-      },
-      {
-        "file": ".editorconfig",
-        "hash": "11532813898455409296"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "637008721651112966"
-      },
-      {
-        "file": ".vscode/settings.json",
-        "hash": "16632116639765706074"
-      },
-      {
-        "file": "tsconfig.base.json",
-        "hash": "102872237454768305"
-      },
-      {
-        "file": "migrations.json",
-        "hash": "4597419159832879830"
-      },
-      {
-        "file": ".eslintignore",
-        "hash": "13404745306227114823"
-      },
-      {
-        "file": "nx.json",
-        "hash": "13543554231657983656"
-      },
-      {
-        "file": "package.json",
-        "hash": "3868875776957438874"
+        "file": "jest.config.ts",
+        "hash": "3407785570333453138"
       },
       {
         "file": ".eslintrc.json",
         "hash": "4566917484430375526"
       },
       {
-        "file": "package-lock.json",
-        "hash": "1194419262312006041"
-      },
-      {
-        "file": "Nx-workshop.postman_collection.json",
-        "hash": "13796819436055774183"
+        "file": "jest.preset.js",
+        "hash": "7473220183190921152"
       },
       {
         "file": "README.md",
         "hash": "1955868086715526908"
       },
       {
+        "file": ".vscode/settings.json",
+        "hash": "16632116639765706074"
+      },
+      {
+        "file": ".eslintignore",
+        "hash": "13404745306227114823"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "637008721651112966"
+      },
+      {
+        "file": "Nx-workshop.postman_collection.json",
+        "hash": "13796819436055774183"
+      },
+      {
+        "file": "package.json",
+        "hash": "3868875776957438874"
+      },
+      {
+        "file": "nx.json",
+        "hash": "13543554231657983656"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "102872237454768305"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "1194419262312006041"
+      },
+      {
+        "file": ".editorconfig",
+        "hash": "11532813898455409296"
+      },
+      {
         "file": ".github/workflows/azure-static-web-apps-icy-tree-01fe4d303.yml",
         "hash": "4292851524355691075"
       },
       {
-        "file": "jest.config.ts",
-        "hash": "3407785570333453138"
-      },
-      {
         "file": "libs/share-a-meal/readme.txt",
         "hash": "8731589497805983804"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "135344717789917661"
       }
     ],
     "projectFileMap": {
@@ -479,7 +479,7 @@
         },
         {
           "file": "libs/frontend/features/src/lib/users/user-details/user-details.component.html",
-          "hash": "14639698816749672268"
+          "hash": "10017405612709382837"
         },
         {
           "file": "libs/frontend/features/src/lib/users/user-details/user-details.component.spec.ts",
@@ -490,7 +490,7 @@
         },
         {
           "file": "libs/frontend/features/src/lib/users/user-details/user-details.component.ts",
-          "hash": "954696104439990745",
+          "hash": "13181516797517746107",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/router",
@@ -543,7 +543,7 @@
         },
         {
           "file": "libs/frontend/features/src/lib/users/user.service.ts",
-          "hash": "5462123873852567087",
+          "hash": "14531665348592858914",
           "deps": [
             "npm:@angular/core",
             "api",
@@ -1630,7 +1630,7 @@
         },
         {
           "file": "libs/backend/user/src/lib/user/user.service.ts",
-          "hash": "12857530342413913462",
+          "hash": "9819313917763517165",
           "deps": [
             "npm:@nestjs/common",
             "npm:mongoose",

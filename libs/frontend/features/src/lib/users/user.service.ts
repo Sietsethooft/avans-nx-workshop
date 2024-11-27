@@ -36,4 +36,14 @@ export class UserService {
             .put<ApiResponse<any>>(environment.dataApiUrl + `/user/${id}`, user)
             .pipe(map((response) => response.results));
     }
+
+    deleteUser(id: string | null): Observable<IUser> {
+        if (!id) {
+            throw new Error('ID is required to delete a user');
+        }
+        console.log('deleteUser aanroepen');
+        return this.http
+            .delete<ApiResponse<any>>(environment.dataApiUrl + `/user/${id}`)
+            .pipe(map((response) => response.results));
+    }
 }
