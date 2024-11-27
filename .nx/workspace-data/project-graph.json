@@ -17397,27 +17397,17 @@
     "users": [
       {
         "source": "users",
-        "target": "npm:@nestjs/common",
-        "type": "static"
-      },
-      {
-        "source": "users",
-        "target": "npm:@nestjs/mongoose",
-        "type": "static"
-      },
-      {
-        "source": "users",
-        "target": "npm:mongoose",
-        "type": "static"
-      },
-      {
-        "source": "users",
-        "target": "npm:rxjs",
+        "target": "npm:axios",
         "type": "static"
       },
       {
         "source": "users",
         "target": "npm:@nestjs/testing",
+        "type": "static"
+      },
+      {
+        "source": "users",
+        "target": "npm:@nestjs/common",
         "type": "static"
       },
       {
@@ -17428,6 +17418,16 @@
       {
         "source": "users",
         "target": "dto",
+        "type": "static"
+      },
+      {
+        "source": "users",
+        "target": "npm:mongoose",
+        "type": "static"
+      },
+      {
+        "source": "users",
+        "target": "npm:@nestjs/mongoose",
         "type": "static"
       },
       {
@@ -17600,6 +17600,16 @@
       {
         "source": "data-api",
         "target": "util-env",
+        "type": "static"
+      },
+      {
+        "source": "data-api",
+        "target": "band",
+        "type": "static"
+      },
+      {
+        "source": "data-api",
+        "target": "instrument",
         "type": "static"
       },
       {
