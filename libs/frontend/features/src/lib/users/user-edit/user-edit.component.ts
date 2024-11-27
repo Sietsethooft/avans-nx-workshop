@@ -4,13 +4,13 @@ import { UserService } from '../user.service';
 import { User } from '@avans-nx-workshop/backend/user';
 import { Subscription } from 'rxjs';
 import { UserGender} from '@avans-nx-workshop/shared/api';
-declare var $: any;
+import { DatePipe } from '@angular/common';
 
 @Component({
     selector: 'avans-nx-workshop-user-edit',
     templateUrl: './user-edit.component.html',
     styles: [],
-    providers: [UserService]
+    providers: [UserService, DatePipe]
 })
 export class UserEditComponent implements OnInit, OnDestroy {
     userId: string | null = null;
@@ -18,10 +18,13 @@ export class UserEditComponent implements OnInit, OnDestroy {
     sub: Subscription = new Subscription();
     genders = Object.values(UserGender);
 
+    formattedBirthDate: string = ''; // Houd de geformatteerde waarde als string.
+
     constructor(
         private route: ActivatedRoute,
         private userService: UserService,
-        private router: Router
+        private router: Router,
+        private datePipe: DatePipe
     ) {}
 
     ngOnInit() {
@@ -30,36 +33,29 @@ export class UserEditComponent implements OnInit, OnDestroy {
             if (this.userId) {
                 this.sub = this.userService.getUserByIdAsync(this.userId).subscribe((user: User) => {
                     this.user = user;
+                    if (this.user.birthDate) {
+                        this.formattedBirthDate = this.datePipe.transform(this.user.birthDate, 'dd-MM-yyyy')!;
+                    }
                 });
             }
         });
-    }
-
-    ngAfterViewInit() {
-        $('.datepicker').datepicker({
-            format: 'dd-mm-yyyy',
-            autoclose: true
-        }).on('changeDate', (e: any) => {
-            this.user.birthDate = this.formatDate(e.date);
-        });
-    }
-
+    }   
+    
     ngOnDestroy() {
         this.sub.unsubscribe();
     }
 
     onSave() {
         if (this.userId) {
+            if (this.formattedBirthDate) {
+                const [day, month, year] = this.formattedBirthDate.split('-');
+                this.user.birthDate = new Date(+year, +month - 1, +day);
+            }
+    
             this.userService.updateUser(this.userId, this.user).subscribe(() => {
                 this.router.navigate(['/users']);
             });
         }
     }
-
-    private formatDate(date: Date): string {
-        const day = ('0' + date.getDate()).slice(-2);
-        const month = ('0' + (date.getMonth() + 1)).slice(-2);
-        const year = date.getFullYear();
-        return `${day}-${month}-${year}`;
-    }
-}
+    
+}    

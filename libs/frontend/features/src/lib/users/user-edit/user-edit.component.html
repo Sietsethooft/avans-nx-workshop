@@ -37,8 +37,15 @@
             </div>
             <div class="col-md-6">
               <label class="fs-4 mb-1" for="inputBirthDate">Geboortedatum</label>
-              <input class="form-control datepicker" id="inputBirthDate" type="text" [(ngModel)]="user.birthDate" name="birthDate">
-            </div>
+              <input
+                  class="form-control"
+                  id="inputBirthDate"
+                  type="text"
+                  [(ngModel)]="formattedBirthDate"
+                  name="formattedBirthDate"
+                  placeholder="dd-mm-yyyy"
+              >
+          </div>                    
           </div>
           <div class="mb-3">
             <label class="fs-4 mb-1" for="inputInstruments">Instrumenten</label>
