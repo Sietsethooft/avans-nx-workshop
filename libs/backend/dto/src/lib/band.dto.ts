@@ -29,9 +29,9 @@ export class CreateBandDto {
   @IsOptional()
   searchFor?: Instrument[];
 
-  @IsEnum(['Weekly', 'Monthly', 'Quarterly'])
+  @IsEnum(['Wekelijks', 'Maandelijks', 'Per kwartaal'])
   @IsOptional()
-  frequencyRepetition?: 'Weekly' | 'Monthly' | 'Quarterly';
+  frequencyRepetition?: 'Wekelijks' | 'Maandelijks' | 'Per kwartaal';
 
   @IsString()
   @IsOptional()
@@ -79,9 +79,9 @@ export class UpsertBandDto {
   @IsOptional()
   searchFor?: Instrument[];
 
-  @IsEnum(['Weekly', 'Monthly', 'Quarterly'])
+  @IsEnum(['Wekelijks', 'Maandelijks', 'Per kwartaal'])
   @IsOptional()
-  frequencyRepetition?: 'Weekly' | 'Monthly' | 'Quarterly';
+  frequencyRepetition?: 'Wekelijks' | 'Maandelijks' | 'Per kwartaal';
 
   @IsString()
   @IsOptional()
@@ -129,9 +129,9 @@ export class UpdateBandDto {
   @IsOptional()
   searchFor?: Instrument[];
 
-  @IsEnum(['Weekly', 'Monthly', 'Quarterly'])
+  @IsEnum(['Wekelijks', 'Maandelijks', 'Per kwartaal'])
   @IsOptional()
-  frequencyRepetition?: 'Weekly' | 'Monthly' | 'Quarterly';
+  frequencyRepetition?: 'Wekelijks' | 'Maandelijks' | 'Per kwartaal';
 
   @IsString()
   @IsOptional()

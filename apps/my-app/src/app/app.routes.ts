@@ -12,13 +12,13 @@ export const appRoutes: Route[] = [
     { path: 'users', pathMatch: 'full', component: UserListComponent },
     { path: 'bands', pathMatch: 'full', component: BandListComponent},
 
-    { path: 'users/:id', component: UserDetailsComponent },
     { path: 'users/new', component: UserEditComponent },
-    { path: 'users/:id/edit', component: UserEditComponent },
+    { path: 'users/:id', component: UserDetailsComponent },
+    { path: 'users/:id/edit', component: UserEditComponent }
 
     // { path: 'bands/:id', component: BandDetailsComponent },
     // { path: 'bands/new', component: BandEditComponent },
     // { path: 'bands/:id/edit', component: BandEditComponent },
 
-    { path: '**', redirectTo: 'dashboard' }
+    // { path: '**', redirectTo: 'dashboard' }
 ];

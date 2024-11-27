@@ -23,7 +23,7 @@ export enum UserGender {
 export interface IUserIdentity extends IEntity {
     name: string;
     emailAddress: string;
-    profileImgUrl: string;
+    profileImgUrl?: string;
     role: UserRole;
     token?: string;
 }
@@ -33,7 +33,7 @@ export interface IUserIdentity extends IEntity {
  */
 export interface IUserInfo extends IUserRegistration {
     _id: Id;
-    profileImgUrl: string;
+    profileImgUrl?: string;
     role: UserRole;
     gender: UserGender;
     isActive: boolean;

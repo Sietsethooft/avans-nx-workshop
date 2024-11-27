@@ -1,36 +1,56 @@
 import { Injectable } from '@angular/core';
-import { delay, map, Observable, of, tap } from 'rxjs';
-import { ApiResponse, IUserInfo, UserGender, UserRole } from "@avans-nx-workshop/shared/api";
+import { IUser,IUserInfo, UserRole, UserGender } from '@avans-nx-workshop/shared/api';
+import { delay, map, Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '@avans-nx-workshop/shared/util-env';
+import { ApiResponse } from '@avans-nx-workshop/shared/api';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
+
 export class UserService {
-  readonly users: IUserInfo[] = [
-  ];
+    readonly users?: IUserInfo[]
 
-  constructor(private http: HttpClient) {
-    console.log('Service constructor aangeroepen');
-  }
+    constructor(private http: HttpClient) {
+        console.log('Service constructor aanroepen');
+    }
 
-  getUsersAsync(): Observable<IUserInfo[]> {
-    console.log('getUsersAsObservableAsync aangeroepen');
-    
-    return this.http
-    .get<ApiResponse<any>>(environment.dataApiUrl + '/user')
-    .pipe(
-      tap(console.log),
-      map(response => response.results));
-  }
-  
-  getUserByIdAsync(id: string | null): Observable<IUserInfo> {
-    console.log('getUserByIdAsync aangeroepen');
-    return this.http
-    .get<ApiResponse<any>>(environment.dataApiUrl + '/user/' + id)
-    .pipe(
-      tap(console.log),
-      map(response => response.results));
-  }
+    getUsersAsync(): Observable<IUserInfo[]> {
+        console.log('getUsersAsync() aanroepen');
+        return this.http
+            .get<ApiResponse<any>>(environment.dataApiUrl + '/user')
+            .pipe(map((response) => response.results));
+    }
+
+    getUserByIdAsync(id: string | null, async: boolean = false): Observable<IUser> {
+        console.log('getUserById aanroepen');
+        return this.http
+            .get<ApiResponse<any>>(environment.dataApiUrl + `/user/${id}`)
+            .pipe(map((response) => response.results));
+    }
+
+    updateUser(id: string | null, user: IUser): Observable<IUser> {
+        console.log('updateUser aanroepen');
+        return this.http
+            .put<ApiResponse<any>>(environment.dataApiUrl + `/user/${id}`, user)
+            .pipe(map((response) => response.results));
+    }
+
+    deleteUser(id: string | null): Observable<IUser> {
+        if (!id) {
+            throw new Error('ID is required to delete a user');
+        }
+        console.log('deleteUser aanroepen');
+        return this.http
+            .delete<ApiResponse<any>>(environment.dataApiUrl + `/user/${id}`)
+            .pipe(map((response) => response.results));
+    }
+
+    createUser(user: IUser): Observable<IUser> {
+        console.log('createUser aanroepen');
+        return this.http
+          .post<ApiResponse<any>>(environment.dataApiUrl + '/user', user)
+          .pipe(map((response) => response.results));
+      }     
 }
