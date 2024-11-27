@@ -25,6 +25,18 @@
                 Naam moet minimaal 5 letters zijn.
               </div>
             </div>
+            <div class="col-md-6" *ngIf="isNewUser">
+              <label class="fs-4 mb-1" for="inputPassword">Wachtwoord</label>
+              <input
+                class="form-control"
+                id="inputPassword"
+                type="password"
+                formControlName="password"
+                placeholder="Voer een wachtwoord in (minimaal 8 tekens)">
+              <div *ngIf="userForm.get('password')?.invalid && userForm.get('password')?.touched" class="text-danger">
+                Wachtwoord moet minimaal 8 tekens lang zijn.
+              </div>
+            </div>            
           </div>
           <div class="row mb-3">
             <div class="col-md-6">

@@ -46,4 +46,11 @@ export class UserService {
             .delete<ApiResponse<any>>(environment.dataApiUrl + `/user/${id}`)
             .pipe(map((response) => response.results));
     }
+
+    createUser(user: IUser): Observable<IUser> {
+        console.log('createUser aanroepen');
+        return this.http
+          .post<ApiResponse<any>>(environment.dataApiUrl + '/user', user)
+          .pipe(map((response) => response.results));
+      }     
 }

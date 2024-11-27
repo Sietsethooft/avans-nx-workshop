@@ -21,6 +21,7 @@ export class UserEditComponent implements OnInit, OnDestroy {
   userForm: FormGroup;
   photoForm: FormGroup;
   formattedBirthDate: string = '';
+  isNewUser: boolean = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -33,18 +34,19 @@ export class UserEditComponent implements OnInit, OnDestroy {
       name: ['', [Validators.required, Validators.minLength(5)]],
       emailAddress: ['', [Validators.required, Validators.email]],
       gender: ['', Validators.required],
-      formattedBirthDate: ['', [Validators.required, this.dateValidator]]
+      formattedBirthDate: ['', [Validators.required, this.dateValidator]],
+      password: ['', [Validators.minLength(8)]],
     });
   
     this.photoForm = this.fb.group({
       profileImgUrl: ['', [Validators.required, Validators.pattern(/https?:\/\/.+/)]]
     });
   }
-  
 
   ngOnInit() {
     this.route.paramMap.subscribe((params: any) => {
       this.userId = params.get('id');
+      this.isNewUser = !this.userId; // Als er geen userId is, is dit een nieuwe gebruiker
       if (this.userId) {
         this.sub = this.userService.getUserByIdAsync(this.userId).subscribe((user: User) => {
           this.user = user;
@@ -54,31 +56,49 @@ export class UserEditComponent implements OnInit, OnDestroy {
               name: this.user.name,
               emailAddress: this.user.emailAddress,
               gender: this.user.gender,
-              formattedBirthDate: this.formattedBirthDate
+              formattedBirthDate: this.formattedBirthDate,
             });
           }
         });
       }
     });
-  }
+  } 
 
   ngOnDestroy() {
     this.sub.unsubscribe();
   }
 
   onSave() {
-    if (this.userForm.valid && this.userId) {
+    if (this.userForm.valid) {
       const formValues = this.userForm.value;
-      const [day, month, year] = formValues.formattedBirthDate.split('-');
-      this.user.birthDate = new Date(+year, +month - 1, +day);
-      this.user.name = formValues.name;
-      this.user.emailAddress = formValues.emailAddress;
-      this.user.gender = formValues.gender;
 
-      this.userService.updateUser(this.userId, this.user).subscribe(() => {
-        this.router.navigate(['/users']);
-      });
+      if (this.isNewUser) {
+        // Nieuwe gebruiker maken
+        const newUser: User = {
+          ...formValues,
+          birthDate: this.parseDate(formValues.formattedBirthDate),
+        };
+        this.userService.createUser(newUser).subscribe(() => {
+          this.router.navigate(['/users']);
+        });
+      } else {
+        // Bestaande gebruiker bijwerken
+        const [day, month, year] = formValues.formattedBirthDate.split('-');
+        this.user.birthDate = new Date(+year, +month - 1, +day);
+        this.user.name = formValues.name;
+        this.user.emailAddress = formValues.emailAddress;
+        this.user.gender = formValues.gender;
+
+        this.userService.updateUser(this.userId!, this.user).subscribe(() => {
+          this.router.navigate(['/users']);
+        });
+      }
     }
+  }
+  
+  parseDate(dateString: string): Date {
+    const [day, month, year] = dateString.split('-').map(Number);
+    return new Date(year, month - 1, day);
   }
 
   dateValidator(control: any): { [key: string]: boolean } | null {
@@ -102,5 +122,6 @@ export class UserEditComponent implements OnInit, OnDestroy {
       const newUrl = this.photoForm.value.profileImgUrl;
       this.user.profileImgUrl = newUrl;      
     }
-  } 
+  }
+  
 }

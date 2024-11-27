@@ -65,40 +65,12 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "README.md",
-        "hash": "1955868086715526908"
-      },
-      {
-        "file": "migrations.json",
-        "hash": "4597419159832879830"
-      },
-      {
-        "file": "tsconfig.base.json",
-        "hash": "102872237454768305"
-      },
-      {
-        "file": "Nx-workshop.postman_collection.json",
-        "hash": "13796819436055774183"
-      },
-      {
         "file": "jest.preset.js",
         "hash": "7473220183190921152"
       },
       {
-        "file": ".eslintrc.json",
-        "hash": "4566917484430375526"
-      },
-      {
-        "file": "package.json",
-        "hash": "3868875776957438874"
-      },
-      {
-        "file": ".github/workflows/azure-static-web-apps-icy-tree-01fe4d303.yml",
-        "hash": "4292851524355691075"
-      },
-      {
-        "file": "nx.json",
-        "hash": "13543554231657983656"
+        "file": "README.md",
+        "hash": "1955868086715526908"
       },
       {
         "file": ".eslintignore",
@@ -109,20 +81,16 @@
         "hash": "8731589497805983804"
       },
       {
-        "file": ".prettierignore",
-        "hash": "135344717789917661"
+        "file": ".github/workflows/azure-static-web-apps-icy-tree-01fe4d303.yml",
+        "hash": "4292851524355691075"
       },
       {
-        "file": ".prettierrc",
-        "hash": "6192629144332209564"
+        "file": ".gitignore",
+        "hash": "637008721651112966"
       },
       {
-        "file": ".vscode/settings.json",
-        "hash": "16632116639765706074"
-      },
-      {
-        "file": "jest.config.ts",
-        "hash": "3407785570333453138"
+        "file": "nx.json",
+        "hash": "13543554231657983656"
       },
       {
         "file": ".editorconfig",
@@ -133,8 +101,40 @@
         "hash": "1194419262312006041"
       },
       {
-        "file": ".gitignore",
-        "hash": "637008721651112966"
+        "file": ".vscode/settings.json",
+        "hash": "16632116639765706074"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "3407785570333453138"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "6192629144332209564"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "135344717789917661"
+      },
+      {
+        "file": "Nx-workshop.postman_collection.json",
+        "hash": "13796819436055774183"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "102872237454768305"
+      },
+      {
+        "file": "package.json",
+        "hash": "3868875776957438874"
+      },
+      {
+        "file": "migrations.json",
+        "hash": "4597419159832879830"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "4566917484430375526"
       }
     ],
     "projectFileMap": {
@@ -1469,7 +1469,7 @@
         },
         {
           "file": "libs/frontend/features/src/lib/users/user-edit/user-edit.component.html",
-          "hash": "7758578559982859688"
+          "hash": "14114579492348184532"
         },
         {
           "file": "libs/frontend/features/src/lib/users/user-edit/user-edit.component.spec.ts",
@@ -1480,7 +1480,7 @@
         },
         {
           "file": "libs/frontend/features/src/lib/users/user-edit/user-edit.component.ts",
-          "hash": "1779052065836397940",
+          "hash": "4153524017192953793",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/router",
@@ -1513,7 +1513,7 @@
         },
         {
           "file": "libs/frontend/features/src/lib/users/user.service.ts",
-          "hash": "14531665348592858914",
+          "hash": "6998911910614182731",
           "deps": [
             "npm:@angular/core",
             "api",
