@@ -6686,3 +6686,14 @@ Failed to process project graph. Run "nx reset" to fix this. Please report the i
 Please rerun the command, which will restart the daemon.
 If you get this error again, check for any errors in the daemon process logs found in: c:\Documenten\Jaar 2\Periode 2\Client-side\github_avans-nx-workshop\avans-nx-workshop\.nx\workspace-data\d\daemon.log
 
+[NX Daemon Server] - 2024-11-27T21:48:44.037Z - Started listening on: \\.\pipe\nx\C:\Users\siets\AppData\Local\Temp\f439848001\d.sock
+[NX Daemon Server] - 2024-11-27T21:48:44.041Z - [WATCHER]: Subscribed to changes within: c:\Documenten\Jaar 2\Periode 2\Client-side\github_avans-nx-workshop\avans-nx-workshop (native)
+[NX Daemon Server] - 2024-11-27T21:48:44.078Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-11-27T21:48:44.080Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-11-27T21:48:44.081Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-11-27T21:48:44.084Z - [REQUEST]: Responding to the client. Shutdown initiated
+[NX Daemon Server] - 2024-11-27T21:48:44.086Z - Done responding to the client Shutdown initiated
+[NX Daemon Server] - 2024-11-27T21:48:44.086Z - Handled FORCE_SHUTDOWN. Handling time: 0. Response time: 2.
+[NX Daemon Server] - 2024-11-27T21:48:44.087Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-11-27T21:48:44.087Z - [WATCHER]: Stopping the watcher for c:\Documenten\Jaar 2\Periode 2\Client-side\github_avans-nx-workshop\avans-nx-workshop (sources)
+[NX Daemon Server] - 2024-11-27T21:48:44.087Z - [WATCHER]: Stopping the watcher for c:\Documenten\Jaar 2\Periode 2\Client-side\github_avans-nx-workshop\avans-nx-workshop (outputs)
