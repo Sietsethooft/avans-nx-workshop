@@ -1,62 +1,94 @@
-<div class="row">
-    <div class="col-xl-4">
-        <div class="card mb-4 mb-xl-0" >
-            <div class="card-header" style="background-color: #435d7d; color: white;"><h4>Profielfoto</h4></div>
-            <div class="card-body text-center">
-                <img class="img-account-profile rounded-circle mb-2" [src]="user?.profileImgUrl" alt="Profielfoto" style="width: 200px; height: 200px;">
+<div *ngIf="!user" class="container p-3">
+    <div class="row">
+        <div class="col-xl-4">
+            <div class="card mb-4 mb-xl-0" >
+                <div class="card-header" style="background-color: #435d7d; color: white;"><h4>Profielfoto</h4></div>
+                <div class="card-body text-center">
+                    <div class="card-body text-center">
+                        <img class="img-account-profile rounded-circle mb-2" src="https://lpcna.nhs.uk/application/files/1516/0322/1131/person-placeholder.jpg" alt="Profielfoto" style="width: 200px; height: 200px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-8">
+            <div class="card mb-4">
+                <div class="card-header d-flex align-items-center justify-content-between" style="background-color: #435d7d; color: white;">
+                    <h4>Accountgegevens</h4>
+                </div>  
+                <div class="card-body">
+                    <div class="d-flex justify-content-center align-items-center" style="height: 200px;">
+                        <div class="spinner-border text-primary m-2" role="status" style="width: 3rem; height: 3rem;">
+                            <span class="sr-only"></span>
+                        </div>
+                        <p class="mb-0" style="font-size: 1.5rem;">Gegevens worden geladen...</p>
+                    </div>
+                </div>          
             </div>
         </div>
     </div>
-    <div class="col-xl-8">
-        <div class="card mb-4">
-            <div class="card-header d-flex align-items-center justify-content-between" style="background-color: #435d7d; color: white;">
-                <h4>Accountgegevens</h4>
-                <div>
-                    <a class="btn btn-primary btn-sm" href="#" role="button" routerLink="edit">Edit</a>
-                    <button class="btn btn-danger btn-sm ms-2" data-bs-toggle="modal" data-bs-target="#deleteUserModal">
-                        Delete
-                    </button>
+</div>
+
+<div *ngIf="user">
+    <div class="row">
+        <div class="col-xl-4">
+            <div class="card mb-4 mb-xl-0" >
+                <div class="card-header" style="background-color: #435d7d; color: white;"><h4>Profielfoto</h4></div>
+                <div class="card-body text-center">
+                    <img class="img-account-profile rounded-circle mb-2" [src]="user.profileImgUrl" alt="Profielfoto" style="width: 200px; height: 200px;">
                 </div>
-            </div>            
-            <div class="card-body">
-                <form>
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <label class="fs-4 mb-1">Naam:</label>
-                            <p class="form-control-plaintext p-0">{{ user?.name }}</p>
-                        </div>
-                        <div class="col-md-6">
-                            <label class="fs-4 mb-1">Geboortedatum:</label>
-                            <p class="form-control-plaintext p-0">{{ user?.birthDate | date:'dd/MM/yyyy' }}</p>
-                        </div>
+            </div>
+        </div>
+        <div class="col-xl-8">
+            <div class="card mb-4">
+                <div class="card-header d-flex align-items-center justify-content-between" style="background-color: #435d7d; color: white;">
+                    <h4>Accountgegevens</h4>
+                    <div>
+                        <a class="btn btn-primary btn-sm" href="#" role="button" routerLink="edit">Edit</a>
+                        <button class="btn btn-danger btn-sm ms-2" data-bs-toggle="modal" data-bs-target="#deleteUserModal">
+                            Delete
+                        </button>
                     </div>
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <label class="fs-4 mb-1">E-mail:</label>
-                            <p class="form-control-plaintext p-0">{{ user?.emailAddress }}</p>
+                </div>            
+                <div class="card-body">
+                    <form>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label class="fs-4 mb-1">Naam:</label>
+                                <p class="form-control-plaintext p-0">{{ user.name }}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="fs-4 mb-1">Geboortedatum:</label>
+                                <p class="form-control-plaintext p-0">{{ user.birthDate | date:'dd/MM/yyyy' }}</p>
+                            </div>
                         </div>
-                        <div class="col-md-6">
-                            <label class="fs-4 mb-1">Rol:</label>
-                            <p class="form-control-plaintext p-0">{{ user?.role }}</p>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label class="fs-4 mb-1">E-mail:</label>
+                                <p class="form-control-plaintext p-0">{{ user.emailAddress }}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="fs-4 mb-1">Rol:</label>
+                                <p class="form-control-plaintext p-0">{{ user.role }}</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <label class="fs-4 mb-1">Geslacht:</label>
-                            <p class="form-control-plaintext p-0">{{ user?.gender }}</p>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label class="fs-4 mb-1">Geslacht:</label>
+                                <p class="form-control-plaintext p-0">{{ user.gender }}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="fs-4 mb-1">Actief:</label>
+                                <p class="form-control-plaintext p-0">{{ user.isActive ? 'Ja' : 'Nee' }}</p>
+                            </div>
                         </div>
-                        <div class="col-md-6">
-                            <label class="fs-4 mb-1">Actief:</label>
-                            <p class="form-control-plaintext p-0">{{ user?.isActive ? 'Ja' : 'Nee' }}</p>
-                        </div>
-                    </div>
-                    <!-- <div class="mb-3">
-                        <label class="fs-4 mb-1">Instrumenten:</label>
-                        <ul class="list-group">
-                            <li class="list-group-item" *ngFor="let instrument of user?.instruments">{{ instrument.name }}</li>
-                        </ul>
-                    </div> -->
-                </form>
+                        <!-- <div class="mb-3">
+                            <label class="fs-4 mb-1">Instrumenten:</label>
+                            <ul class="list-group">
+                                <li class="list-group-item" *ngFor="let instrument of user?.instruments">{{ instrument.name }}</li>
+                            </ul>
+                        </div> -->
+                    </form>
+                </div>
             </div>
         </div>
     </div>
