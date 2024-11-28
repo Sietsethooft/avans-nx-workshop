@@ -36,9 +36,14 @@ export class UserEditComponent implements OnInit, OnDestroy {
       emailAddress: ['', [Validators.required, Validators.email]],
       gender: ['', Validators.required],
       formattedBirthDate: ['', [Validators.required, this.dateValidator]],
-      password: ['', [Validators.minLength(8)]],
+      password: [
+        '',
+        this.isNewUser 
+          ? [Validators.required, Validators.minLength(8)]
+          : [],
+      ],
     });
-
+  
     this.photoForm = this.fb.group({
       profileImgUrl: ['', [Validators.required, Validators.pattern(/https?:\/\/.+/)]]
     });
@@ -48,15 +53,22 @@ export class UserEditComponent implements OnInit, OnDestroy {
     this.route.paramMap.subscribe((params: any) => {
       this.userId = params.get('id');
       this.isNewUser = !this.userId; 
-
+  
+      if (this.isNewUser) {
+        // Voeg validatie toe voor nieuwe gebruikers
+        this.userForm.get('password')?.setValidators([Validators.required, Validators.minLength(8)]);
+        this.userForm.get('password')?.updateValueAndValidity();
+      }
+  
       if (this.isNewUser) {
         this.isLoading = false;
+        this.userForm.markAllAsTouched();
       } else {
         this.sub = this.userService.getUserByIdAsync(this.userId).subscribe({
           next: (user: User) => {
             this.user = user;
             this.isLoading = false;
-
+  
             if (this.user.birthDate) {
               this.formattedBirthDate = this.datePipe.transform(this.user.birthDate, 'dd-MM-yyyy')!;
               this.userForm.patchValue({
@@ -73,13 +85,18 @@ export class UserEditComponent implements OnInit, OnDestroy {
         });
       }
     });
-  }
+  }  
 
   ngOnDestroy() {
     this.sub.unsubscribe();
   }
 
   onSave() {
+    if (this.userForm.invalid) {
+      this.userForm.markAllAsTouched(); // Markeer alle velden als 'aangeraakt' om fouten weer te geven
+      return;
+    }
+
     if (this.userForm.valid) {
       const formValues = this.userForm.value;
   

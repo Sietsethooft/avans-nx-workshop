@@ -72,6 +72,7 @@ export class BandEditComponent implements OnInit, OnDestroy {
         });
       } else {
         this.isLoading = false;
+        this.bandForm.markAllAsTouched();
         this.assignRandomLeaderAndMember();
       }
     });
@@ -82,6 +83,11 @@ export class BandEditComponent implements OnInit, OnDestroy {
   }
 
   onSave() {
+    if (this.bandForm.invalid) {
+      this.bandForm.markAllAsTouched();
+      return;
+    }
+
     if (this.bandForm.valid) {
       const formValues = this.bandForm.value;
       const genresArray = formValues.genres.split(',').map((genre: string) => genre.trim());
