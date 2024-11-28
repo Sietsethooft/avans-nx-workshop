@@ -22,6 +22,10 @@ export class UserEditComponent implements OnInit, OnDestroy {
   photoForm: FormGroup;
   formattedBirthDate: string = '';
   isNewUser: boolean = false;
+<<<<<<< HEAD
+=======
+  isLoading: boolean = true;
+>>>>>>> Development
 
   constructor(
     private route: ActivatedRoute,
@@ -37,7 +41,10 @@ export class UserEditComponent implements OnInit, OnDestroy {
       formattedBirthDate: ['', [Validators.required, this.dateValidator]],
       password: ['', [Validators.minLength(8)]],
     });
+<<<<<<< HEAD
   
+=======
+>>>>>>> Development
     this.photoForm = this.fb.group({
       profileImgUrl: ['', [Validators.required, Validators.pattern(/https?:\/\/.+/)]]
     });
@@ -46,6 +53,7 @@ export class UserEditComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.route.paramMap.subscribe((params: any) => {
       this.userId = params.get('id');
+<<<<<<< HEAD
       this.isNewUser = !this.userId; // Als er geen userId is, is dit een nieuwe gebruiker
       if (this.userId) {
         this.sub = this.userService.getUserByIdAsync(this.userId).subscribe((user: User) => {
@@ -63,11 +71,41 @@ export class UserEditComponent implements OnInit, OnDestroy {
       }
     });
   } 
+=======
+      this.isNewUser = !this.userId; 
+
+      if (this.isNewUser) {
+        this.isLoading = false;
+      } else {
+        this.sub = this.userService.getUserByIdAsync(this.userId).subscribe({
+          next: (user: User) => {
+            this.user = user;
+            this.isLoading = false;
+
+            if (this.user.birthDate) {
+              this.formattedBirthDate = this.datePipe.transform(this.user.birthDate, 'dd-MM-yyyy')!;
+              this.userForm.patchValue({
+                name: this.user.name,
+                emailAddress: this.user.emailAddress,
+                gender: this.user.gender,
+                formattedBirthDate: this.formattedBirthDate,
+              });
+            }
+          },
+          error: () => {
+            this.isLoading = true; 
+          },
+        });
+      }
+    });
+  }
+>>>>>>> Development
 
   ngOnDestroy() {
     this.sub.unsubscribe();
   }
 
+<<<<<<< HEAD
   onSave() {
     if (this.userForm.valid) {
       const formValues = this.userForm.value;
@@ -76,19 +114,42 @@ export class UserEditComponent implements OnInit, OnDestroy {
         // Nieuwe gebruiker maken
         const newUser: User = {
           ...formValues,
+=======
+
+
+  onSave() {
+    if (this.userForm.valid) {
+      const formValues = this.userForm.value;
+  
+      const profileImgUrl = this.photoForm.get('profileImgUrl')?.value || 'https://lpcna.nhs.uk/application/files/1516/0322/1131/person-placeholder.jpg';
+  
+      if (this.isNewUser) {
+        const newUser: User = {
+          ...formValues,
+          profileImgUrl, 
+>>>>>>> Development
           birthDate: this.parseDate(formValues.formattedBirthDate),
         };
         this.userService.createUser(newUser).subscribe(() => {
           this.router.navigate(['/users']);
         });
       } else {
+<<<<<<< HEAD
         // Bestaande gebruiker bijwerken
+=======
+>>>>>>> Development
         const [day, month, year] = formValues.formattedBirthDate.split('-');
         this.user.birthDate = new Date(+year, +month - 1, +day);
         this.user.name = formValues.name;
         this.user.emailAddress = formValues.emailAddress;
         this.user.gender = formValues.gender;
+<<<<<<< HEAD
 
+=======
+  
+        this.user.profileImgUrl = profileImgUrl;
+  
+>>>>>>> Development
         this.userService.updateUser(this.userId!, this.user).subscribe(() => {
           this.router.navigate(['/users']);
         });
@@ -96,6 +157,10 @@ export class UserEditComponent implements OnInit, OnDestroy {
     }
   }
   
+<<<<<<< HEAD
+=======
+  
+>>>>>>> Development
   parseDate(dateString: string): Date {
     const [day, month, year] = dateString.split('-').map(Number);
     return new Date(year, month - 1, day);
