@@ -17163,11 +17163,6 @@
       },
       {
         "source": "features",
-        "target": "my-app",
-        "type": "static"
-      },
-      {
-        "source": "features",
         "target": "users",
         "type": "static"
       },
