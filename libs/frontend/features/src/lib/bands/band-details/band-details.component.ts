@@ -63,11 +63,11 @@ export class BandDetailsComponent implements OnInit {
     }
 
     deleteBand(): void {
-        // if (this.bandId) {
-        //     this.bandService.deleteBand(this.bandId).subscribe(() => {
-        //         this.router.navigate(['/bands']);
-        //     });
-        // }
+        if (this.bandId) {
+            this.bandService.deleteBand(this.bandId).subscribe(() => {
+                this.router.navigate(['/bands']);
+            });
+        }
     }
 
     confirmDelete() {

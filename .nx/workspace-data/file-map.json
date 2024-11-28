@@ -65,76 +65,76 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "Nx-workshop.postman_collection.json",
-        "hash": "13796819436055774183"
-      },
-      {
-        "file": ".eslintrc.json",
-        "hash": "4566917484430375526"
-      },
-      {
-        "file": ".github/workflows/azure-static-web-apps-icy-tree-01fe4d303.yml",
-        "hash": "4292851524355691075"
-      },
-      {
-        "file": ".eslintignore",
-        "hash": "13404745306227114823"
-      },
-      {
-        "file": ".prettierrc",
-        "hash": "6192629144332209564"
-      },
-      {
-        "file": "libs/share-a-meal/readme.txt",
-        "hash": "8731589497805983804"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "637008721651112966"
-      },
-      {
-        "file": "tsconfig.base.json",
-        "hash": "4407260957838184679"
-      },
-      {
-        "file": "README.md",
-        "hash": "1955868086715526908"
-      },
-      {
-        "file": ".editorconfig",
-        "hash": "11532813898455409296"
-      },
-      {
-        "file": "jest.preset.js",
-        "hash": "7473220183190921152"
-      },
-      {
-        "file": "package-lock.json",
-        "hash": "1194419262312006041"
+        "file": "migrations.json",
+        "hash": "4597419159832879830"
       },
       {
         "file": ".vscode/settings.json",
         "hash": "16632116639765706074"
       },
       {
-        "file": "jest.config.ts",
-        "hash": "3407785570333453138"
+        "file": ".gitignore",
+        "hash": "637008721651112966"
+      },
+      {
+        "file": ".eslintignore",
+        "hash": "13404745306227114823"
       },
       {
         "file": "nx.json",
         "hash": "6819787887827871845"
       },
       {
-        "file": "package.json",
-        "hash": "3868875776957438874"
-      },
-      {
         "file": ".prettierignore",
         "hash": "135344717789917661"
       },
       {
-        "file": "migrations.json",
-        "hash": "4597419159832879830"
+        "file": ".prettierrc",
+        "hash": "6192629144332209564"
+      },
+      {
+        "file": "README.md",
+        "hash": "1955868086715526908"
+      },
+      {
+        "file": "package.json",
+        "hash": "3868875776957438874"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "4566917484430375526"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "4407260957838184679"
+      },
+      {
+        "file": "libs/share-a-meal/readme.txt",
+        "hash": "8731589497805983804"
+      },
+      {
+        "file": ".github/workflows/azure-static-web-apps-icy-tree-01fe4d303.yml",
+        "hash": "4292851524355691075"
+      },
+      {
+        "file": ".editorconfig",
+        "hash": "11532813898455409296"
+      },
+      {
+        "file": "Nx-workshop.postman_collection.json",
+        "hash": "13796819436055774183"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "7473220183190921152"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "3407785570333453138"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "1194419262312006041"
       }
     ],
     "projectFileMap": {
@@ -823,7 +823,7 @@
         },
         {
           "file": "apps/my-app/src/styles.css",
-          "hash": "2917954890128038984"
+          "hash": "11794519127851257462"
         },
         {
           "file": "apps/my-app/src/test-setup.ts",
@@ -1623,11 +1623,11 @@
         },
         {
           "file": "libs/frontend/features/src/lib/bands/band-details/band-details.component.html",
-          "hash": "370750234844209807"
+          "hash": "15666558705538881669"
         },
         {
           "file": "libs/frontend/features/src/lib/bands/band-details/band-details.component.ts",
-          "hash": "7520416116028555025",
+          "hash": "1952600061157291670",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/router",
@@ -1660,7 +1660,7 @@
         },
         {
           "file": "libs/frontend/features/src/lib/bands/band-service.ts",
-          "hash": "17889139271089604850",
+          "hash": "10805000721983359861",
           "deps": [
             "npm:@angular/core",
             "npm:rxjs",
@@ -1681,7 +1681,7 @@
         },
         {
           "file": "libs/frontend/features/src/lib/users/user-details/user-details.component.html",
-          "hash": "17154102539314697702"
+          "hash": "11463747249226949777"
         },
         {
           "file": "libs/frontend/features/src/lib/users/user-details/user-details.component.spec.ts",
@@ -1701,7 +1701,7 @@
         },
         {
           "file": "libs/frontend/features/src/lib/users/user-edit/user-edit.component.html",
-          "hash": "8819314670860865989"
+          "hash": "14874974628487379146"
         },
         {
           "file": "libs/frontend/features/src/lib/users/user-edit/user-edit.component.spec.ts",
