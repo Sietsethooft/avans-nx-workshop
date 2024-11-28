@@ -4,9 +4,7 @@
             <div class="card mb-4 mb-xl-0" >
                 <div class="card-header" style="background-color: #435d7d; color: white;"><h4>Profielfoto</h4></div>
                 <div class="card-body text-center">
-                    <div class="card-body text-center">
-                        <img class="img-account-profile rounded-circle mb-2" src="https://lpcna.nhs.uk/application/files/1516/0322/1131/person-placeholder.jpg" alt="Profielfoto" style="width: 200px; height: 200px;">
-                    </div>
+                    <img class="img-account-profile rounded-circle mb-2" src="https://lpcna.nhs.uk/application/files/1516/0322/1131/person-placeholder.jpg" alt="Profielfoto" style="width: 200px; height: 200px;">
                 </div>
             </div>
         </div>
@@ -28,7 +26,7 @@
     </div>
 </div>
 
-<div *ngIf="user">
+<div *ngIf="user" class="container p-3">
     <div class="row">
         <div class="col-xl-4">
             <div class="card mb-4 mb-xl-0" >
@@ -54,31 +52,31 @@
                         <div class="row mb-3">
                             <div class="col-md-6">
                                 <label class="fs-4 mb-1">Naam:</label>
-                                <p class="form-control-plaintext p-0">{{ user.name }}</p>
+                                <p class="form-control-plaintext p-0 ml-s">{{ user.name }}</p>
                             </div>
                             <div class="col-md-6">
                                 <label class="fs-4 mb-1">Geboortedatum:</label>
-                                <p class="form-control-plaintext p-0">{{ user.birthDate | date:'dd/MM/yyyy' }}</p>
+                                <p class="form-control-plaintext p-0 ml-s">{{ user.birthDate | date:'dd/MM/yyyy' }}</p>
                             </div>
                         </div>
                         <div class="row mb-3">
                             <div class="col-md-6">
                                 <label class="fs-4 mb-1">E-mail:</label>
-                                <p class="form-control-plaintext p-0">{{ user.emailAddress }}</p>
+                                <p class="form-control-plaintext p-0 ml-s">{{ user.emailAddress }}</p>
                             </div>
                             <div class="col-md-6">
                                 <label class="fs-4 mb-1">Rol:</label>
-                                <p class="form-control-plaintext p-0">{{ user.role }}</p>
+                                <p class="form-control-plaintext p-0 ml-s">{{ user.role }}</p>
                             </div>
                         </div>
                         <div class="row mb-3">
                             <div class="col-md-6">
                                 <label class="fs-4 mb-1">Geslacht:</label>
-                                <p class="form-control-plaintext p-0">{{ user.gender }}</p>
+                                <p class="form-control-plaintext p-0 ml-s">{{ user.gender }}</p>
                             </div>
                             <div class="col-md-6">
                                 <label class="fs-4 mb-1">Actief:</label>
-                                <p class="form-control-plaintext p-0">{{ user.isActive ? 'Ja' : 'Nee' }}</p>
+                                <p class="form-control-plaintext p-0 ml-s">{{ user.isActive ? 'Ja' : 'Nee' }}</p>
                             </div>
                         </div>
                         <!-- <div class="mb-3">

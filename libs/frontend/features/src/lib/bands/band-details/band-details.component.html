@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-xl-4">
             <div class="card mb-4 mb-xl-0">
-           <div class="card-header" style="background-color: #435d7d; color: white;"><h4>Profielfoto</h4></div>
+           <div class="card-header" style="background-color: #435d7d; color: white;"><h4>Bandfoto</h4></div>
                 <div class="card-body text-center">
                     <img src="https://utaten.com/karaoke/wp-content/uploads/2018/09/image2-21.jpg" class="bd-placeholder-img card-img-top" alt="default band-picture's profile picture" width="100%" height="225">
                 </div>
@@ -18,7 +18,7 @@
                         <div class="spinner-border text-primary m-2" role="status">
                             <span class="sr-only"></span>
                         </div>
-                        <p class="mb-0">Gegevens worden geladen...</p>
+                        <p class="mb-0" style="font-size: 1.5rem;">Gegevens worden geladen...</p>
                     </div>
                 </div>          
             </div>
@@ -30,7 +30,7 @@
     <div class="row">
         <div class="col-xl-4">
             <div class="card mb-4 mb-xl-0">
-                <div class="card-header" style="background-color: #435d7d; color: white;"><h4>Profielfoto</h4></div>
+                <div class="card-header" style="background-color: #435d7d; color: white;"><h4>Bandfoto</h4></div>
                 <div class="card-body text-center">
                     <img [src]="band.profileImgUrl" class="bd-placeholder-img card-img-top" alt="{{band.name}}'s profile picture" width="100%" height="225">
                 </div>
@@ -52,51 +52,54 @@
                         <div class="row mb-3">
                             <div class="col-md-6">
                                 <label class="fs-4 mb-1">Naam:</label>
-                                <p class="form-control-plaintext p-0">{{ band.name }}</p>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="fs-4 mb-1">Beschrijving:</label>
-                                <p class="form-control-plaintext p-0">{{ band.description }}</p>
+                                <p class="form-control-plaintext p-0 ml-s">{{ band.name }}</p>
                             </div>
                         </div>
                         <div class="row mb-3">
                             <div class="col-md-6">
-                                <label class="fs-4 mb-1">Leider:</label>
-                                <p class="form-control-plaintext p-0">{{ band.leader }}</p>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="fs-4 mb-1">Leden:</label>
-                                <ul class="list-group">
-                                    <li class="list-group-item" *ngFor="let member of band.members">{{ member}}</li>
-                                </ul>
+                                <label class="fs-4 mb-1">Beschrijving:</label>
+                                <p class="form-control-plaintext p-0 ml-s">{{ band.description }}</p>
                             </div>
                         </div>
                         <div class="row mb-3">
                             <div class="col-md-6">
                                 <label class="fs-4 mb-1">Hoeveelheid repetities:</label>
-                                <p class="form-control-plaintext p-0">{{ band.frequencyRepetition }}</p>
+                                <p class="form-control-plaintext p-0 ml-s">{{ band.frequencyRepetition }}</p>
                             </div>
                             <div class="col-md-6">
                                 <label class="fs-4 mb-1">Regio:</label>
-                                <p class="form-control-plaintext p-0">{{ band.region }}</p>
+                                <p class="form-control-plaintext p-0 ml-s">{{ band.region }}</p>
                             </div>
                         </div>
                         <div class="row mb-3">
                             <div class="col-md-6">
-                                <label class="fs-4 mb-1">Gespeelde genres:</label>
-                                <ul class="list-group">
-                                    <li class="list-group-item" *ngFor="let genre of band.genres">{{ genre }}</li>
-                                </ul>
+                                <label class="fs-4 mb-1">Leider:</label>
+                                <p class="form-control-plaintext p-0 ml-s">{{ leader?.name }}</p>
                             </div>
+                            <div class="col-md-6">
+                                <label class="fs-4 mb-1">Genres:</label>
+                                <p class="m-0 ml-s">{{ band.genres.join(', ') }}</p>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
                             <div class="col-md-6">
                                 <label class="fs-4 mb-1">Minimale leeftijd:</label>
-                                <p class="form-control-plaintext p-0">{{ band.minAge }}</p>
+                                <p class="form-control-plaintext p-0 ml-s">{{ band.minAge }} jaar</p>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="fs-4 mb-1">Minimale ervaring:</label>
+                                <p class="form-control-plaintext p-0 ml-s">{{ band.minExperience }} jaar</p>
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <div class="col-md-6">
-                                <label class="fs-4 mb-1">Minimale ervaring:</label>
-                                <p class="form-control-plaintext p-0">{{ band.minExperience }}</p>
+                            <div class="col-md-12">
+                                <label class="fs-4 mb-1">Leden:</label>
+                                <ul class="list-group">
+                                    <li class="list-group-item p-2" *ngFor="let member of members">
+                                        <img [src]="member.profileImgUrl" alt="{{ member.name }}" class="rounded" style="width: 50px; height: 50px;">
+                                        <span class="m-3">{{ member.name }}</span>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </form>
