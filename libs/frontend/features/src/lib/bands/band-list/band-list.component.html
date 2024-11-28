@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-<div *ngIf="!bands">
-    <p>Loading data...</p>
-</div>
-<div *ngIf="bands && bands.length === 0">
-    <p>No bands were found.</p>
-</div>
-<div *ngIf="bands && bands.length > 0" class="container">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        <div class="col" *ngFor="let band of bands">
-            <div class="card shadow-sm">
-                <img [src]="band.profileImgUrl" class="bd-placeholder-img card-img-top" alt="{{band.name}}'s profile picture" width="100%" height="225">
-                <div class="card-body">
-                    <h5 class="card-title">{{band.name}}</h5>
-                    <p class="card-text">{{band.description}}</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <a [routerLink]="band._id" class="btn btn-primary">Bekijk details</a>
-=======
 <div *ngIf="!bands" class="container p-3">
     <div class="card mb-4" style="border-radius: 10px; overflow: hidden;">
         <div class="card-header" style="background-color: #435d7d; color: white;">
@@ -90,7 +72,6 @@
                                 <!-- <a [routerLink]="band._id" class="btn btn-primary">Bekijk details</a> -->
                             </div>
                         </div>
->>>>>>> Development
                     </div>
                 </div>
             </div>
