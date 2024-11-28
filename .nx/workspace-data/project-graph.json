@@ -17148,17 +17148,17 @@
       },
       {
         "source": "features",
+        "target": "npm:@angular/forms",
+        "type": "static"
+      },
+      {
+        "source": "features",
         "target": "npm:@angular/common",
         "type": "static"
       },
       {
         "source": "features",
         "target": "util-env",
-        "type": "static"
-      },
-      {
-        "source": "features",
-        "target": "npm:@angular/forms",
         "type": "static"
       },
       {

@@ -36,14 +36,16 @@ export class BandService {
   }
 
   createBand(band: any): Observable<IBand> {
-    console.log('createBand aangeroepen');
+    const bandJson = JSON.stringify(band, null, 2);
+    console.log('createBand aangeroepen met data:', bandJson);
     return this.http
       .post<ApiResponse<any>>(environment.dataApiUrl + '/band', band)
       .pipe(map((response) => response.results));
   }
 
   updateBand(id: string, band: any): Observable<IBand> {
-    console.log('updateBand aangeroepen');
+    const bandJson = JSON.stringify(band, null, 2);
+    console.log('updateBand aangeroepen', bandJson);
     return this.http
       .put<ApiResponse<any>>(environment.dataApiUrl + `/band/${id}`, band)
       .pipe(map((response) => response.results));
