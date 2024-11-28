@@ -78,18 +78,17 @@ export class UserEditComponent implements OnInit, OnDestroy {
     this.sub.unsubscribe();
   }
 
-
-
   onSave() {
     if (this.userForm.valid) {
       const formValues = this.userForm.value;
   
-      const profileImgUrl = this.photoForm.get('profileImgUrl')?.value || 'https://lpcna.nhs.uk/application/files/1516/0322/1131/person-placeholder.jpg';
+      const profileImgUrl = this.photoForm.get('profileImgUrl')?.value || this.user.profileImgUrl || 
+        'https://lpcna.nhs.uk/application/files/1516/0322/1131/person-placeholder.jpg';
   
       if (this.isNewUser) {
         const newUser: User = {
           ...formValues,
-          profileImgUrl, 
+          profileImgUrl,
           birthDate: this.parseDate(formValues.formattedBirthDate),
         };
         this.userService.createUser(newUser).subscribe(() => {
@@ -110,7 +109,6 @@ export class UserEditComponent implements OnInit, OnDestroy {
       }
     }
   }
-  
   
   parseDate(dateString: string): Date {
     const [day, month, year] = dateString.split('-').map(Number);
