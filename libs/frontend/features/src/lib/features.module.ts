@@ -11,11 +11,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
     imports: [CommonModule, RouterModule, FormsModule, ReactiveFormsModule],
-<<<<<<< HEAD
-    declarations: [UserDetailsComponent, UserListComponent, UserEditComponent],
-=======
     declarations: [UserDetailsComponent, UserListComponent, UserEditComponent, BandDetailsComponent],
->>>>>>> Development
     providers: [provideHttpClient()],
 })
 export class FeaturesModule {}
