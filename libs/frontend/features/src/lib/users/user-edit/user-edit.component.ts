@@ -22,6 +22,7 @@ export class UserEditComponent implements OnInit, OnDestroy {
   photoForm: FormGroup;
   formattedBirthDate: string = '';
   isNewUser: boolean = false;
+  isLoading: boolean = true;
 
   constructor(
     private route: ActivatedRoute,
@@ -37,7 +38,7 @@ export class UserEditComponent implements OnInit, OnDestroy {
       formattedBirthDate: ['', [Validators.required, this.dateValidator]],
       password: ['', [Validators.minLength(8)]],
     });
-  
+
     this.photoForm = this.fb.group({
       profileImgUrl: ['', [Validators.required, Validators.pattern(/https?:\/\/.+/)]]
     });
@@ -46,54 +47,62 @@ export class UserEditComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.route.paramMap.subscribe((params: any) => {
       this.userId = params.get('id');
-      this.isNewUser = !this.userId; // Als er geen userId is, is dit een nieuwe gebruiker
-      if (this.userId) {
-        this.sub = this.userService.getUserByIdAsync(this.userId).subscribe((user: User) => {
-          this.user = user;
-          if (this.user.birthDate) {
-            this.formattedBirthDate = this.datePipe.transform(this.user.birthDate, 'dd-MM-yyyy')!;
-            this.userForm.patchValue({
-              name: this.user.name,
-              emailAddress: this.user.emailAddress,
-              gender: this.user.gender,
-              formattedBirthDate: this.formattedBirthDate,
-            });
-          }
+      this.isNewUser = !this.userId; 
+
+      if (this.isNewUser) {
+        this.isLoading = false;
+      } else {
+        this.sub = this.userService.getUserByIdAsync(this.userId).subscribe({
+          next: (user: User) => {
+            this.user = user;
+            this.isLoading = false;
+
+            if (this.user.birthDate) {
+              this.formattedBirthDate = this.datePipe.transform(this.user.birthDate, 'dd-MM-yyyy')!;
+              this.userForm.patchValue({
+                name: this.user.name,
+                emailAddress: this.user.emailAddress,
+                gender: this.user.gender,
+                formattedBirthDate: this.formattedBirthDate,
+              });
+            }
+          },
+          error: () => {
+            this.isLoading = true; 
+          },
         });
       }
     });
-  } 
+  }
 
   ngOnDestroy() {
     this.sub.unsubscribe();
   }
 
+
+
   onSave() {
     if (this.userForm.valid) {
       const formValues = this.userForm.value;
   
-      // Voeg de afbeelding-URL toe (als die bestaat in de photoForm)
       const profileImgUrl = this.photoForm.get('profileImgUrl')?.value || 'https://lpcna.nhs.uk/application/files/1516/0322/1131/person-placeholder.jpg';
   
       if (this.isNewUser) {
-        // Nieuwe gebruiker maken
         const newUser: User = {
           ...formValues,
-          profileImgUrl, // Voeg de geüploade afbeelding-URL toe
+          profileImgUrl, 
           birthDate: this.parseDate(formValues.formattedBirthDate),
         };
         this.userService.createUser(newUser).subscribe(() => {
           this.router.navigate(['/users']);
         });
       } else {
-        // Bestaande gebruiker bijwerken
         const [day, month, year] = formValues.formattedBirthDate.split('-');
         this.user.birthDate = new Date(+year, +month - 1, +day);
         this.user.name = formValues.name;
         this.user.emailAddress = formValues.emailAddress;
         this.user.gender = formValues.gender;
   
-        // Update de afbeelding-URL
         this.user.profileImgUrl = profileImgUrl;
   
         this.userService.updateUser(this.userId!, this.user).subscribe(() => {

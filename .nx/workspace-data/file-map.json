@@ -65,76 +65,76 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "migrations.json",
-        "hash": "4597419159832879830"
-      },
-      {
-        "file": "jest.preset.js",
-        "hash": "7473220183190921152"
-      },
-      {
-        "file": "README.md",
-        "hash": "1955868086715526908"
-      },
-      {
-        "file": ".github/workflows/azure-static-web-apps-icy-tree-01fe4d303.yml",
-        "hash": "4292851524355691075"
-      },
-      {
-        "file": "package.json",
-        "hash": "3868875776957438874"
-      },
-      {
-        "file": "tsconfig.base.json",
-        "hash": "102872237454768305"
-      },
-      {
-        "file": ".vscode/settings.json",
-        "hash": "16632116639765706074"
-      },
-      {
-        "file": "libs/share-a-meal/readme.txt",
-        "hash": "8731589497805983804"
-      },
-      {
-        "file": "jest.config.ts",
-        "hash": "3407785570333453138"
-      },
-      {
-        "file": ".prettierrc",
-        "hash": "6192629144332209564"
-      },
-      {
-        "file": ".prettierignore",
-        "hash": "135344717789917661"
-      },
-      {
         "file": "Nx-workshop.postman_collection.json",
         "hash": "13796819436055774183"
-      },
-      {
-        "file": ".eslintignore",
-        "hash": "13404745306227114823"
-      },
-      {
-        "file": ".editorconfig",
-        "hash": "11532813898455409296"
-      },
-      {
-        "file": "package-lock.json",
-        "hash": "1194419262312006041"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "637008721651112966"
       },
       {
         "file": "nx.json",
         "hash": "13543554231657983656"
       },
       {
+        "file": "migrations.json",
+        "hash": "4597419159832879830"
+      },
+      {
+        "file": ".eslintignore",
+        "hash": "13404745306227114823"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "637008721651112966"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "135344717789917661"
+      },
+      {
         "file": ".eslintrc.json",
         "hash": "4566917484430375526"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "102872237454768305"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "3407785570333453138"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "7473220183190921152"
+      },
+      {
+        "file": ".github/workflows/azure-static-web-apps-icy-tree-01fe4d303.yml",
+        "hash": "4292851524355691075"
+      },
+      {
+        "file": ".editorconfig",
+        "hash": "11532813898455409296"
+      },
+      {
+        "file": "README.md",
+        "hash": "1955868086715526908"
+      },
+      {
+        "file": "libs/share-a-meal/readme.txt",
+        "hash": "8731589497805983804"
+      },
+      {
+        "file": "package.json",
+        "hash": "3868875776957438874"
+      },
+      {
+        "file": ".vscode/settings.json",
+        "hash": "16632116639765706074"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "6192629144332209564"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "1194419262312006041"
       }
     ],
     "projectFileMap": {
@@ -344,7 +344,7 @@
         },
         {
           "file": "libs/frontend/features/src/lib/users/user-edit/user-edit.component.html",
-          "hash": "17074800881200809726"
+          "hash": "3764378260213702261"
         },
         {
           "file": "libs/frontend/features/src/lib/users/user-edit/user-edit.component.spec.ts",
@@ -355,7 +355,7 @@
         },
         {
           "file": "libs/frontend/features/src/lib/users/user-edit/user-edit.component.ts",
-          "hash": "3357349395904019469",
+          "hash": "13616406953375956799",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/router",
