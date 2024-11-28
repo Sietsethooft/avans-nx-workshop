@@ -18,7 +18,7 @@
                         <div class="spinner-border text-primary m-2" role="status">
                             <span class="sr-only"></span>
                         </div>
-                        <p class="mb-0">Gegevens worden geladen...</p>
+                        <p class="mb-0" style="font-size: 1.5rem;">Gegevens worden geladen...</p>
                     </div>
                 </div>          
             </div>
@@ -54,21 +54,11 @@
                                 <label class="fs-4 mb-1">Naam:</label>
                                 <p class="form-control-plaintext p-0">{{ band.name }}</p>
                             </div>
-                            <div class="col-md-6">
-                                <label class="fs-4 mb-1">Beschrijving:</label>
-                                <p class="form-control-plaintext p-0">{{ band.description }}</p>
-                            </div>
                         </div>
                         <div class="row mb-3">
                             <div class="col-md-6">
-                                <label class="fs-4 mb-1">Leider:</label>
-                                <p class="form-control-plaintext p-0">{{ band.leader }}</p>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="fs-4 mb-1">Leden:</label>
-                                <ul class="list-group">
-                                    <li class="list-group-item" *ngFor="let member of band.members">{{ member}}</li>
-                                </ul>
+                                <label class="fs-4 mb-1">Beschrijving:</label>
+                                <p class="form-control-plaintext p-0">{{ band.description }}</p>
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -83,20 +73,33 @@
                         </div>
                         <div class="row mb-3">
                             <div class="col-md-6">
-                                <label class="fs-4 mb-1">Gespeelde genres:</label>
-                                <ul class="list-group">
-                                    <li class="list-group-item" *ngFor="let genre of band.genres">{{ genre }}</li>
-                                </ul>
+                                <label class="fs-4 mb-1">Leider:</label>
+                                <p class="form-control-plaintext p-0">{{ leader?.name }}</p>
                             </div>
                             <div class="col-md-6">
-                                <label class="fs-4 mb-1">Minimale leeftijd:</label>
-                                <p class="form-control-plaintext p-0">{{ band.minAge }}</p>
+                                <label class="fs-4 mb-1">Genres:</label>
+                                <p class="m-0">{{ band.genres.join(', ') }}</p>
                             </div>
                         </div>
                         <div class="row mb-3">
                             <div class="col-md-6">
+                                <label class="fs-4 mb-1">Minimale leeftijd:</label>
+                                <p class="form-control-plaintext p-0">{{ band.minAge }} jaar</p>
+                            </div>
+                            <div class="col-md-6">
                                 <label class="fs-4 mb-1">Minimale ervaring:</label>
-                                <p class="form-control-plaintext p-0">{{ band.minExperience }}</p>
+                                <p class="form-control-plaintext p-0">{{ band.minExperience }} jaar</p>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <label class="fs-4 mb-1">Leden:</label>
+                                <ul class="list-group">
+                                    <li class="list-group-item p-2" *ngFor="let member of members">
+                                        <img [src]="member.profileImgUrl" alt="{{ member.name }}" class="rounded" style="width: 50px; height: 50px;">
+                                        <span class="m-3">{{ member.name }}</span>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </form>
