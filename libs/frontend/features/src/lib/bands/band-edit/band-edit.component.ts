@@ -87,18 +87,16 @@ export class BandEditComponent implements OnInit, OnDestroy {
       const genresArray = formValues.genres.split(',').map((genre: string) => genre.trim());
   
       const saveBand = () => {
-        // Filter null-waarden uit de members-array
         const validMembers = this.band.members?.filter(member => member && member._id) || [];
   
         const updatedBand: IBand = {
           ...this.band,
           ...formValues,
           genres: genresArray,
-          leader: this.band.leader ? (this.band.leader as IUserIdentity)._id : undefined, // Converteer naar string als aanwezig
-          members: validMembers.length > 0 ? validMembers.map((member: IUserIdentity) => member._id) : undefined, // Alleen als er geldige members zijn
+          leader: this.band.leader ? (this.band.leader as IUserIdentity)._id : undefined,
+          members: validMembers.length > 0 ? validMembers.map((member: IUserIdentity) => member._id) : undefined,
         };
   
-        // Verwijder properties met undefined waarden
         Object.keys(updatedBand).forEach(key => {
           if (updatedBand[key as keyof IBand] === undefined) {
             delete updatedBand[key as keyof IBand];
@@ -106,12 +104,14 @@ export class BandEditComponent implements OnInit, OnDestroy {
         });
   
         if (this.bandId) {
+          // Bijwerken van een bestaande band
           this.bandService.updateBand(this.bandId, updatedBand).subscribe(() => {
-            this.router.navigate(['/bands']);
+            this.router.navigate(['/bands', this.bandId]); // Navigeren naar detailpagina
           });
         } else {
-          this.bandService.createBand(updatedBand).subscribe(() => {
-            this.router.navigate(['/bands']);
+          // Aanmaken van een nieuwe band
+          this.bandService.createBand(updatedBand).subscribe((newBand: IBand) => {
+            this.router.navigate(['/bands', newBand._id]); // Navigeren naar detailpagina
           });
         }
       };
@@ -126,8 +126,7 @@ export class BandEditComponent implements OnInit, OnDestroy {
         saveBand();
       }
     }
-  }
-  
+  }  
 
   updatePhoto() {
     if (this.photoForm.valid) {

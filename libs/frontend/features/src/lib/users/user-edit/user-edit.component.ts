@@ -83,19 +83,24 @@ export class UserEditComponent implements OnInit, OnDestroy {
     if (this.userForm.valid) {
       const formValues = this.userForm.value;
   
-      const profileImgUrl = this.photoForm.get('profileImgUrl')?.value || this.user.profileImgUrl || 
+      // Gebruik een standaardafbeelding als er geen URL is opgegeven
+      const profileImgUrl = this.photoForm.get('profileImgUrl')?.value || 
+        this.user.profileImgUrl || 
         'https://lpcna.nhs.uk/application/files/1516/0322/1131/person-placeholder.jpg';
   
       if (this.isNewUser) {
+        // Nieuwe gebruiker aanmaken
         const newUser: User = {
           ...formValues,
           profileImgUrl,
           birthDate: this.parseDate(formValues.formattedBirthDate),
         };
-        this.userService.createUser(newUser).subscribe(() => {
-          this.router.navigate(['/users']);
+  
+        this.userService.createUser(newUser).subscribe((createdUser: User) => {
+          this.router.navigate(['/users', createdUser._id]); // Navigeren naar detailpagina
         });
       } else {
+        // Bestaande gebruiker bijwerken
         const [day, month, year] = formValues.formattedBirthDate.split('-');
         this.user.birthDate = new Date(+year, +month - 1, +day);
         this.user.name = formValues.name;
@@ -105,12 +110,11 @@ export class UserEditComponent implements OnInit, OnDestroy {
         this.user.profileImgUrl = profileImgUrl;
   
         this.userService.updateUser(this.userId!, this.user).subscribe(() => {
-          this.router.navigate(['/users']);
+          this.router.navigate(['/users', this.userId]); // Navigeren naar detailpagina
         });
       }
     }
   }
-  
   
   
   parseDate(dateString: string): Date {
