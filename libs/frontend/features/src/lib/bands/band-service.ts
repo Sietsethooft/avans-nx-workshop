@@ -34,4 +34,25 @@ export class BandService {
         map(response => response.results)
       );
   }
+
+  createBand(band: any): Observable<IBand> {
+    console.log('createBand aangeroepen');
+    return this.http
+      .post<ApiResponse<any>>(environment.dataApiUrl + '/band', band)
+      .pipe(map((response) => response.results));
+  }
+
+  updateBand(id: string, band: any): Observable<IBand> {
+    console.log('updateBand aangeroepen');
+    return this.http
+      .put<ApiResponse<any>>(environment.dataApiUrl + `/band/${id}`, band)
+      .pipe(map((response) => response.results));
+  }
+
+  deleteBand(id: string): Observable<IBand> {
+    console.log('deleteBand aangeroepen');
+    return this.http
+      .delete<ApiResponse<any>>(environment.dataApiUrl + `/band/${id}`)
+      .pipe(map((response) => response.results));
+  }
 }
