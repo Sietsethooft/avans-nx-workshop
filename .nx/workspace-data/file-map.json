@@ -65,76 +65,76 @@
   "fileMap": {
     "nonProjectFiles": [
       {
+        "file": ".gitignore",
+        "hash": "637008721651112966"
+      },
+      {
         "file": ".prettierrc",
         "hash": "6192629144332209564"
-      },
-      {
-        "file": "jest.preset.js",
-        "hash": "7473220183190921152"
-      },
-      {
-        "file": ".eslintrc.json",
-        "hash": "4566917484430375526"
-      },
-      {
-        "file": "README.md",
-        "hash": "1955868086715526908"
       },
       {
         "file": ".github/workflows/azure-static-web-apps-icy-tree-01fe4d303.yml",
         "hash": "4292851524355691075"
       },
       {
-        "file": "package-lock.json",
-        "hash": "1194419262312006041"
-      },
-      {
-        "file": ".eslintignore",
-        "hash": "13404745306227114823"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "637008721651112966"
-      },
-      {
-        "file": ".editorconfig",
-        "hash": "11532813898455409296"
-      },
-      {
-        "file": ".prettierignore",
-        "hash": "135344717789917661"
+        "file": "README.md",
+        "hash": "1955868086715526908"
       },
       {
         "file": "Nx-workshop.postman_collection.json",
         "hash": "13796819436055774183"
       },
       {
-        "file": "libs/share-a-meal/readme.txt",
-        "hash": "8731589497805983804"
-      },
-      {
         "file": "migrations.json",
         "hash": "4597419159832879830"
-      },
-      {
-        "file": "jest.config.ts",
-        "hash": "3407785570333453138"
-      },
-      {
-        "file": "tsconfig.base.json",
-        "hash": "4407260957838184679"
       },
       {
         "file": ".vscode/settings.json",
         "hash": "16632116639765706074"
       },
       {
+        "file": ".editorconfig",
+        "hash": "11532813898455409296"
+      },
+      {
+        "file": ".eslintignore",
+        "hash": "13404745306227114823"
+      },
+      {
         "file": "nx.json",
         "hash": "6819787887827871845"
       },
       {
+        "file": "tsconfig.base.json",
+        "hash": "4407260957838184679"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "3407785570333453138"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "7473220183190921152"
+      },
+      {
+        "file": "libs/share-a-meal/readme.txt",
+        "hash": "8731589497805983804"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "135344717789917661"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "1194419262312006041"
+      },
+      {
         "file": "package.json",
         "hash": "3868875776957438874"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "4566917484430375526"
       }
     ],
     "projectFileMap": {
@@ -1641,7 +1641,7 @@
         },
         {
           "file": "libs/frontend/features/src/lib/bands/band-edit/band-edit.component.ts",
-          "hash": "17998243448535983070",
+          "hash": "5881055435735965313",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/router",
@@ -1667,7 +1667,7 @@
         },
         {
           "file": "libs/frontend/features/src/lib/bands/band-service.ts",
-          "hash": "10805000721983359861",
+          "hash": "3969525618617046013",
           "deps": [
             "npm:@angular/core",
             "npm:rxjs",

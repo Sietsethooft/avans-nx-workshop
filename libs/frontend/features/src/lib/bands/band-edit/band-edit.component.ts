@@ -72,6 +72,7 @@ export class BandEditComponent implements OnInit, OnDestroy {
         });
       } else {
         this.isLoading = false;
+        this.assignRandomLeaderAndMember();
       }
     });
   }
@@ -84,24 +85,49 @@ export class BandEditComponent implements OnInit, OnDestroy {
     if (this.bandForm.valid) {
       const formValues = this.bandForm.value;
       const genresArray = formValues.genres.split(',').map((genre: string) => genre.trim());
-
-      const updatedBand: IBand = {
-        ...this.band,
-        ...formValues,
-        genres: genresArray,
+  
+      const saveBand = () => {
+        // Filter null-waarden uit de members-array
+        const validMembers = this.band.members?.filter(member => member && member._id) || [];
+  
+        const updatedBand: IBand = {
+          ...this.band,
+          ...formValues,
+          genres: genresArray,
+          leader: this.band.leader ? (this.band.leader as IUserIdentity)._id : undefined, // Converteer naar string als aanwezig
+          members: validMembers.length > 0 ? validMembers.map((member: IUserIdentity) => member._id) : undefined, // Alleen als er geldige members zijn
+        };
+  
+        // Verwijder properties met undefined waarden
+        Object.keys(updatedBand).forEach(key => {
+          if (updatedBand[key as keyof IBand] === undefined) {
+            delete updatedBand[key as keyof IBand];
+          }
+        });
+  
+        if (this.bandId) {
+          this.bandService.updateBand(this.bandId, updatedBand).subscribe(() => {
+            this.router.navigate(['/bands']);
+          });
+        } else {
+          this.bandService.createBand(updatedBand).subscribe(() => {
+            this.router.navigate(['/bands']);
+          });
+        }
       };
-
-      if (this.bandId) {
-        this.bandService.updateBand(this.bandId, updatedBand).subscribe(() => {
-          this.router.navigate(['/bands']);
-        });
+  
+      if (!this.bandId) {
+        this.assignRandomLeaderAndMember()
+          .then(saveBand)
+          .catch(error => {
+            console.error(error);
+          });
       } else {
-        this.bandService.createBand(updatedBand).subscribe(() => {
-          this.router.navigate(['/bands']);
-        });
+        saveBand();
       }
     }
   }
+  
 
   updatePhoto() {
     if (this.photoForm.valid) {
@@ -117,5 +143,33 @@ export class BandEditComponent implements OnInit, OnDestroy {
         console.log('leader: ', this.leader);
       });
     }
+  }
+
+  assignRandomLeaderAndMember(): Promise<void> {
+    return new Promise((resolve, reject) => {
+      this.userService.getUsersAsync().subscribe((users: IUserInfo[]) => {
+        if (users.length > 1) {
+          const randomLeader = users[Math.floor(Math.random() * users.length)];
+          let randomMember;
+          do {
+            randomMember = users[Math.floor(Math.random() * users.length)];
+          } while (randomMember._id === randomLeader._id);
+
+          this.band.leader = {
+            _id: randomLeader._id,
+          } as IUserIdentity;
+
+          this.band.members = [{
+            _id: randomMember._id,
+          } as IUserIdentity];
+
+          console.log('Assigned leader: ', randomLeader);
+          console.log('Assigned member: ', randomMember);
+          resolve();
+        } else {
+          reject('Not enough users to assign leader and member');
+        }
+      });
+    });
   }
 }
