@@ -65,24 +65,60 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": ".editorconfig",
-        "hash": "11532813898455409296"
+        "file": ".vscode/settings.json",
+        "hash": "16632116639765706074"
       },
       {
         "file": ".eslintignore",
         "hash": "13404745306227114823"
       },
       {
+        "file": "nx.json",
+        "hash": "6819787887827871845"
+      },
+      {
+        "file": "README.md",
+        "hash": "1955868086715526908"
+      },
+      {
         "file": ".eslintrc.json",
         "hash": "4566917484430375526"
       },
       {
-        "file": ".github/workflows/azure-static-web-apps-icy-tree-01fe4d303.yml",
-        "hash": "4292851524355691075"
+        "file": "migrations.json",
+        "hash": "4597419159832879830"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "3407785570333453138"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "4407260957838184679"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "1194419262312006041"
       },
       {
         "file": ".gitignore",
         "hash": "637008721651112966"
+      },
+      {
+        "file": ".editorconfig",
+        "hash": "11532813898455409296"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "7473220183190921152"
+      },
+      {
+        "file": "Nx-workshop.postman_collection.json",
+        "hash": "13796819436055774183"
+      },
+      {
+        "file": "package.json",
+        "hash": "3868875776957438874"
       },
       {
         "file": ".prettierignore",
@@ -93,48 +129,12 @@
         "hash": "6192629144332209564"
       },
       {
-        "file": ".vscode/settings.json",
-        "hash": "16632116639765706074"
-      },
-      {
-        "file": "Nx-workshop.postman_collection.json",
-        "hash": "13796819436055774183"
-      },
-      {
-        "file": "README.md",
-        "hash": "1955868086715526908"
-      },
-      {
-        "file": "jest.config.ts",
-        "hash": "3407785570333453138"
-      },
-      {
-        "file": "jest.preset.js",
-        "hash": "7473220183190921152"
-      },
-      {
         "file": "libs/share-a-meal/readme.txt",
         "hash": "8731589497805983804"
       },
       {
-        "file": "migrations.json",
-        "hash": "4597419159832879830"
-      },
-      {
-        "file": "nx.json",
-        "hash": "13543554231657983656"
-      },
-      {
-        "file": "package-lock.json",
-        "hash": "1194419262312006041"
-      },
-      {
-        "file": "package.json",
-        "hash": "3868875776957438874"
-      },
-      {
-        "file": "tsconfig.base.json",
-        "hash": "102872237454768305"
+        "file": ".github/workflows/azure-static-web-apps-icy-tree-01fe4d303.yml",
+        "hash": "4292851524355691075"
       }
     ],
     "projectFileMap": {
@@ -499,7 +499,7 @@
         },
         {
           "file": "libs/frontend/features/src/lib/bands/band-list/band-list.component.html",
-          "hash": "10487101842565499098"
+          "hash": "6026995805473214073"
         },
         {
           "file": "libs/frontend/features/src/lib/bands/band-list/band-list.component.ts",
@@ -579,7 +579,7 @@
         },
         {
           "file": "libs/frontend/features/src/lib/users/user-list/user-list.component.html",
-          "hash": "8673746983185949044"
+          "hash": "6337789077983403086"
         },
         {
           "file": "libs/frontend/features/src/lib/users/user-list/user-list.component.spec.ts",
@@ -1284,6 +1284,29 @@
           ]
         },
         {
+          "file": "apps/my-app/src/app/components/loadspinner.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/my-app/src/app/components/loadspinner.component.html",
+          "hash": "5075043222556009255"
+        },
+        {
+          "file": "apps/my-app/src/app/components/loadspinner.component.spec.ts",
+          "hash": "17862910356968145608",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/my-app/src/app/components/loadspinner.component.ts",
+          "hash": "6851875176619418249",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common"
+          ]
+        },
+        {
           "file": "apps/my-app/src/app/components/ui/footer/footer.component.css",
           "hash": "3244421341483603138"
         },
@@ -1311,7 +1334,7 @@
         },
         {
           "file": "apps/my-app/src/app/components/ui/header/header.component.html",
-          "hash": "17492411665719759799"
+          "hash": "17732088191328739137"
         },
         {
           "file": "apps/my-app/src/app/components/ui/header/header.component.spec.ts",

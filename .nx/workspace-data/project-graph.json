@@ -17641,6 +17641,11 @@
       },
       {
         "source": "my-app",
+        "target": "npm:@angular/common",
+        "type": "static"
+      },
+      {
+        "source": "my-app",
         "target": "npm:@angular/platform-browser-dynamic",
         "type": "static"
       },
