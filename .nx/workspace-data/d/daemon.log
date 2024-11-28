@@ -6571,3 +6571,22 @@ Failed to process project graph. Run "nx reset" to fix this. Please report the i
 [NX Daemon Server] - 2024-11-27T15:22:16.476Z - Done responding to the client handleGetFlakyTasks
 [NX Daemon Server] - 2024-11-27T15:22:16.477Z - Handled GET_FLAKY_TASKS. Handling time: 1. Response time: 1.
 [NX Daemon Server] - 2024-11-27T15:22:16.485Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-11-28T08:56:41.785Z - Started listening on: \\.\pipe\nx\C:\Users\siets\AppData\Local\Temp\f439848001\d.sock
+[NX Daemon Server] - 2024-11-28T08:56:41.791Z - [WATCHER]: Subscribed to changes within: c:\Documenten\Jaar 2\Periode 2\Client-side\github_avans-nx-workshop\avans-nx-workshop (native)
+[NX Daemon Server] - 2024-11-28T08:56:41.793Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-11-28T08:56:41.796Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-11-28T08:56:41.797Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-11-28T08:56:41.800Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-11-28T08:56:42.539Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-11-28T08:56:42.539Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-28T08:56:42.539Z - [REQUEST]: 
+[NX Daemon Server] - 2024-11-28T08:56:42.561Z - Time taken for 'loadNxPlugins' 735.9513999999999ms
+[NX Daemon Server] - 2024-11-28T08:56:42.561Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-11-28T08:56:42.562Z - Established a connection. Number of open connections: 3
+[NX Daemon Server] - 2024-11-28T08:56:42.562Z - Closed a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-11-28T08:56:42.566Z - [REQUEST]: Responding to the client. handleGlob
+[NX Daemon Server] - 2024-11-28T08:56:42.567Z - Done responding to the client handleGlob
+[NX Daemon Server] - 2024-11-28T08:56:42.567Z - Handled GLOB. Handling time: 2. Response time: 1.
+[NX Daemon Server] - 2024-11-28T08:56:42.815Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX Daemon Server] - 2024-11-28T08:56:42.815Z - Done responding to the client handleHashGlob
+[NX Daemon Server] - 2024-11-28T08:56:42.815Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
