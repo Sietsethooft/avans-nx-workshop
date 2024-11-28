@@ -17163,6 +17163,11 @@
       },
       {
         "source": "features",
+        "target": "my-app",
+        "type": "static"
+      },
+      {
+        "source": "features",
         "target": "users",
         "type": "static"
       },
@@ -17637,11 +17642,6 @@
       {
         "source": "my-app",
         "target": "features",
-        "type": "static"
-      },
-      {
-        "source": "my-app",
-        "target": "npm:@angular/common",
         "type": "static"
       },
       {
