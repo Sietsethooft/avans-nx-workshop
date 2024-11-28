@@ -69,36 +69,28 @@
         "hash": "7473220183190921152"
       },
       {
-        "file": ".prettierrc",
-        "hash": "6192629144332209564"
+        "file": ".prettierignore",
+        "hash": "135344717789917661"
       },
       {
-        "file": ".editorconfig",
-        "hash": "11532813898455409296"
+        "file": "README.md",
+        "hash": "1955868086715526908"
       },
       {
-        "file": "jest.config.ts",
-        "hash": "3407785570333453138"
+        "file": "package.json",
+        "hash": "3868875776957438874"
       },
       {
         "file": ".eslintrc.json",
         "hash": "4566917484430375526"
       },
       {
-        "file": ".github/workflows/azure-static-web-apps-icy-tree-01fe4d303.yml",
-        "hash": "4292851524355691075"
-      },
-      {
-        "file": ".vscode/settings.json",
-        "hash": "16632116639765706074"
-      },
-      {
-        "file": "nx.json",
-        "hash": "6819787887827871845"
-      },
-      {
         "file": "Nx-workshop.postman_collection.json",
         "hash": "13796819436055774183"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "3407785570333453138"
       },
       {
         "file": ".gitignore",
@@ -109,24 +101,20 @@
         "hash": "1194419262312006041"
       },
       {
-        "file": "libs/share-a-meal/readme.txt",
-        "hash": "8731589497805983804"
+        "file": ".prettierrc",
+        "hash": "6192629144332209564"
       },
       {
-        "file": "package.json",
-        "hash": "3868875776957438874"
+        "file": ".editorconfig",
+        "hash": "11532813898455409296"
       },
       {
-        "file": ".prettierignore",
-        "hash": "135344717789917661"
+        "file": ".github/workflows/azure-static-web-apps-icy-tree-01fe4d303.yml",
+        "hash": "4292851524355691075"
       },
       {
-        "file": "README.md",
-        "hash": "1955868086715526908"
-      },
-      {
-        "file": ".eslintignore",
-        "hash": "13404745306227114823"
+        "file": ".vscode/settings.json",
+        "hash": "16632116639765706074"
       },
       {
         "file": "tsconfig.base.json",
@@ -135,6 +123,18 @@
       {
         "file": "migrations.json",
         "hash": "4597419159832879830"
+      },
+      {
+        "file": "nx.json",
+        "hash": "6819787887827871845"
+      },
+      {
+        "file": ".eslintignore",
+        "hash": "13404745306227114823"
+      },
+      {
+        "file": "libs/share-a-meal/readme.txt",
+        "hash": "8731589497805983804"
       }
     ],
     "projectFileMap": {
@@ -1314,11 +1314,11 @@
         },
         {
           "file": "apps/my-app/src/app/components/ui/header/header.component.css",
-          "hash": "3244421341483603138"
+          "hash": "9805082594463658033"
         },
         {
           "file": "apps/my-app/src/app/components/ui/header/header.component.html",
-          "hash": "17732088191328739137"
+          "hash": "13835401828795050699"
         },
         {
           "file": "apps/my-app/src/app/components/ui/header/header.component.spec.ts",
