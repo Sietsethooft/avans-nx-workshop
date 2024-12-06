@@ -4,16 +4,15 @@ import { Id } from './id.type';
 import { IInstrument } from './instrument.interface';
 
 export enum UserRole {
-    Guest = 'Guest',
+    Guest = 'Gast',
     Admin = 'Admin',
-    Unknown = 'Unknown',
+    Unknown = 'Onbekend',
 }
 
 export enum UserGender {
-    Male = 'Male',
-    Female = 'Female',
-    None = 'None',
-    Unknown = 'Unknown'
+    Male = 'Man',
+    Female = 'Vrouw',
+    Unknown = 'Overig'
 }
 
 /**
