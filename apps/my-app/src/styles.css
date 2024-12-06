@@ -2,3 +2,7 @@
 .ml-s {
   margin-left: 0.2rem;
 }
+
+html {
+  overflow-y: scroll;
+}
